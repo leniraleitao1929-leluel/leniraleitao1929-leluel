@@ -6,7 +6,7 @@
   <img src="banner.gif" width="100%" alt="Lenira Leitão. Criadora digital, IA e formação.">
 </p>
 
-<h3 align="center">Dou forma a ideias, com inteligência artificial e um toque de magia ✨</h3>
+<h3 align="center">Numa viagem para criar coisas que fazem diferença na vida das pessoas... ✨</h3>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&duration=3000&pause=800&color=C084FC&center=true&vCenter=true&width=600&lines=Apps+%C3%BAteis+para+pessoas+reais;Sites+que+fazem+uma+marca+brilhar;Forma%C3%A7%C3%B5es+para+quem+quer+criar" alt="Apps úteis para pessoas reais. Sites que fazem uma marca brilhar. Formações para quem quer criar.">
