@@ -50,6 +50,10 @@ Aquilo de que mais gosto:
 
 ### As minhas criações ✨
 
+<p align="center">
+  <img src="constelacao.gif" width="100%" alt="Constelação das minhas criações">
+</p>
+
 <details>
 <summary><b>Ver as apps</b></summary>
 <br>
