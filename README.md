@@ -152,7 +152,7 @@ O guia passo a passo para transformar o que sabes fazer num ebook, numa landing 
 **[Pequenos Encantos](https://pequenosencantos.lovable.app)**<br>
 <sub>MARCA · CONTOS MÁGICOS</sub>
 
-Músicas personalizadas, vídeos encantados e memórias mágicas para emocionar famílias.
+Vídeos animados e músicas personalizadas para famílias. Um vídeo chegou a 3,3 milhões de visualizações no Instagram. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/pequenos-encantos.html)
 
 </td>
 </tr>
