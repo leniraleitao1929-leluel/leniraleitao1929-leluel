@@ -32,6 +32,22 @@ Aquilo de que mais gosto:
 
 <br>
 
+### O meu percurso
+
+**Comunicar com quem está do outro lado.** Criei o **Pequenos Encantos**, uma marca de músicas personalizadas, vídeos encantados e contos mágicos para famílias, que hoje junta uma comunidade de **mais de 32 000 pessoas no Facebook** e **7 900 no Instagram**. Foi aí que aprendi a contar histórias que tocam as pessoas.
+
+**Construir com inteligência artificial.** Comecei a criar apps e sites com IA e cada projeto nasceu de alguém real: a **Voz Clara** para a minha irmã, que é cega, e o **BlueTime** em homenagem a uma cabeleireira com mais de 30 anos de profissão. Não paro no "parece pronto": testo no telemóvel, protejo os dados e corrijo até estar certo.
+
+**Ensinar o que aprendo.** Criei o **Método ORIGEM**, o workshop e o ebook *O Teu Talento Merece Ser Encontrado*, para que mais pessoas transformem o que sabem num projeto digital.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Facebook-32%20000%2B%20seguidores-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Pequenos Encantos no Facebook: mais de 32 000 seguidores">
+  <img src="https://img.shields.io/badge/Instagram-7%20900%20seguidores-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Pequenos Encantos no Instagram: 7 900 seguidores">
+  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-9%20projetos-6D28D9?style=for-the-badge" alt="9 projetos">
+</p>
+
+<br>
+
 ### Neste momento
 
 
@@ -184,4 +200,16 @@ Página para uma nutricionista, com marcação de consultas por WhatsApp.
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=leniraleitao1929-leluel&bg_color=1E1B4B&color=E9D5FF&line=EC4899&point=FDE68A&area=true&area_color=6D28D9&hide_border=true&radius=12&custom_title=Atividade%20recente" alt="Gráfico de atividade" width="100%">
 </p>
 
-<h3 align="center"><a href="https://www.linkedin.com/in/lenira-tavares-363bb5269">Vamos falar no LinkedIn 💜</a></h3>
+<br>
+
+### Vamos trabalhar juntos?
+
+Se tem uma ideia, um negócio que precisa de um site ou de uma app, ou quer aprender a criar com IA, posso ajudar com:
+
+- 🌐 **Sites e landing pages** que mostram bem a sua marca e trazem contactos;
+- 📱 **Apps à medida**, com contas, base de dados e dados protegidos;
+- 🎓 **Formação** para criar o seu próprio projeto digital com IA.
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/lenira-tavares-363bb5269"><img src="https://img.shields.io/badge/Falar%20comigo%20no%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Falar comigo no LinkedIn" height="38"></a>
+</p>
