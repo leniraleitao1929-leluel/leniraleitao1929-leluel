@@ -39,7 +39,7 @@ Aquilo de que mais gosto:
 
 `Novidade nov 2026:` O [BlueTime Agenda](https://agenda-fluxo-azul.lovable.app) ficou completo, com notificações, dois idiomas e testes automáticos. [Ler o caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo)
 
-`Novidade nov 2026:` Publiquei a **Voz Clara**, que lê em voz alta documentos para pessoas cegas ou com pouca visão.
+`Novidade nov 2026:` Publiquei a **[Voz Clara](https://tatodigital.lovable.app)**, que lê em voz alta documentos para pessoas cegas ou com pouca visão.
 
 ### As minhas criações ✨
 
@@ -47,9 +47,9 @@ Aquilo de que mais gosto:
 <tr>
 <td width="50%" valign="top">
 
-<img src="projetos/voz-clara.png" alt="Voz Clara" width="100%">
+<a href="https://tatodigital.lovable.app"><img src="projetos/voz-clara.png" alt="Voz Clara" width="100%"></a>
 
-**Voz Clara**<br>
+**[Voz Clara](https://tatodigital.lovable.app)**<br>
 <sub>APP · ACESSIBILIDADE</sub>
 
 Lê em voz alta PDFs e fotografias de cartas que o telemóvel não consegue ler, para pessoas cegas ou com pouca visão.
@@ -69,10 +69,10 @@ Marcações online com lembretes por WhatsApp e avisos para o salão. [Caso de e
 <tr>
 <td width="50%" valign="top">
 
-<img src="projetos/vertice.png" alt="VÉRTICE" width="100%">
+<a href="https://vertice-ai-citizen.lovable.app"><img src="projetos/vertice.png" alt="VÉRTICE" width="100%"></a>
 
-**VÉRTICE**<br>
-<sub>APP · EM DESENVOLVIMENTO</sub>
+**[VÉRTICE](https://vertice-ai-citizen.lovable.app)**<br>
+<sub>APP · DOCUMENTOS OFICIAIS</sub>
 
 Tira uma foto a uma carta das Finanças e explica o que é, quanto pagar e até quando.
 
@@ -101,9 +101,9 @@ Formação prática para transformar o teu conhecimento num projeto digital com 
 </td>
 <td width="50%" valign="top">
 
-<img src="projetos/academia.png" alt="Academia ORIGEM" width="100%">
+<a href="https://workshopoteutalentoencontrado.lovable.app"><img src="projetos/academia.png" alt="Academia ORIGEM" width="100%"></a>
 
-**Academia ORIGEM**<br>
+**[Academia ORIGEM](https://workshopoteutalentoencontrado.lovable.app)**<br>
 <sub>WORKSHOP</sub>
 
 Num sábado, online: crias o teu ebook de manhã e, à tarde, a página e o anúncio em vídeo.
@@ -113,9 +113,9 @@ Num sábado, online: crias o teu ebook de manhã e, à tarde, a página e o anú
 <tr>
 <td width="50%" valign="top">
 
-<img src="projetos/ebook.png" alt="O Teu Talento Merece Ser Encontrado" width="100%">
+<a href="https://ebookoteutalentomereceserencontrado.lovable.app"><img src="projetos/ebook.png" alt="O Teu Talento Merece Ser Encontrado" width="100%"></a>
 
-**O Teu Talento Merece Ser Encontrado**<br>
+**[O Teu Talento Merece Ser Encontrado](https://ebookoteutalentomereceserencontrado.lovable.app)**<br>
 <sub>EBOOK</sub>
 
 O guia passo a passo para transformar o que sabes fazer num ebook, numa landing page e num anúncio.
