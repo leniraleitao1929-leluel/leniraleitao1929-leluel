@@ -12,6 +12,10 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&duration=3000&pause=800&color=C084FC&center=true&vCenter=true&width=600&lines=Apps+%C3%BAteis+para+pessoas+reais;Sites+que+fazem+uma+marca+brilhar;Forma%C3%A7%C3%B5es+para+quem+quer+criar" alt="Apps úteis para pessoas reais. Sites que fazem uma marca brilhar. Formações para quem quer criar.">
 </p>
 
+<p align="center">
+  <a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/"><img src="https://img.shields.io/badge/%E2%9C%A8%20Ver%20todas%20as%20minhas%20cria%C3%A7%C3%B5es-EC4899?style=for-the-badge&labelColor=6D28D9" alt="Ver todas as minhas criações" height="38"></a>
+</p>
+
 ### Olá 👋
 
 Sou a **Lenira**, criadora digital em Portugal 🇵🇹
@@ -42,6 +46,8 @@ Aquilo de que mais gosto:
 `Novidade nov 2026:` Publiquei a **[Voz Clara](https://tatodigital.lovable.app)**, que ajuda pessoas cegas ou com baixa visão no dia a dia: cores, cartas, documentos e onde estão.
 
 ### As minhas criações ✨
+
+<p align="center"><a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/"><b>Abrir a página das minhas criações ↗</b></a></p>
 
 <table>
 <tr>
