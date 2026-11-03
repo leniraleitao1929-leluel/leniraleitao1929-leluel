@@ -43,7 +43,7 @@ Aquilo de que mais gosto:
 <p align="center">
   <a href="https://www.facebook.com/share/1CCWDAb1ev/"><img src="https://img.shields.io/badge/Facebook-32%20000%2B%20seguidores-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Pequenos Encantos no Facebook: mais de 32 000 seguidores"></a>
   <a href="https://www.instagram.com/pequenosencantos.brilho/"><img src="https://img.shields.io/badge/Instagram-7%20900%20seguidores-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Pequenos Encantos no Instagram: 7 900 seguidores"></a>
-  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-9%20projetos-6D28D9?style=for-the-badge" alt="9 projetos">
+  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-8%20projetos-6D28D9?style=for-the-badge" alt="8 projetos">
 </p>
 
 <br>
@@ -157,16 +157,7 @@ Músicas personalizadas, vídeos encantados e memórias mágicas para emocionar 
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-
-<img src="projetos/mariana-silva.png" alt="Mariana Silva Nutrition" width="100%">
-
-**Mariana Silva Nutrition**<br>
-<sub>SITE · PROTÓTIPO</sub>
-
-Página para uma nutricionista, com marcação de consultas por WhatsApp.
-
-</td>
+<td width="50%"></td>
 <td width="50%"></td>
 </tr>
 </table>
