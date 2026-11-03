@@ -1,6 +1,5 @@
-<!-- Topo em onda animada -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:1E1B4B,45:6D28D9,100:EC4899&text=Lenira%20Leit%C3%A3o&fontColor=FFFFFF&fontSize=60&fontAlignY=36&desc=Criadora%20digital%20%E2%9C%A6%20IA%20%E2%9C%A6%20Forma%C3%A7%C3%A3o&descAlignY=58&descSize=20&animation=twinkling" alt="Lenira Leitão. Criadora digital, IA e formação." width="100%">
+  <img src="header.gif" alt="Lenira Leitão. Criadora digital, IA e formação." width="100%">
 </p>
 
 <p align="center">
@@ -17,7 +16,7 @@
 
 ### 💜 Sobre mim
 
-<img src="planeta.svg" align="right" width="230" alt="Planeta mágico a flutuar">
+<img src="planeta.gif" align="right" width="220" alt="Planeta mágico a flutuar">
 
 - 🪄 Dou forma a ideias: **apps, sites e formações** com um toque de magia.
 - 🤖 Uso a **inteligência artificial** como ferramenta de trabalho, do rascunho à app publicada.
@@ -29,12 +28,12 @@
 
 <br clear="right">
 
-<img src="divisor.svg" width="100%" alt="">
+<img src="divisor.gif" width="100%" alt="">
 
 ### ✨ A minha constelação de criações
 
 <p align="center">
-  <img src="constelacao.svg" alt="Constelação das minhas criações" width="100%">
+  <img src="constelacao.gif" alt="Constelação das minhas criações" width="100%">
 </p>
 
 | | Projeto | O que faz |
@@ -50,7 +49,7 @@
 | 🌍 | **Círculo Europa** | Landing page para apresentar uma oferta e captar contactos. |
 | 🥗 | **Mariana Silva Nutrition** | Página para uma nutricionista, com marcação por WhatsApp. *Protótipo.* |
 
-<img src="divisor.svg" width="100%" alt="">
+<img src="divisor.gif" width="100%" alt="">
 
 ### 🛠️ Ferramentas com que crio
 
