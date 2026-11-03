@@ -36,13 +36,13 @@ Aquilo de que mais gosto:
 
 **Comunicar com quem está do outro lado.** Criei o **Pequenos Encantos**, uma marca de músicas personalizadas, vídeos encantados e contos mágicos para famílias, que hoje junta uma comunidade de **mais de 32 000 pessoas no Facebook** e **7 900 no Instagram**. Foi aí que aprendi a contar histórias que tocam as pessoas.
 
-**Construir com inteligência artificial.** Comecei a criar apps e sites com IA e cada projeto nasceu de alguém real: a **Voz Clara** para a minha irmã, que é cega, e o **BlueTime** em homenagem a uma cabeleireira com mais de 30 anos de profissão. Não paro no "parece pronto": testo no telemóvel, protejo os dados e corrijo até estar certo.
+**Construir com inteligência artificial.** Comecei a criar apps e sites com IA e cada projeto nasceu de alguém real: a **Voz Clara** para a minha irmã, que é cega, e o **BlueTime** em homenagem à minha mãe, **Cuxe Lopes**, cabeleireira durante mais de 30 anos, a quem ajudei muito no salão até ir para a universidade. Não paro no "parece pronto": testo no telemóvel, protejo os dados e corrijo até estar certo.
 
 **Ensinar o que aprendo.** Criei o **Método ORIGEM**, o workshop e o ebook *O Teu Talento Merece Ser Encontrado*, para que mais pessoas transformem o que sabem num projeto digital.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Facebook-32%20000%2B%20seguidores-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Pequenos Encantos no Facebook: mais de 32 000 seguidores">
-  <img src="https://img.shields.io/badge/Instagram-7%20900%20seguidores-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Pequenos Encantos no Instagram: 7 900 seguidores">
+  <a href="https://www.facebook.com/share/1CCWDAb1ev/"><img src="https://img.shields.io/badge/Facebook-32%20000%2B%20seguidores-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Pequenos Encantos no Facebook: mais de 32 000 seguidores"></a>
+  <a href="https://www.instagram.com/pequenosencantos.brilho/"><img src="https://img.shields.io/badge/Instagram-7%20900%20seguidores-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Pequenos Encantos no Instagram: 7 900 seguidores"></a>
   <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-9%20projetos-6D28D9?style=for-the-badge" alt="9 projetos">
 </p>
 
@@ -86,7 +86,7 @@ Para pessoas cegas ou com baixa visão: diz a cor da roupa, lê cartas e rótulo
 **[BlueTime Agenda](https://agenda-fluxo-azul.lovable.app)**<br>
 <sub>APP · SALÕES E BARBEARIAS</sub>
 
-Marcações online com lembretes por WhatsApp e avisos para o salão. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/bluetime.html)
+Marcações online com lembretes por WhatsApp e avisos para o salão. Feita em homenagem à minha mãe, cabeleireira durante mais de 30 anos. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/bluetime.html)
 
 </td>
 </tr>
