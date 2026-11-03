@@ -30,6 +30,8 @@ Aquilo de que mais gosto:
 - Acessibilidade ♿ e tecnologia que inclui
 - Ensinar 🎓 e criar ebooks 📖, para que mais pessoas consigam
 
+<br>
+
 ### Neste momento
 
 
@@ -45,9 +47,9 @@ Aquilo de que mais gosto:
 
 `Novidade nov 2026:` Publiquei a **[Voz Clara](https://tatodigital.lovable.app)**, que ajuda pessoas cegas ou com baixa visão no dia a dia: cores, cartas, documentos e onde estão.
 
-### As minhas criações ✨
+<br>
 
-<p align="center"><a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/"><b>Abrir a página das minhas criações ↗</b></a></p>
+### As minhas criações
 
 <table>
 <tr>
@@ -169,6 +171,8 @@ Página para uma nutricionista, com marcação de consultas por WhatsApp.
 </p>
 
 </details>
+
+<br>
 
 ### O meu ritmo no GitHub 📈
 
