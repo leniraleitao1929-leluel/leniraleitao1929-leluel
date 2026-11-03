@@ -12,8 +12,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&duration=3000&pause=800&color=C084FC&center=true&vCenter=true&width=600&lines=Apps+%C3%BAteis+para+pessoas+reais;Sites+que+fazem+uma+marca+brilhar;Forma%C3%A7%C3%B5es+para+quem+quer+criar" alt="Apps úteis para pessoas reais. Sites que fazem uma marca brilhar. Formações para quem quer criar.">
 </p>
 
-<img src="planeta.gif" align="right" width="240" alt="Planeta com uma lua a girar à volta">
-
 ### Olá 👋
 
 Sou a **Lenira**, criadora digital em Portugal 🇵🇹
@@ -27,8 +25,6 @@ Aquilo de que mais gosto:
 - Criar apps e sites 🌐 com IA 🤖
 - Acessibilidade ♿ e tecnologia que inclui
 - Ensinar 🎓 e criar ebooks 📖, para que mais pessoas consigam
-
-<br clear="right">
 
 ### Neste momento
 
@@ -45,50 +41,111 @@ Aquilo de que mais gosto:
 
 `Novidade nov 2026:` Publiquei a **Voz Clara**, que lê em voz alta documentos para pessoas cegas ou com pouca visão.
 
-<br clear="right">
-
 ### As minhas criações ✨
 
-<p align="center">
-  <img src="constelacao.gif" width="100%" alt="Constelação das minhas criações">
-</p>
+<table>
+<tr>
+<td width="50%" valign="top">
 
-<details>
-<summary><b>Ver as apps</b></summary>
-<br>
+<img src="projetos/voz-clara.png" alt="Voz Clara" width="100%">
 
-| | App | O que faz |
-|:-:|---|---|
-| 🔊 | **Voz Clara** | Lê em voz alta PDFs e fotografias de cartas que o telemóvel não consegue ler, para pessoas cegas ou com pouca visão. |
-| 💇‍♀️ | **[BlueTime Agenda](https://agenda-fluxo-azul.lovable.app)** | Marcações online para salões e barbearias, com lembretes por WhatsApp. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo) |
-| 🏛️ | **VÉRTICE: Inteligência Civil** | Explica em linguagem simples cartas oficiais portuguesas. *Em desenvolvimento.* |
-| 📊 | **Insight Ally** | Painéis de vendas com a marca de cada parceiro, a partir de um Excel. *Em desenvolvimento.* |
+**Voz Clara**<br>
+<sub>APP · ACESSIBILIDADE</sub>
 
-</details>
+Lê em voz alta PDFs e fotografias de cartas que o telemóvel não consegue ler, para pessoas cegas ou com pouca visão.
 
-<details>
-<summary><b>Ver a formação e os ebooks</b></summary>
-<br>
+</td>
+<td width="50%" valign="top">
 
-| | Projeto | O que é |
-|:-:|---|---|
-| 🎓 | **Origem Premium** | Portal do curso *Empreender com Inteligência Artificial* (Método ORIGEM). |
-| 🌟 | **Lenira's Luminous Creations** | Os meus workshops de criação web e de ebooks interativos. |
-| 📖 | **O teu talento merece ser encontrado** | Ebook para criar landing pages no Lovable, passo a passo. |
+<a href="https://agenda-fluxo-azul.lovable.app"><img src="projetos/bluetime.png" alt="BlueTime Agenda" width="100%"></a>
 
-</details>
+**[BlueTime Agenda](https://agenda-fluxo-azul.lovable.app)**<br>
+<sub>APP · SALÕES E BARBEARIAS</sub>
 
-<details>
-<summary><b>Ver os sites para clientes</b></summary>
-<br>
+Marcações online com lembretes por WhatsApp e avisos para o salão. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo)
 
-| | Site | Para quem |
-|:-:|---|---|
-| 🧚 | **Enchanted Tales Studio** | Sites com ambiente de conto de fadas para marcas de criança. |
-| 🌍 | **Círculo Europa** | Landing page para apresentar uma oferta e captar contactos. |
-| 🥗 | **Mariana Silva Nutrition** | Página para uma nutricionista, com marcação por WhatsApp. *Protótipo.* |
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-</details>
+<img src="projetos/vertice.png" alt="VÉRTICE" width="100%">
+
+**VÉRTICE**<br>
+<sub>APP · EM DESENVOLVIMENTO</sub>
+
+Tira uma foto a uma carta das Finanças e explica o que é, quanto pagar e até quando.
+
+</td>
+<td width="50%" valign="top">
+
+<img src="projetos/montra.png" alt="Montra" width="100%">
+
+**Montra**<br>
+<sub>PLATAFORMA · EM DESENVOLVIMENTO</sub>
+
+Transforma o Excel de vendas dos clientes de contabilistas em painéis e respostas claras.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<img src="projetos/origem.png" alt="Método ORIGEM" width="100%">
+
+**Método ORIGEM**<br>
+<sub>CURSO · 150 HORAS</sub>
+
+Formação prática para transformar o teu conhecimento num projeto digital com Inteligência Artificial.
+
+</td>
+<td width="50%" valign="top">
+
+<img src="projetos/academia.png" alt="Academia ORIGEM" width="100%">
+
+**Academia ORIGEM**<br>
+<sub>WORKSHOP</sub>
+
+Num sábado, online: crias o teu ebook de manhã e, à tarde, a página e o anúncio em vídeo.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<img src="projetos/ebook.png" alt="O Teu Talento Merece Ser Encontrado" width="100%">
+
+**O Teu Talento Merece Ser Encontrado**<br>
+<sub>EBOOK</sub>
+
+O guia passo a passo para transformar o que sabes fazer num ebook, numa landing page e num anúncio.
+
+</td>
+<td width="50%" valign="top">
+
+<img src="projetos/pequenos-encantos.png" alt="Pequenos Encantos" width="100%">
+
+**Pequenos Encantos**<br>
+<sub>MARCA · CONTOS MÁGICOS</sub>
+
+Músicas personalizadas, vídeos encantados e memórias mágicas para emocionar famílias.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<img src="projetos/mariana-silva.png" alt="Mariana Silva Nutrition" width="100%">
+
+**Mariana Silva Nutrition**<br>
+<sub>SITE · PROTÓTIPO</sub>
+
+Página para uma nutricionista, com marcação de consultas por WhatsApp.
+
+</td>
+<td width="50%"></td>
+</tr>
+</table>
 
 <details>
 <summary><b>Ver as ferramentas com que crio</b></summary>
