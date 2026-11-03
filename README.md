@@ -1,57 +1,95 @@
 <p align="center">
-  <img src="header.gif" alt="Lenira Leitão. Criadora digital, IA e formação." width="100%">
+  <img src="ornamento.gif" width="440" alt="">
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=21&duration=3000&pause=800&color=C084FC&center=true&vCenter=true&width=640&lines=Transformo+ideias+em+apps+e+sites+%E2%9C%A8;Crio+com+IA+do+primeiro+rascunho+%C3%A0+publica%C3%A7%C3%A3o;Ensino+outras+pessoas+a+fazer+o+mesmo+%F0%9F%92%9C" alt="Transformo ideias em apps e sites. Crio com IA do primeiro rascunho à publicação. Ensino outras pessoas a fazer o mesmo.">
+  <img src="banner.gif" width="100%" alt="Lenira Leitão. Criadora digital, IA e formação.">
 </p>
 
-### 🤝 Vamos falar
+<h3 align="center">Dou forma a ideias, com inteligência artificial e um toque de magia ✨</h3>
 
-<p>
-  <a href="https://www.linkedin.com/in/lenira-tavares-363bb5269"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://agenda-fluxo-azul.lovable.app/caso-de-estudo"><img src="https://img.shields.io/badge/Caso_de_estudo-6D28D9?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Caso de estudo"></a>
-  <a href="#-a-minha-constelação-de-criações"><img src="https://img.shields.io/badge/Os_meus_projetos-EC4899?style=for-the-badge&logo=sparkfun&logoColor=white" alt="Os meus projetos"></a>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&duration=3000&pause=800&color=C084FC&center=true&vCenter=true&width=600&lines=Apps+%C3%BAteis+para+pessoas+reais;Sites+que+fazem+uma+marca+brilhar;Forma%C3%A7%C3%B5es+para+quem+quer+criar" alt="Apps úteis para pessoas reais. Sites que fazem uma marca brilhar. Formações para quem quer criar.">
 </p>
 
-### 💜 Sobre mim
+<img src="cristal.gif" align="right" width="230" alt="Bola de cristal mágica">
 
-<img src="planeta.gif" align="right" width="220" alt="Planeta mágico a flutuar">
+### Olá 👋
 
-- 🪄 Dou forma a ideias: **apps, sites e formações** com um toque de magia.
-- 🤖 Uso a **inteligência artificial** como ferramenta de trabalho, do rascunho à app publicada.
-- 💇‍♀️ Cada projeto nasce de **uma pessoa real**: uma cabeleireira, alguém que não consegue ler uma carta, uma marca que quer ser encontrada.
-- 🎓 Criei o **Método ORIGEM** e ensino quem acha que "isto não é para mim".
-- 🔒 Cuido do que não se vê: **dados protegidos, acessibilidade e testes**.
-- 🇵🇹 Trabalho em **português de Portugal**.
-- 🌱 Agora a aprender: arquitetura de apps, bases de dados e testes automáticos.
+Sou a **Lenira**, criadora digital em Portugal 🇵🇹
+
+Gosto de pegar numa ideia ainda sem forma e torná-la em algo **bonito e útil**: uma app que resolve um problema do dia a dia, um site que faz uma marca brilhar, uma formação que dá coragem a quem acha que "isto não é para mim" 💜
+
+Uso a **inteligência artificial** como ferramenta de trabalho, do primeiro rascunho à app publicada. Mas cada projeto começa numa pessoa real.
+
+Aquilo de que mais gosto:
+
+- Criar apps e sites 🌐 com IA 🤖
+- Acessibilidade ♿ e tecnologia que inclui
+- Ensinar 🎓 e criar ebooks 📖, para que mais pessoas consigam
 
 <br clear="right">
 
-<img src="divisor.gif" width="100%" alt="">
+### Neste momento
 
-### ✨ A minha constelação de criações
+<img src="livro.gif" align="right" width="230" alt="Livro mágico aberto com faíscas">
 
-<p align="center">
-  <img src="constelacao.gif" alt="Constelação das minhas criações" width="100%">
-</p>
+🪄 A criar apps úteis com IA, do problema real à publicação
 
-| | Projeto | O que faz |
+🎓 A preparar a **Academia ORIGEM** e o curso *Empreender com Inteligência Artificial*
+
+🔍 A aprender a fundo arquitetura de apps, bases de dados e testes automáticos
+
+♿ A tornar cada projeto acessível a quem usa leitor de ecrã
+
+`Novidade nov 2026:` O [BlueTime Agenda](https://agenda-fluxo-azul.lovable.app) ficou completo, com notificações, dois idiomas e testes automáticos. [Ler o caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo)
+
+`Novidade nov 2026:` Publiquei a **Voz Clara**, que lê em voz alta documentos para pessoas cegas ou com pouca visão.
+
+<br clear="right">
+
+### As minhas criações ✨
+
+<details>
+<summary><b>Ver as apps</b></summary>
+<br>
+
+| | App | O que faz |
 |:-:|---|---|
-| 🔊 | **Voz Clara** | Lê em voz alta PDFs e fotografias de cartas para pessoas cegas ou com pouca visão. |
-| 💇‍♀️ | **[BlueTime Agenda](https://agenda-fluxo-azul.lovable.app)** | Marcações online para salões, com lembretes por WhatsApp. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo) |
+| 🔊 | **Voz Clara** | Lê em voz alta PDFs e fotografias de cartas que o telemóvel não consegue ler, para pessoas cegas ou com pouca visão. |
+| 💇‍♀️ | **[BlueTime Agenda](https://agenda-fluxo-azul.lovable.app)** | Marcações online para salões e barbearias, com lembretes por WhatsApp. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo) |
 | 🏛️ | **VÉRTICE: Inteligência Civil** | Explica em linguagem simples cartas oficiais portuguesas. *Em desenvolvimento.* |
 | 📊 | **Insight Ally** | Painéis de vendas com a marca de cada parceiro, a partir de um Excel. *Em desenvolvimento.* |
+
+</details>
+
+<details>
+<summary><b>Ver a formação e os ebooks</b></summary>
+<br>
+
+| | Projeto | O que é |
+|:-:|---|---|
 | 🎓 | **Origem Premium** | Portal do curso *Empreender com Inteligência Artificial* (Método ORIGEM). |
 | 🌟 | **Lenira's Luminous Creations** | Os meus workshops de criação web e de ebooks interativos. |
 | 📖 | **O teu talento merece ser encontrado** | Ebook para criar landing pages no Lovable, passo a passo. |
+
+</details>
+
+<details>
+<summary><b>Ver os sites para clientes</b></summary>
+<br>
+
+| | Site | Para quem |
+|:-:|---|---|
 | 🧚 | **Enchanted Tales Studio** | Sites com ambiente de conto de fadas para marcas de criança. |
 | 🌍 | **Círculo Europa** | Landing page para apresentar uma oferta e captar contactos. |
 | 🥗 | **Mariana Silva Nutrition** | Página para uma nutricionista, com marcação por WhatsApp. *Protótipo.* |
 
-<img src="divisor.gif" width="100%" alt="">
+</details>
 
-### 🛠️ Ferramentas com que crio
+<details>
+<summary><b>Ver as ferramentas com que crio</b></summary>
+<br>
 
 <p>
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
@@ -64,17 +102,16 @@
   <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude">
 </p>
 
-### 📈 O meu ritmo no GitHub
+</details>
+
+### O meu ritmo no GitHub 📈
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=leniraleitao1929-leluel&theme=tokyonight&hide_border=true&background=1E1B4B&ring=EC4899&fire=FDE68A&currStreakLabel=C084FC&locale=pt_BR" alt="Contribuições no GitHub" height="170">
+  <img src="https://streak-stats.demolab.com?user=leniraleitao1929-leluel&hide_border=true&background=1E1B4B&ring=EC4899&fire=FDE68A&currStreakLabel=C084FC&sideLabels=E9D5FF&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=C4B5FD&stroke=6D28D9&locale=pt_BR" alt="Contribuições no GitHub" height="165">
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=leniraleitao1929-leluel&bg_color=1E1B4B&color=E9D5FF&line=EC4899&point=FDE68A&area=true&area_color=6D28D9&hide_border=true&custom_title=Atividade%20nos%20%C3%BAltimos%20dias" alt="Gráfico de atividade" width="100%">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=leniraleitao1929-leluel&bg_color=1E1B4B&color=E9D5FF&line=EC4899&point=FDE68A&area=true&area_color=6D28D9&hide_border=true&radius=12&custom_title=Atividade%20recente" alt="Gráfico de atividade" width="100%">
 </p>
 
-<!-- Rodapé em onda -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:EC4899,55:6D28D9,100:1E1B4B" alt="" width="100%">
-</p>
+<h3 align="center"><a href="https://www.linkedin.com/in/lenira-tavares-363bb5269">Vamos falar no LinkedIn 💜</a></h3>
