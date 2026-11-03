@@ -1,0 +1,141 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BlueTime Agenda · Estudo de caso</title><meta name="description" content="Marcações online para salões e barbearias em Portugal: como foi feita e o que aprendi.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"><style>
+:root{--hero:#0D1630;--hero-2:#1D2F66;--accent:#9CC3FE;--accent-ink:#1D4ED8;--on-accent:#0D1630;--bg:#F8F9FC;--surface:#FFFFFF;--ink:#0D1630;--muted:#5B6577;--line:#E3E7EF;--ok:#15803D;--warn:#B45309;--on-hero:#FFFFFF;--on-hero-soft:#C7D2E8;--font-display:"Instrument Serif", Georgia, serif;--font-body:Inter, "Segoe UI", system-ui, sans-serif;--font-mono:"JetBrains Mono", ui-monospace, monospace;--display-weight:400;--em-style:italic;--brand-tracking:0;--font-h3:Inter, "Segoe UI", system-ui, sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.125rem;line-height:1.65}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:8px;font-weight:700;z-index:20}
+.skip:focus{left:16px}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.12;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:var(--display-weight);letter-spacing:-0.01em}
+h3{font-size:1.25rem;font-weight:700;font-family:var(--font-h3,var(--font-display))}
+p{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.prose{max-width:40rem;display:grid;gap:1rem}
+.muted{color:var(--muted)}
+.back{display:inline-block;font-size:.95rem;color:var(--on-hero-soft);text-decoration:none;margin-bottom:.4rem}
+.back:hover{color:var(--on-hero)}
+.hero{background:linear-gradient(140deg,var(--hero) 0%,var(--hero-2) 100%);color:var(--on-hero)}
+.hero .wrap{padding-block:3rem 3rem;display:grid;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand .mark{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent);font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.brand b{font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:var(--brand-tracking)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:var(--display-weight);letter-spacing:-0.02em;max-width:18ch}
+.hero h1 em{font-style:var(--em-style);color:var(--accent)}
+.hero .lede{font-size:1.25rem;color:var(--on-hero-soft);max-width:40rem}
+.hero .lede strong{color:var(--on-hero)}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn.solid{background:var(--accent);color:var(--on-accent)}
+.btn.ghost{border:2px solid rgba(255,255,255,.45);color:var(--on-hero)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-family:var(--font-mono);font-size:.9rem;color:var(--on-hero-soft)}
+.facts b{color:var(--on-hero);font-weight:600}
+section.block{padding-block:3.5rem;border-bottom:1px solid var(--line)}
+section.block>.wrap{display:grid;gap:1.6rem}
+.head{display:grid;gap:.6rem}
+.quote{border-left:5px solid var(--accent);padding:.4rem 0 .4rem 1.2rem;font-size:1.3rem;font-family:var(--font-display);font-weight:500;max-width:40rem}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem;display:grid;gap:.4rem;align-content:start}
+.feat .say{font-family:var(--font-mono);font-size:.85rem;color:var(--accent-ink)}
+.group-label{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.flow{list-style:none;margin:0;padding:0;display:grid;counter-reset:passo}
+.flow li{counter-increment:passo;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding-bottom:1.4rem;position:relative}
+.flow li::before{content:counter(passo);width:3rem;height:3rem;border-radius:50%;background:var(--hero);color:var(--on-hero);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:1.5rem;top:3rem;bottom:0;width:2px;background:var(--line)}
+.flow .who{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.flow h3{margin-top:.1rem}
+.stack{display:grid;gap:.8rem}
+.tool{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:.4rem 1.4rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}
+.tool .name{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.1rem}
+.tool .kind{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);display:block;font-weight:400;margin-top:.15rem}
+@media (max-width:640px){.tool{grid-template-columns:minmax(0,1fr)}}
+.lessons{display:grid;gap:.9rem}
+.lesson{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem}
+.lesson .tag{font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:.3rem}
+.lesson .tag.prob{color:var(--warn)}
+.lesson .tag.fix{color:var(--ok)}
+@media (max-width:640px){.lesson{grid-template-columns:minmax(0,1fr);gap:.7rem}}
+.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem}
+.num{border-top:4px solid var(--accent);padding-top:.7rem}
+.num b{display:block;font-family:var(--font-display);font-size:2.3rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.05}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem}
+.shots figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:.6rem .9rem;font-size:.95rem;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.6rem}
+.list{margin:0;padding-left:1.2rem;display:grid;gap:.55rem}
+.list li::marker{color:var(--accent-ink)}
+.role{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--hero-2);border-radius:12px;padding:1.4rem 1.5rem;display:grid;gap:.8rem;max-width:44rem}
+footer{padding-block:2.5rem 3rem}
+footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
+@media (prefers-color-scheme:dark){:root{--bg:#0A1022;--surface:#111A33;--ink:#EEF2FB;--muted:#A3AEC4;--line:#22305A;--accent-ink:#9CC3FE;--ok:#4ADE80;--warn:#F5B14A;color-scheme:dark}}</style></head><body>
+<a class="skip" href="#problema">Saltar para o conteúdo</a>
+<header class="hero"><div class="wrap">
+<a class="back" href="../index.html">← Todos os projetos de Lenira Leitão</a>
+<div class="brand" aria-hidden="true"><span class="mark">◷</span><b>BlueTime Agenda</b></div>
+<p class="eyebrow" style="color:var(--accent)">Estudo de caso · App publicada · Portugal, 2026</p>
+<h1>A agenda cheia, <em>sem telefonemas.</em></h1><p class="lede">Uma app de marcações para <strong>salões, barbearias e espaços de estética</strong>. O cliente marca pelo telemóvel sem criar conta e recebe lembrete por WhatsApp. O dono gere a agenda, a equipa e os relatórios, e é avisado com som quando entra uma marcação. Feita em homenagem a Cuxe Lopes, cabeleireira durante mais de 30 anos.</p><div class="links">
+<a class="btn solid" href="https://agenda-fluxo-azul.lovable.app" target="_blank" rel="noopener">Abrir a app ↗</a>
+<a class="btn ghost" href="https://agenda-fluxo-azul.lovable.app/demo/barbearia-classic" target="_blank" rel="noopener">Ver uma barbearia de exemplo ↗</a>
+</div><p class="facts"><span><b>70</b> testes automáticos</span><span><b>22</b> páginas verificadas quanto a acessibilidade</span><span><b>2</b> idiomas</span><span><b>123</b> alterações à base de dados</span></p></div></header><main>
+<section class="block" id="problema" aria-labelledby="t-problema"><div class="wrap"><div class="head"><p class="eyebrow">O problema</p><h2 id="t-problema">O tempo perdido entre uma cliente e o telefone</h2></div><div class="prose"><p>Num salão, o telefone toca a meio de um corte. Marca-se à pressa num caderno, esquecem-se horas, duas clientes ficam com a mesma hora e há quem simplesmente não apareça.</p><p>O objetivo do BlueTime é que cada espaço tenha a sua página de marcação, que só mostra horas realmente livres, envia lembretes e deixa o cliente cancelar ou remarcar sozinho. O dono deixa de ser telefonista e passa a ver a agenda organizada.</p></div>
+</div></section>
+<section class="block" aria-labelledby="t-faz"><div class="wrap"><div class="head"><p class="eyebrow">O que faz</p><h2 id="t-faz">Duas pessoas, duas experiências</h2><p class="muted prose">O cliente nunca precisa de conta. O dono tem uma área de gestão completa, no telemóvel e no computador.</p></div>
+<p class="group-label">Para o cliente</p><div class="features">
+<div class="feat"><h3>Marcar em segundos</h3><p>Escolhe o serviço, o profissional (opcional) e uma hora livre. A página tem as cores e o logótipo do espaço.</p><p class="say">/salao/nome-do-salao</p></div>
+<div class="feat"><h3>Lembretes</h3><p>Recebe lembrete por WhatsApp na véspera e 3 horas antes, no idioma em que marcou.</p></div>
+<div class="feat"><h3>Cancelar ou remarcar</h3><p>Pelo link que recebe, sem telefonemas. A página atualiza-se sozinha com a mensagem do salão.</p></div>
+</div>
+<p class="group-label">Para o dono</p><div class="features">
+<div class="feat"><h3>Agenda e marcações</h3><p>Filtros, pesquisa, confirmação com um toque e mensagem ao cliente.</p></div>
+<div class="feat"><h3>Equipa e horários</h3><p>Horários semanais, pausas, folgas, feriados e regras por serviço: preparação, limpeza, intervalo, limite por dia.</p></div>
+<div class="feat"><h3>Avisos com som</h3><p>Notificação no telemóvel ou no computador quando entra uma marcação, mesmo com a app fechada.</p></div>
+<div class="feat"><h3>Relatórios</h3><p>Relatório mensal em PDF e Excel, faturação por profissional e por serviço.</p></div>
+<div class="feat"><h3>Clientes</h3><p>Histórico, faltas e, para o RGPD, apagar os dados pessoais sem perder a faturação.</p></div>
+<div class="feat"><h3>Português e Inglês</h3><p>Cada pessoa escolhe o idioma. Um teste garante que nenhum texto fica por traduzir.</p></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-shots"><div class="wrap"><div class="head"><p class="eyebrow">Ecrãs</p><h2 id="t-shots">Como se vê</h2></div><div class="shots"><figure><img src="img/bluetime-inicio.jpg" alt="Página inicial" loading="lazy"><figcaption>Página inicial</figcaption></figure><figure><img src="img/bluetime-marcacoes.jpg" alt="Área de gestão: marcações" loading="lazy"><figcaption>Área de gestão: marcações</figcaption></figure><figure><img src="img/bluetime-marcacao-telemovel.jpg" alt="Página de marcação no telemóvel" loading="lazy"><figcaption>Página de marcação no telemóvel</figcaption></figure></div></div></section>
+<section class="block" aria-labelledby="t-pedido"><div class="wrap"><div class="head"><p class="eyebrow">Por dentro</p><h2 id="t-pedido">O que acontece quando uma cliente marca</h2><p class="muted prose">Cada passo foi pensado para que nunca haja duas pessoas na mesma hora e para que o salão saiba logo.</p></div><ol class="flow">
+<li><div><span class="who">Telemóvel · página do salão</span><h3>Escolher o serviço e a hora</h3><p>A página pergunta ao servidor que horas estão livres para aquele serviço, já com folgas, pausas, feriados e as regras do serviço aplicadas.</p></div></li>
+<li><div><span class="who">Servidor · base de dados</span><h3>Confirmar sem duplicar</h3><p>Ao confirmar, a base de dados bloqueia a agenda do salão por instantes, volta a calcular as horas livres e só então grava. Se outra pessoa ficou com a hora no mesmo segundo, a página pede outra.</p></div></li>
+<li><div><span class="who">Servidor · aviso</span><h3>Avisar o dono</h3><p>Um gatilho na base de dados chama uma função que envia a notificação com som para os telemóveis e computadores do dono.</p></div></li>
+<li><div><span class="who">Servidor · lembretes</span><h3>Lembrar a cliente</h3><p>De 15 em 15 minutos, uma tarefa automática envia os lembretes de quem deu consentimento, no idioma certo.</p></div></li>
+<li><div><span class="who">Telemóvel · link da cliente</span><h3>Cancelar ou remarcar</h3><p>A cliente usa o link que recebeu. O mesmo cálculo das horas livres garante que a nova hora também está livre.</p></div></li>
+</ol></div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feita</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2><p class="muted prose">Cada linha diz o que a ferramenta é e para que serve nesta app.</p></div>
+<p class="group-label">Construir e publicar</p><div class="stack">
+<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Criou a primeira versão a partir de descrições escritas e é onde a app fica publicada, em agenda-fluxo-azul.lovable.app.</p></div></div>
+<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda todo o código e o histórico de cada alteração, com uma explicação do porquê. Cada alteração aprovada aparece logo no Lovable.</p></div></div>
+<div class="tool"><div class="name">Claude Code<span class="kind">assistente de programação com IA</span></div><div><p>Analisou, escreveu e corrigiu o código a partir dos pedidos da Lenira, sempre em português, e correu os testes automáticos antes de cada envio.</p></div></div>
+</div>
+<p class="group-label">A app por dentro</p><div class="stack">
+<div class="tool"><div class="name">React, TypeScript, Vite e Tailwind<span class="kind">a base da app web</span></div><div><p>As ferramentas com que se desenham os ecrãs. Cada página só é descarregada quando é precisa.</p></div></div>
+<div class="tool"><div class="name">Supabase<span class="kind">base de dados, contas e funções</span></div><div><p>Guarda salões, clientes e marcações. Regras de segurança na base de dados garantem que cada salão só vê os seus dados.</p></div></div>
+<div class="tool"><div class="name">Web Push e Realtime<span class="kind">avisos em tempo real</span></div><div><p>Avisam o dono quando entra uma marcação, com a app aberta ou fechada.</p></div></div>
+<div class="tool"><div class="name">WhatsApp Cloud API<span class="kind">lembretes</span></div><div><p>Envia os lembretes aprovados. Sem credenciais, os lembretes aparecem no painel para enviar com um toque.</p></div></div>
+<div class="tool"><div class="name">jsPDF e ExcelJS<span class="kind">relatórios</span></div><div><p>Criam o relatório mensal em PDF e em Excel, só quando se carrega em descarregar.</p></div></div>
+</div>
+<p class="group-label">Testar antes de publicar</p><div class="stack">
+<div class="tool"><div class="name">Vitest<span class="kind">testes automáticos</span></div><div><p>31 testes às regras: datas em Lisboa, telefones, planos, traduções.</p></div></div>
+<div class="tool"><div class="name">Playwright<span class="kind">browser automático</span></div><div><p>39 cenários, cada um no computador e no telemóvel: marcar, cancelar, gerir, notificações.</p></div></div>
+<div class="tool"><div class="name">axe<span class="kind">verificador de acessibilidade</span></div><div><p>22 páginas verificadas segundo as normas WCAG 2.1 AA.</p></div></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Erros reais</p><h2 id="t-aprendi">O que se encontrou e como ficou resolvido</h2><p class="muted prose">A maior parte veio de usar a app como cliente e como dona de salão.</p></div><div class="lessons">
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Uma marcação parecia aparecer 3 ou 4 vezes.</p></div><div><span class="tag fix">Solução</span><p>Eram marcações de teste com o mesmo telefone, e cada uma mudava o nome do cliente. Agora o nome mantém-se e o novo fica nas notas.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>O limite diário de um serviço era guardado mas não tinha efeito.</p></div><div><span class="tag fix">Solução</span><p>As regras por serviço passaram a contar no cálculo das horas livres, ao marcar e ao remarcar.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>O salão tinha de ir ver de tempo a tempo se entrava uma marcação.</p></div><div><span class="tag fix">Solução</span><p>Avisos com som no telemóvel e no computador, mesmo com a app fechada.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Regras antigas do protótipo deixariam contas "staff" ver outros salões.</p></div><div><span class="tag fix">Solução</span><p>Cada dono só vê o que é seu, em todas as tabelas, verificado como visitante e como dono.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>O Excel era uma tabela simples.</p></div><div><span class="tag fix">Solução</span><p>Um relatório com o mesmo aspeto do PDF, com indicadores e cores por estado.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Textos claros demais e botões sem nome para leitores de ecrã.</p></div><div><span class="tag fix">Solução</span><p>22 páginas passam a verificação de acessibilidade, que faz parte dos testes.</p></div></div>
+</div></div></section>
+<section class="block" aria-labelledby="t-numeros"><div class="wrap"><div class="head"><p class="eyebrow">Em números</p><h2 id="t-numeros">O projeto em números</h2></div><div class="numbers"><div class="num"><b>15 800</b><span class="muted">linhas de TypeScript</span></div><div class="num"><b>8 300</b><span class="muted">linhas de SQL</span></div><div class="num"><b>70</b><span class="muted">testes automáticos</span></div><div class="num"><b>1 145</b><span class="muted">textos em português e inglês</span></div></div></div></section>
+<section class="block" aria-labelledby="t-limites"><div class="wrap"><div class="two"><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">Com franqueza</p><h2 id="t-limites">Limites atuais</h2><ul class="list"><li>Os pagamentos (Stripe) estão em modo de teste.</li><li>O envio automático por WhatsApp espera a aprovação dos modelos na Meta.</li><li>Ainda não tem domínio próprio nem monitorização de erros.</li><li>Ainda não há salões reais a usar a app.</li></ul></div><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">A seguir</p><h2>Próximos passos</h2><ul class="list"><li>Pôr um ou dois salões a usar e medir as faltas antes e depois.</li><li>Ativar os pagamentos e os lembretes automáticos.</li><li>Domínio próprio e monitorização de erros.</li></ul></div></div></div></section>
+<section class="block" aria-labelledby="t-papel"><div class="wrap"><div class="role"><p class="eyebrow">O meu papel</p><h2 id="t-papel">Lenira Leitão</h2><p>A ideia, as decisões de produto, os testes como cliente e como dona de salão e a direção de cada correção foram meus. O código foi escrito com ferramentas de IA (Lovable e Claude Code), a partir dos meus pedidos.</p><p class="muted">Aprendi a pedir revisões com provas, a testar no telemóvel e no computador, a proteger os dados de cada salão e a não aceitar "está feito" sem ver.</p></div></div></section>
+</main><footer><div class="wrap"><p>BlueTime Agenda. App em <a href="https://agenda-fluxo-azul.lovable.app" target="_blank" rel="noopener">agenda-fluxo-azul.lovable.app</a>.</p><p>Em homenagem a Cuxe Lopes, cabeleireira durante mais de 30 anos.</p></div></footer></body></html>

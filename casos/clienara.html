@@ -1,0 +1,143 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CLIENARA · Estudo de caso</title><meta name="description" content="Painéis, relatórios e IA a partir do Excel de vendas, com a marca de cada parceiro.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"><style>
+:root{--hero:#1B3A5F;--hero-2:#24507F;--accent:#7CC4F0;--accent-ink:#1B6FA8;--on-accent:#0E2238;--bg:#F6F9FC;--surface:#FFFFFF;--ink:#10223A;--muted:#55657A;--line:#DCE4EE;--ok:#15803D;--warn:#B45309;--on-hero:#FFFFFF;--on-hero-soft:#C8DAEC;--font-display:Fraunces, Georgia, serif;--font-body:Manrope, "Segoe UI", system-ui, sans-serif;--font-mono:"JetBrains Mono", ui-monospace, monospace;--display-weight:600;--em-style:normal;--brand-tracking:0.08em}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.125rem;line-height:1.65}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:8px;font-weight:700;z-index:20}
+.skip:focus{left:16px}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.12;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:var(--display-weight);letter-spacing:-0.01em}
+h3{font-size:1.25rem;font-weight:700;font-family:var(--font-h3,var(--font-display))}
+p{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.prose{max-width:40rem;display:grid;gap:1rem}
+.muted{color:var(--muted)}
+.back{display:inline-block;font-size:.95rem;color:var(--on-hero-soft);text-decoration:none;margin-bottom:.4rem}
+.back:hover{color:var(--on-hero)}
+.hero{background:linear-gradient(140deg,var(--hero) 0%,var(--hero-2) 100%);color:var(--on-hero)}
+.hero .wrap{padding-block:3rem 3rem;display:grid;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand .mark{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent);font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.brand b{font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:var(--brand-tracking)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:var(--display-weight);letter-spacing:-0.02em;max-width:18ch}
+.hero h1 em{font-style:var(--em-style);color:var(--accent)}
+.hero .lede{font-size:1.25rem;color:var(--on-hero-soft);max-width:40rem}
+.hero .lede strong{color:var(--on-hero)}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn.solid{background:var(--accent);color:var(--on-accent)}
+.btn.ghost{border:2px solid rgba(255,255,255,.45);color:var(--on-hero)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-family:var(--font-mono);font-size:.9rem;color:var(--on-hero-soft)}
+.facts b{color:var(--on-hero);font-weight:600}
+section.block{padding-block:3.5rem;border-bottom:1px solid var(--line)}
+section.block>.wrap{display:grid;gap:1.6rem}
+.head{display:grid;gap:.6rem}
+.quote{border-left:5px solid var(--accent);padding:.4rem 0 .4rem 1.2rem;font-size:1.3rem;font-family:var(--font-display);font-weight:500;max-width:40rem}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem;display:grid;gap:.4rem;align-content:start}
+.feat .say{font-family:var(--font-mono);font-size:.85rem;color:var(--accent-ink)}
+.group-label{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.flow{list-style:none;margin:0;padding:0;display:grid;counter-reset:passo}
+.flow li{counter-increment:passo;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding-bottom:1.4rem;position:relative}
+.flow li::before{content:counter(passo);width:3rem;height:3rem;border-radius:50%;background:var(--hero);color:var(--on-hero);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:1.5rem;top:3rem;bottom:0;width:2px;background:var(--line)}
+.flow .who{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.flow h3{margin-top:.1rem}
+.stack{display:grid;gap:.8rem}
+.tool{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:.4rem 1.4rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}
+.tool .name{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.1rem}
+.tool .kind{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);display:block;font-weight:400;margin-top:.15rem}
+@media (max-width:640px){.tool{grid-template-columns:minmax(0,1fr)}}
+.lessons{display:grid;gap:.9rem}
+.lesson{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem}
+.lesson .tag{font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:.3rem}
+.lesson .tag.prob{color:var(--warn)}
+.lesson .tag.fix{color:var(--ok)}
+@media (max-width:640px){.lesson{grid-template-columns:minmax(0,1fr);gap:.7rem}}
+.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem}
+.num{border-top:4px solid var(--accent);padding-top:.7rem}
+.num b{display:block;font-family:var(--font-display);font-size:2.3rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.05}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem}
+.shots figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:.6rem .9rem;font-size:.95rem;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.6rem}
+.list{margin:0;padding-left:1.2rem;display:grid;gap:.55rem}
+.list li::marker{color:var(--accent-ink)}
+.role{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--hero-2);border-radius:12px;padding:1.4rem 1.5rem;display:grid;gap:.8rem;max-width:44rem}
+footer{padding-block:2.5rem 3rem}
+footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1626;--surface:#112238;--ink:#EAF1F8;--muted:#A2B3C7;--line:#21374F;--accent-ink:#7CC4F0;--ok:#4ADE80;--warn:#F5B14A;color-scheme:dark}}</style></head><body>
+<a class="skip" href="#problema">Saltar para o conteúdo</a>
+<header class="hero"><div class="wrap">
+<a class="back" href="../index.html">← Todos os projetos de Lenira Leitão</a>
+<div class="brand" aria-hidden="true"><span class="mark">C</span><b>CLIENARA</b></div>
+<p class="eyebrow" style="color:var(--accent)">Estudo de caso · App publicada · Portugal, 2026</p>
+<h1>Menos tarefas manuais. <em>Mais trabalho inteligente.</em></h1><p class="lede">Uma plataforma para <strong>contabilistas e consultoras</strong>: o Excel de vendas que os clientes já lhes enviam transforma-se em <strong>painéis, relatórios em PDF e respostas da IA</strong>, com a marca do parceiro e os dados de cada empresa bem guardados.</p><div class="links">
+<a class="btn solid" href="https://clienara.lovable.app" target="_blank" rel="noopener">Abrir a app ↗</a>
+<a class="btn ghost" href="#como-foi-feita">Como foi feita</a>
+</div><p class="facts"><span><b>39</b> testes às regras</span><span><b>22</b> verificações de segurança</span><span><b>White-label</b> com a marca de cada parceiro</span><span><b>IA</b> só com dados agregados</span></p></div></header><main>
+<section class="block" id="problema" aria-labelledby="t-problema"><div class="wrap"><div class="head"><p class="eyebrow">O problema</p><h2 id="t-problema">O Excel que ninguém tem tempo de transformar</h2></div><div class="prose"><p>Os gabinetes de contabilidade recebem todos os meses ficheiros de vendas dos clientes, cada um exportado de um programa diferente. Transformar isso em gráficos e conclusões leva horas e acaba quase sempre por não se fazer.</p><p>A CLIENARA lê o ficheiro, percebe sozinha que coluna é o quê, valida cada linha e monta os painéis e o relatório. O parceiro mostra tudo com a sua própria marca, e o cliente pode fazer perguntas em português.</p></div>
+</div></section>
+<section class="block" aria-labelledby="t-faz"><div class="wrap"><div class="head"><p class="eyebrow">O que faz</p><h2 id="t-faz">Do ficheiro à conversa com o cliente</h2><p class="muted prose">Três papéis: o administrador do parceiro gere empresas e marca, o gestor carrega e analisa, o visualizador só consulta.</p></div>
+<p class="group-label">Dados</p><div class="features">
+<div class="feat"><h3>Carregar Excel ou CSV</h3><p>Aceita os formatos portugueses: datas dia/mês, valores 1.234,56 € e ficheiros com acentos do Windows.</p><p class="say">«vendas_outubro.xlsx»</p></div>
+<div class="feat"><h3>Mapeamento inteligente</h3><p>Sugere a coluna certa para cada campo a partir do nome (PT/EN) e do tipo de dados, e guarda modelos para reutilizar.</p><p class="say">«Artigo», «Família», «Total (€)»</p></div>
+<div class="feat"><h3>Validação linha a linha</h3><p>Mostra quantas linhas são válidas e porquê as outras foram rejeitadas. Um upload pode ser anulado.</p><p class="say">«Linha 14: valor inválido»</p></div>
+</div>
+<p class="group-label">Análise</p><div class="features">
+<div class="feat"><h3>Painel</h3><p>Receita, transações, ticket médio, crescimento, top de produtos, equipa, pagamentos e mapa de calor dia × hora.</p></div>
+<div class="feat"><h3>Pergunte aos seus dados</h3><p>O cliente escreve perguntas em português e recebe respostas baseadas só nos números do período.</p><p class="say">«Quando devo reforçar a equipa?»</p></div>
+<div class="feat"><h3>Relatório PDF</h3><p>Com o logótipo e as cores do parceiro e um resumo escrito automaticamente.</p></div>
+</div>
+<p class="group-label">Gestão</p><div class="features">
+<div class="feat"><h3>White-label</h3><p>Logótipo, cores e nome da plataforma de cada parceiro, aplicados em toda a interface e no PDF.</p></div>
+<div class="feat"><h3>Visão do parceiro</h3><p>Empresas em queda de receita e sem dados recentes, ordenadas por prioridade.</p></div>
+<div class="feat"><h3>Segurança e RGPD</h3><p>Registo de auditoria, exportação e apagamento de dados de cada empresa.</p></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-shots"><div class="wrap"><div class="head"><p class="eyebrow">Ecrãs</p><h2 id="t-shots">Como se vê</h2></div><div class="shots"><figure><img src="img/clienara-landing.jpg" alt="Página inicial" loading="lazy"><figcaption>Página inicial</figcaption></figure><figure><img src="img/clienara-dashboard.jpg" alt="Painel com a marca de um parceiro" loading="lazy"><figcaption>Painel com a marca de um parceiro</figcaption></figure><figure><img src="img/clienara-assistente-ia.jpg" alt="Pergunte aos seus dados" loading="lazy"><figcaption>Pergunte aos seus dados</figcaption></figure><figure><img src="img/clienara-relatorio.jpg" alt="Relatório executivo em PDF" loading="lazy"><figcaption>Relatório executivo em PDF</figcaption></figure></div></div></section>
+<section class="block" aria-labelledby="t-pedido"><div class="wrap"><div class="head"><p class="eyebrow">Por dentro</p><h2 id="t-pedido">Do Excel do cliente à resposta da IA</h2><p class="muted prose">Cada passo protege os dados: cada empresa só é vista por quem tem acesso a ela.</p></div><ol class="flow">
+<li><div><span class="who">Browser · leitura do ficheiro</span><h3>Ler e perceber o ficheiro</h3><p>A app lê o Excel ou CSV no próprio browser, deteta o tipo de cada coluna e sugere o mapeamento.</p></div></li>
+<li><div><span class="who">Browser · validação</span><h3>Converter e validar</h3><p>Datas, valores e horas passam para um formato único. Cada linha inválida fica explicada.</p></div></li>
+<li><div><span class="who">Servidor · base de dados</span><h3>Guardar por empresa</h3><p>As vendas são gravadas em lotes, ligadas à empresa e ao parceiro. As regras de segurança impedem que outro parceiro as veja.</p></div></li>
+<li><div><span class="who">Browser · cálculos</span><h3>Montar o painel</h3><p>Os indicadores, rankings e o mapa de calor são calculados com os filtros escolhidos.</p></div></li>
+<li><div><span class="who">Servidor · IA</span><h3>Responder com privacidade</h3><p>Para a IA só segue um resumo com totais, nunca vendas individuais nem clientes. A chamada corre no servidor e cada pergunta fica registada.</p></div></li>
+</ol></div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feita</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2><p class="muted prose">Cada linha diz o que a ferramenta é e para que serve nesta app.</p></div>
+<p class="group-label">Construir e publicar</p><div class="stack">
+<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Criou a primeira versão a partir de descrições escritas e é onde a app fica publicada, em clienara.lovable.app.</p></div></div>
+<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda todo o código e o histórico de cada alteração, com uma explicação do porquê. Cada alteração aprovada aparece logo no Lovable.</p></div></div>
+<div class="tool"><div class="name">Claude Code<span class="kind">assistente de programação com IA</span></div><div><p>Analisou, escreveu e corrigiu o código a partir dos pedidos da Lenira, sempre em português, e correu os testes automáticos antes de cada envio.</p></div></div>
+</div>
+<p class="group-label">A app por dentro</p><div class="stack">
+<div class="tool"><div class="name">React, TypeScript, Vite e Tailwind<span class="kind">a base da app web</span></div><div><p>As ferramentas com que se desenham os ecrãs e os gráficos (Recharts).</p></div></div>
+<div class="tool"><div class="name">Supabase<span class="kind">base de dados, contas, ficheiros e funções</span></div><div><p>Isola os dados por parceiro e por empresa com regras na própria base de dados.</p></div></div>
+<div class="tool"><div class="name">SheetJS<span class="kind">leitura de Excel</span></div><div><p>Lê ficheiros .xlsx e .csv no browser, sem os enviar para outro serviço.</p></div></div>
+<div class="tool"><div class="name">Lovable AI<span class="kind">assistente de IA</span></div><div><p>Responde às perguntas em português de Portugal, usando apenas os números recebidos.</p></div></div>
+<div class="tool"><div class="name">jsPDF e html2canvas<span class="kind">relatório PDF</span></div><div><p>Transformam os gráficos do painel num relatório com a marca do parceiro.</p></div></div>
+</div>
+<p class="group-label">Testar antes de publicar</p><div class="stack">
+<div class="tool"><div class="name">Vitest<span class="kind">testes automáticos</span></div><div><p>39 testes: conversões em formato português, mapeamento, indicadores, mapa de calor e o resumo enviado à IA.</p></div></div>
+<div class="tool"><div class="name">Testes SQL<span class="kind">segurança</span></div><div><p>22 verificações de que um parceiro não lê nem altera dados de outro.</p></div></div>
+<div class="tool"><div class="name">Playwright<span class="kind">browser automático</span></div><div><p>Percurso completo: registo, dados de demonstração, filtros, upload, PDF, marca e convite.</p></div></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Lições</p><h2 id="t-aprendi">O que se encontrou e como ficou resolvido</h2><p class="muted prose">Sete lições do guia de construção, resumidas.</p></div><div class="lessons">
+<div class="lesson"><div><span class="tag prob">Problema</span><p>A primeira versão parecia completa, mas os relatórios diziam "em breve" e os valores 1.234,56 € eram guardados como 1,23.</p></div><div><span class="tag fix">Solução</span><p>Fazer o percurso completo como cliente antes de mostrar: criar conta, carregar dados, ver o resultado.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Uma regra de segurança deixava qualquer pessoa mudar o seu parceiro e ler as vendas de outro.</p></div><div><span class="tag fix">Solução</span><p>O utilizador só altera o próprio nome. Tudo o resto passa por funções que verificam quem pede, com 22 testes de ataque.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Com 32 mil vendas, o painel do parceiro demorava 10,8 segundos.</p></div><div><span class="tag fix">Solução</span><p>A regra de segurança passou a ser calculada uma vez por consulta: 46 milissegundos.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Os ficheiros portugueses trazem datas dia/mês, vírgulas decimais e acentos estragados.</p></div><div><span class="tag fix">Solução</span><p>Uma conversão própria para datas, valores e codificações, coberta por testes automáticos.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Enviar vendas à IA poria em risco os dados dos clientes.</p></div><div><span class="tag fix">Solução</span><p>Só seguem totais agregados, e um teste garante que não há dados pessoais no que é enviado.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>No telemóvel, os gráficos saíam 228 px para fora do ecrã.</p></div><div><span class="tag fix">Solução</span><p>As colunas dos gráficos passaram a poder encolher, e o mapa de calor desliza dentro do seu cartão.</p></div></div>
+</div></div></section>
+<section class="block" aria-labelledby="t-numeros"><div class="wrap"><div class="head"><p class="eyebrow">Em números</p><h2 id="t-numeros">O projeto em números</h2></div><div class="numbers"><div class="num"><b>10 300</b><span class="muted">linhas de TypeScript</span></div><div class="num"><b>39</b><span class="muted">testes às regras</span></div><div class="num"><b>22</b><span class="muted">verificações de segurança</span></div><div class="num"><b>3</b><span class="muted">papéis de utilizador</span></div></div></div></section>
+<section class="block" aria-labelledby="t-limites"><div class="wrap"><div class="two"><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">Com franqueza</p><h2 id="t-limites">Limites atuais</h2><ul class="list"><li>Os dados chegam por upload manual de ficheiros.</li><li>Ainda não envia convites nem relatórios por email.</li><li>Ainda não há gabinetes reais a usar a plataforma.</li></ul></div><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">A seguir</p><h2>Próximos passos</h2><ul class="list"><li>Ligação direta a programas de faturação (SAF-T PT, sistemas de caixa).</li><li>Envio de convites e relatórios por email, com relatórios agendados.</li><li>Domínio próprio para cada parceiro.</li></ul></div></div></div></section>
+<section class="block" aria-labelledby="t-papel"><div class="wrap"><div class="role"><p class="eyebrow">O meu papel</p><h2 id="t-papel">Lenira Leitão</h2><p>A ideia, as decisões de produto e a direção de cada correção foram meus. O código foi escrito com ferramentas de IA (Lovable e Claude Code), a partir dos meus pedidos.</p><p class="muted">Aprendi que "tem segurança" não é o mesmo que "está seguro": é preciso tentar entrar como atacante e provar que falha.</p></div></div></section>
+</main><footer><div class="wrap"><p>CLIENARA. App em <a href="https://clienara.lovable.app" target="_blank" rel="noopener">clienara.lovable.app</a>.</p></div></footer></body></html>

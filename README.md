@@ -52,7 +52,7 @@ Aquilo de que mais gosto:
 **[Voz Clara](https://tatodigital.lovable.app)**<br>
 <sub>APP · ACESSIBILIDADE</sub>
 
-Para pessoas cegas ou com baixa visão: diz a cor da roupa, lê cartas e rótulos com a câmara, diz onde a pessoa está e lê documentos em voz alta. [Como foi feita](casos/voz-clara.md)
+Para pessoas cegas ou com baixa visão: diz a cor da roupa, lê cartas e rótulos com a câmara, diz onde a pessoa está e lê documentos em voz alta. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
 
 </td>
 <td width="50%" valign="top">
@@ -62,7 +62,7 @@ Para pessoas cegas ou com baixa visão: diz a cor da roupa, lê cartas e rótulo
 **[BlueTime Agenda](https://agenda-fluxo-azul.lovable.app)**<br>
 <sub>APP · SALÕES E BARBEARIAS</sub>
 
-Marcações online com lembretes por WhatsApp e avisos para o salão. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo) · [Como foi feito](casos/bluetime.md)
+Marcações online com lembretes por WhatsApp e avisos para o salão. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/bluetime.html)
 
 </td>
 </tr>
@@ -84,7 +84,7 @@ Tira uma foto a uma carta das Finanças e explica o que é, quanto pagar e até 
 **[CLIENARA](https://clienara.lovable.app)**<br>
 <sub>PLATAFORMA · AUTOMAÇÃO PARA EMPRESAS</sub>
 
-Menos tarefas manuais, mais trabalho inteligente: o Excel de vendas dos clientes vira painéis, relatórios em PDF e respostas da IA, com a marca de cada parceiro. [Como foi feita](casos/clienara.md)
+Menos tarefas manuais, mais trabalho inteligente: o Excel de vendas dos clientes vira painéis, relatórios em PDF e respostas da IA, com a marca de cada parceiro. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/clienara.html)
 
 </td>
 </tr>
