@@ -12,7 +12,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&duration=3000&pause=800&color=C084FC&center=true&vCenter=true&width=600&lines=Apps+%C3%BAteis+para+pessoas+reais;Sites+que+fazem+uma+marca+brilhar;Forma%C3%A7%C3%B5es+para+quem+quer+criar" alt="Apps úteis para pessoas reais. Sites que fazem uma marca brilhar. Formações para quem quer criar.">
 </p>
 
-<img src="cristal.gif" align="right" width="230" alt="Bola de cristal mágica">
+<img src="planeta.gif" align="right" width="240" alt="Planeta com uma lua a girar à volta">
 
 ### Olá 👋
 
@@ -32,7 +32,6 @@ Aquilo de que mais gosto:
 
 ### Neste momento
 
-<img src="livro.gif" align="right" width="230" alt="Livro mágico aberto com faíscas">
 
 🪄 A criar apps úteis com IA, do problema real à publicação
 
