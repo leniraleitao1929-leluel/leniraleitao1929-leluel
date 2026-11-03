@@ -91,9 +91,9 @@ Menos tarefas manuais, mais trabalho inteligente: clientes, documentos e process
 <tr>
 <td width="50%" valign="top">
 
-<img src="projetos/origem.png" alt="Método ORIGEM" width="100%">
+<a href="https://metodo-origem.lovable.app"><img src="projetos/origem.png" alt="Método ORIGEM" width="100%"></a>
 
-**Método ORIGEM**<br>
+**[Método ORIGEM](https://metodo-origem.lovable.app)**<br>
 <sub>CURSO · 150 HORAS</sub>
 
 Formação prática para transformar o teu conhecimento num projeto digital com Inteligência Artificial.
@@ -123,9 +123,9 @@ O guia passo a passo para transformar o que sabes fazer num ebook, numa landing 
 </td>
 <td width="50%" valign="top">
 
-<img src="projetos/pequenos-encantos.png" alt="Pequenos Encantos" width="100%">
+<a href="https://pequenosencantos.lovable.app"><img src="projetos/pequenos-encantos.png" alt="Pequenos Encantos" width="100%"></a>
 
-**Pequenos Encantos**<br>
+**[Pequenos Encantos](https://pequenosencantos.lovable.app)**<br>
 <sub>MARCA · CONTOS MÁGICOS</sub>
 
 Músicas personalizadas, vídeos encantados e memórias mágicas para emocionar famílias.
