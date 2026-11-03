@@ -62,7 +62,7 @@ Lê em voz alta PDFs e fotografias de cartas que o telemóvel não consegue ler,
 **[BlueTime Agenda](https://agenda-fluxo-azul.lovable.app)**<br>
 <sub>APP · SALÕES E BARBEARIAS</sub>
 
-Marcações online com lembretes por WhatsApp e avisos para o salão. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo)
+Marcações online com lembretes por WhatsApp e avisos para o salão. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo) · [Como foi feito](casos/bluetime.md)
 
 </td>
 </tr>
@@ -79,12 +79,12 @@ Tira uma foto a uma carta das Finanças e explica o que é, quanto pagar e até 
 </td>
 <td width="50%" valign="top">
 
-<a href="https://clienara.lovable.app"><img src="projetos/clienara.png" alt="Clienara" width="100%"></a>
+<a href="https://clienara.lovable.app"><img src="projetos/clienara.png" alt="CLIENARA" width="100%"></a>
 
-**[Clienara](https://clienara.lovable.app)**<br>
+**[CLIENARA](https://clienara.lovable.app)**<br>
 <sub>PLATAFORMA · AUTOMAÇÃO PARA EMPRESAS</sub>
 
-Menos tarefas manuais, mais trabalho inteligente: clientes, documentos e processos organizados num só lugar.
+Menos tarefas manuais, mais trabalho inteligente: o Excel de vendas dos clientes vira painéis, relatórios em PDF e respostas da IA, com a marca de cada parceiro. [Como foi feita](casos/clienara.md)
 
 </td>
 </tr>
