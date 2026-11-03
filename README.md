@@ -39,7 +39,7 @@ Aquilo de que mais gosto:
 
 `Novidade nov 2026:` O [BlueTime Agenda](https://agenda-fluxo-azul.lovable.app) ficou completo, com notificações, dois idiomas e testes automáticos. [Ler o caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo)
 
-`Novidade nov 2026:` Publiquei a **[Voz Clara](https://tatodigital.lovable.app)**, que lê em voz alta documentos para pessoas cegas ou com pouca visão.
+`Novidade nov 2026:` Publiquei a **[Voz Clara](https://tatodigital.lovable.app)**, que ajuda pessoas cegas ou com baixa visão no dia a dia: cores, cartas, documentos e onde estão.
 
 ### As minhas criações ✨
 
@@ -52,7 +52,7 @@ Aquilo de que mais gosto:
 **[Voz Clara](https://tatodigital.lovable.app)**<br>
 <sub>APP · ACESSIBILIDADE</sub>
 
-Lê em voz alta PDFs e fotografias de cartas que o telemóvel não consegue ler, para pessoas cegas ou com pouca visão.
+Para pessoas cegas ou com baixa visão: diz a cor da roupa, lê cartas e rótulos com a câmara, diz onde a pessoa está e lê documentos em voz alta. [Como foi feita](casos/voz-clara.md)
 
 </td>
 <td width="50%" valign="top">
