@@ -31,7 +31,7 @@ Aquilo de que mais gosto:
 
 🪄 A criar apps úteis com IA, do problema real à publicação
 
-🎓 A preparar a **Academia ORIGEM** e o curso *Empreender com Inteligência Artificial*
+🎓 A preparar a **Academia ORIGEM**, uma app de estudo e de acompanhamento dos alunos
 
 🔍 A aprender a fundo arquitetura de apps, bases de dados e testes automáticos
 
@@ -79,12 +79,12 @@ Tira uma foto a uma carta das Finanças e explica o que é, quanto pagar e até 
 </td>
 <td width="50%" valign="top">
 
-<img src="projetos/montra.png" alt="Montra" width="100%">
+<a href="https://clienara.lovable.app"><img src="projetos/clienara.png" alt="Clienara" width="100%"></a>
 
-**Montra**<br>
-<sub>PLATAFORMA · EM DESENVOLVIMENTO</sub>
+**[Clienara](https://clienara.lovable.app)**<br>
+<sub>PLATAFORMA · AUTOMAÇÃO PARA EMPRESAS</sub>
 
-Transforma o Excel de vendas dos clientes de contabilistas em painéis e respostas claras.
+Menos tarefas manuais, mais trabalho inteligente: clientes, documentos e processos organizados num só lugar.
 
 </td>
 </tr>
@@ -101,9 +101,9 @@ Formação prática para transformar o teu conhecimento num projeto digital com 
 </td>
 <td width="50%" valign="top">
 
-<a href="https://workshopoteutalentoencontrado.lovable.app"><img src="projetos/academia.png" alt="Academia ORIGEM" width="100%"></a>
+<a href="https://workshopoteutalentoencontrado.lovable.app"><img src="projetos/workshop.png" alt="Workshop ORIGEM" width="100%"></a>
 
-**[Academia ORIGEM](https://workshopoteutalentoencontrado.lovable.app)**<br>
+**[Workshop ORIGEM](https://workshopoteutalentoencontrado.lovable.app)**<br>
 <sub>WORKSHOP</sub>
 
 Num sábado, online: crias o teu ebook de manhã e, à tarde, a página e o anúncio em vídeo.
