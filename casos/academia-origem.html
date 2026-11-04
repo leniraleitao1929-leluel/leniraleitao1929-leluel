@@ -1,0 +1,146 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Academia ORIGEM · Estudo de caso</title><meta name="description" content="A plataforma de estudo do ebook e do workshop «O Teu Talento Merece Ser Encontrado»: aulas, prompts preenchidos, passaporte de carimbos, comunidade e painel da formadora em tempo real.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;600&display=swap"><style>
+:root{--hero:#0B1A33;--hero-2:#1B3360;--accent:#E3C277;--accent-ink:#8A6418;--on-accent:#0B1A33;--bg:#FAF6EC;--surface:#FFFFFF;--ink:#0E1B33;--muted:#55607A;--line:#EADFC8;--ok:#1D7A46;--warn:#A4501B;--on-hero:#FFFFFF;--on-hero-soft:#CFD8EA;--font-display:Cinzel, Georgia, serif;--font-body:"DM Sans", "Segoe UI", system-ui, sans-serif;--font-mono:"JetBrains Mono", ui-monospace, monospace;--display-weight:700;--em-style:normal;--brand-tracking:0.08em;--font-h3:"DM Sans", "Segoe UI", system-ui, sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.125rem;line-height:1.65}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:8px;font-weight:700;z-index:20}
+.skip:focus{left:16px}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.12;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:var(--display-weight);letter-spacing:-0.01em}
+h3{font-size:1.25rem;font-weight:700;font-family:var(--font-h3,var(--font-display))}
+p{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.prose{max-width:40rem;display:grid;gap:1rem}
+.muted{color:var(--muted)}
+.back{display:inline-block;font-size:.95rem;color:var(--on-hero-soft);text-decoration:none;margin-bottom:.4rem}
+.back:hover{color:var(--on-hero)}
+.hero{background:linear-gradient(140deg,var(--hero) 0%,var(--hero-2) 100%);color:var(--on-hero)}
+.hero .wrap{padding-block:3rem 3rem;display:grid;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand .mark{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent);font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.brand b{font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:var(--brand-tracking)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:var(--display-weight);letter-spacing:-0.02em;max-width:18ch}
+.hero h1 em{font-style:var(--em-style);color:var(--accent)}
+.hero .lede{font-size:1.25rem;color:var(--on-hero-soft);max-width:40rem}
+.hero .lede strong{color:var(--on-hero)}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn.solid{background:var(--accent);color:var(--on-accent)}
+.btn.ghost{border:2px solid rgba(255,255,255,.45);color:var(--on-hero)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-family:var(--font-mono);font-size:.9rem;color:var(--on-hero-soft)}
+.facts b{color:var(--on-hero);font-weight:600}
+section.block{padding-block:3.5rem;border-bottom:1px solid var(--line)}
+section.block>.wrap{display:grid;gap:1.6rem}
+.head{display:grid;gap:.6rem}
+.quote{border-left:5px solid var(--accent);padding:.4rem 0 .4rem 1.2rem;font-size:1.3rem;font-family:var(--font-display);font-weight:500;max-width:40rem}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem;display:grid;gap:.4rem;align-content:start}
+.feat .say{font-family:var(--font-mono);font-size:.85rem;color:var(--accent-ink)}
+.group-label{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.flow{list-style:none;margin:0;padding:0;display:grid;counter-reset:passo}
+.flow li{counter-increment:passo;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding-bottom:1.4rem;position:relative}
+.flow li::before{content:counter(passo);width:3rem;height:3rem;border-radius:50%;background:var(--hero);color:var(--on-hero);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:1.5rem;top:3rem;bottom:0;width:2px;background:var(--line)}
+.flow .who{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.flow h3{margin-top:.1rem}
+.stack{display:grid;gap:.8rem}
+.tool{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:.4rem 1.4rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}
+.tool .name{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.1rem}
+.tool .kind{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);display:block;font-weight:400;margin-top:.15rem}
+@media (max-width:640px){.tool{grid-template-columns:minmax(0,1fr)}}
+.lessons{display:grid;gap:.9rem}
+.lesson{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem}
+.lesson .tag{font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:.3rem}
+.lesson .tag.prob{color:var(--warn)}
+.lesson .tag.fix{color:var(--ok)}
+@media (max-width:640px){.lesson{grid-template-columns:minmax(0,1fr);gap:.7rem}}
+.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem}
+.num{border-top:4px solid var(--accent);padding-top:.7rem}
+.num b{display:block;font-family:var(--font-display);font-size:2.3rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.05}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;align-items:start}
+.shots figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:.6rem .9rem;font-size:.95rem;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.6rem}
+.list{margin:0;padding-left:1.2rem;display:grid;gap:.55rem}
+.list li::marker{color:var(--accent-ink)}
+.role{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--hero-2);border-radius:12px;padding:1.4rem 1.5rem;display:grid;gap:.8rem;max-width:44rem}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:1.1rem 1.1rem 1.1rem .3rem;padding:.55rem 1rem;font-size:1.05rem}
+footer{padding-block:2.5rem 3rem}
+footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
+@media (prefers-color-scheme:dark){:root{--bg:#08111F;--surface:#101C33;--ink:#F2EEE4;--muted:#A9B3C7;--line:#22324F;--accent-ink:#E3C277;--ok:#4ADE80;--warn:#F5B14A;color-scheme:dark}}</style></head><body>
+<a class="skip" href="#problema">Saltar para o conteúdo</a>
+<header class="hero"><div class="wrap">
+<a class="back" href="../index.html">← Todos os projetos de Lenira Leitão</a>
+<div class="brand" aria-hidden="true"><span class="mark">✦</span><b>Academia ORIGEM</b></div>
+<p class="eyebrow" style="color:var(--accent)">Estudo de caso · Plataforma de ensino · Portugal, 2026</p>
+<h1>Uma escola onde cada aluna <em>sai com o projeto feito.</em></h1><p class="lede">A plataforma de estudo do ebook e do workshop <strong>«O Teu Talento Merece Ser Encontrado»</strong>. Quem compra entra com o seu email e encontra as aulas, os prompts já preenchidos com as próprias respostas, um passaporte de carimbos e uma comunidade. No dia do workshop, vê o horário ao vivo e tem um botão para pedir ajuda. A formadora acompanha tudo num painel em tempo real.</p><div class="links">
+<a class="btn solid" href="https://academia-origem-preparacao.lovable.app" target="_blank" rel="noopener">Abrir a Academia ↗</a>
+<a class="btn ghost" href="https://workshopoteutalentoencontrado.lovable.app" target="_blank" rel="noopener">Conhecer o workshop ↗</a>
+</div><p class="facts"><span><b>22</b> aulas guiadas em 5 trilhas</span><span><b>16</b> prompts preenchidos automaticamente</span><span><b>8</b> carimbos no passaporte</span><span><b>3</b> níveis de acesso, decididos pela base de dados</span></p></div></header><main>
+<section class="block" id="problema" aria-labelledby="t-problema"><div class="wrap"><div class="head"><p class="eyebrow">O problema</p><h2 id="t-problema">Um curso não pode acabar quando acaba a aula</h2></div><div class="prose"><p>Quem compra um ebook ou faz um workshop fica muitas vezes sozinha no dia seguinte: o PDF fica numa pasta, os prompts têm de ser copiados e adaptados à mão, e a formadora não sabe quem parou nem onde.</p><p>Num workshop ao vivo de um dia inteiro, com ChatGPT, Gamma, Lovable e Google Flow abertos ao mesmo tempo, quem fica presa perde o ritmo e, muitas vezes, não quer interromper a turma.</p><p>A Academia ORIGEM junta tudo num só lugar: o método, os exercícios, as ferramentas, a turma e a formadora. Cada resposta da aluna é reaproveitada no passo seguinte, para que o projeto avance mesmo quando a motivação baixa.</p></div>
+</div></section>
+<section class="block" aria-labelledby="t-faz"><div class="wrap"><div class="head"><p class="eyebrow">O que faz</p><h2 id="t-faz">Três pessoas, três experiências</h2><p class="muted prose">A leitora do ebook, a aluna do workshop e a formadora entram na mesma app, mas cada uma vê o que lhe pertence.</p></div>
+<p class="group-label">Para a aluna</p><div class="features">
+<div class="feat"><h3>Trilhas com o próximo passo</h3><p>22 aulas em 5 trilhas (Começa aqui, Ebook, Página, Anúncio e Montra), com cerca de 12 horas de trabalho guiado. O início mostra sempre o próximo passo e quanto tempo demora.</p></div>
+<div class="feat"><h3>Prompts que se preenchem sozinhos</h3><p>Os 16 prompts do método já vêm com o título, o público e a promessa que a aluna escreveu antes. O que falta preencher aparece a dourado.</p></div>
+<div class="feat"><h3>O livro vivo</h3><p>Cada exercício escreve uma página do ebook da própria aluna: capa, porque escrevo, sobre a autora, índice. A capa pode ser guardada como imagem.</p></div>
+<div class="feat"><h3>Passaporte e cartão de talento</h3><p>8 carimbos ganhos a fazer, não a ler: compromisso, talento, promessa, ebook, página no ar, anúncio, lançamento e 30 dias.</p><p class="say">«Cada carimbo ganha-se a fazer, não a ler.»</p></div>
+<div class="feat"><h3>Plano de 30 dias</h3><p>Dois ritmos à escolha: um passo por dia durante 30 dias, ou um sábado intensivo em 6 blocos.</p></div>
+<div class="feat"><h3>Quando ficas presa</h3><p>Os 13 problemas mais comuns com a solução de cada um, dicas para poupar créditos, glossário com 14 termos e notas na margem de cada capítulo.</p></div>
+</div>
+<p class="group-label">No dia do workshop</p><div class="features">
+<div class="feat"><h3>Secção «Hoje»</h3><p>O horário do dia, o link da sessão e os selos Ebook, Página e Anúncio, que acendem quando cada bloco termina.</p></div>
+<div class="feat"><h3>Botão «Preciso de ajuda»</h3><p>A aluna escreve onde está presa. O pedido chega logo ao painel da formadora, com o passo em que está.</p></div>
+<div class="feat"><h3>Comunidade e montra</h3><p>Dúvidas, partilhas, vitórias e o «teste dos 5 segundos» ao título do ebook. Na montra, cada aluna mostra o que criou.</p></div>
+</div>
+<p class="group-label">Para a formadora</p><div class="features">
+<div class="feat"><h3>Painel da turma em tempo real</h3><p>Quem está ativa, quem está parada há mais de 15 minutos, quem pediu ajuda e em que aula está cada uma.</p></div>
+<div class="feat"><h3>Conduzir o dia</h3><p>A formadora inicia cada bloco e as alunas veem o bloco atual com temporizador.</p></div>
+<div class="feat"><h3>Ver como a aluna vê</h3><p>Botões para ver a app como leitora do ebook ou como aluna do workshop, antes de publicar alterações.</p></div>
+<div class="feat"><h3>A escada de produtos</h3><p>Ebook, workshop, programa de 4 semanas e mentoria. Cada aluna pode mostrar interesse no degrau seguinte, sem pagamentos dentro da app.</p></div>
+</div>
+<p class="group-label">Acesso e vendas</p><div class="features">
+<div class="feat"><h3>Ligação à Hotmart</h3><p>Uma compra aprovada dá acesso ao email da compra. Um reembolso ou chargeback retira-o. Sem trabalho manual.</p></div>
+<div class="feat"><h3>Conteúdo protegido</h3><p>As aulas e os prompts não estão no código da app. A base de dados só entrega o conteúdo do nível de cada pessoa.</p></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-shots"><div class="wrap"><div class="head"><p class="eyebrow">Ecrãs</p><h2 id="t-shots">Como se vê</h2></div><div class="shots"><figure><img src="img/academia-inicio.jpg" alt="Início: a constelação acende uma estrela por cada passo feito" loading="lazy"><figcaption>Início: a constelação acende uma estrela por cada passo feito</figcaption></figure><figure><img src="img/academia-aula.jpg" alt="Uma aula com o prompt já preenchido com as respostas da aluna" loading="lazy"><figcaption>Uma aula com o prompt já preenchido com as respostas da aluna</figcaption></figure><figure><img src="img/academia-livro.jpg" alt="O livro vivo: o ebook da aluna nasce enquanto lê o da Lé" loading="lazy"><figcaption>O livro vivo: o ebook da aluna nasce enquanto lê o da Lé</figcaption></figure><figure><img src="img/academia-passaporte.jpg" alt="O passaporte ORIGEM: 8 carimbos ganhos a fazer" loading="lazy"><figcaption>O passaporte ORIGEM: 8 carimbos ganhos a fazer</figcaption></figure><figure><img src="img/academia-hoje.jpg" alt="Dia do workshop: horário, ferramentas e selos" loading="lazy"><figcaption>Dia do workshop: horário, ferramentas e selos</figcaption></figure><figure><img src="img/academia-painel.jpg" alt="Painel da turma: quem está ativa, parada ou a pedir ajuda" loading="lazy"><figcaption>Painel da turma: quem está ativa, parada ou a pedir ajuda</figcaption></figure></div><p class="muted" style="margin-top:1rem;font-size:.95rem">Capturas de ecrã com dados de exemplo (a aluna «Ana» e a turma são fictícias), para não expor alunas reais.</p></div></section>
+<section class="block" aria-labelledby="t-pedido"><div class="wrap"><div class="head"><p class="eyebrow">Por dentro</p><h2 id="t-pedido">Da compra ao projeto feito</h2><p class="muted prose">O que acontece, passo a passo, desde que alguém compra até ter o ebook, a página e o anúncio prontos.</p></div><ol class="flow">
+<li><div><span class="who">Hotmart · compra</span><h3>Dar acesso sozinho</h3><p>A Hotmart avisa a app. Uma função no servidor confirma o segredo, regista o aviso e dá o nível certo (ebook ou workshop) ao email da compra.</p></div></li>
+<li><div><span class="who">Telemóvel ou computador · entrada</span><h3>Entrar com o email</h3><p>Na primeira vez, a aluna cria a palavra-passe com regras claras. Se o email não tiver compra, a app explica o que fazer em vez de mostrar um erro.</p></div></li>
+<li><div><span class="who">Base de dados · conteúdo</span><h3>Entregar só o que foi comprado</h3><p>A leitora recebe as aulas do ebook. A aluna do workshop recebe também a Biblioteca, a Turma e as trilhas da Página, do Anúncio e da Montra.</p></div></li>
+<li><div><span class="who">App · aulas</span><h3>Aprender a fazer</h3><p>Cada resposta é guardada e reaproveitada nos prompts seguintes, no livro vivo e no cartão de talento. Os carimbos aparecem quando o trabalho fica feito.</p></div></li>
+<li><div><span class="who">Tempo real · painel</span><h3>Acompanhar a turma</h3><p>O progresso de cada aluna chega ao painel da formadora. Os pedidos de ajuda aparecem com um número no menu.</p></div></li>
+<li><div><span class="who">Hotmart · reembolso</span><h3>Retirar o acesso</h3><p>Um reembolso, chargeback ou cancelamento retira o acesso automaticamente.</p></div></li>
+</ol></div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feita</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2><p class="muted prose">Cada linha diz o que a ferramenta é e para que serve nesta app.</p></div>
+<p class="group-label">Construir e publicar</p><div class="stack">
+<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Onde a app está publicada, em academia-origem-preparacao.lovable.app.</p></div></div>
+<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda o código e o histórico de cada alteração, com a explicação do porquê.</p></div></div>
+<div class="tool"><div class="name">Claude Code<span class="kind">assistente de programação com IA</span></div><div><p>Escreveu e corrigiu o código a partir dos pedidos e das decisões da Lenira.</p></div></div>
+</div>
+<p class="group-label">A app por dentro</p><div class="stack">
+<div class="tool"><div class="name">Supabase<span class="kind">base de dados, contas e ficheiros</span></div><div><p>Guarda o progresso, a comunidade e os acessos. As regras de quem vê o quê estão na própria base de dados, não só no ecrã.</p></div></div>
+<div class="tool"><div class="name">Supabase Realtime<span class="kind">tempo real</span></div><div><p>Atualiza o painel da formadora e a comunidade sem recarregar a página.</p></div></div>
+<div class="tool"><div class="name">Edge Function da Hotmart<span class="kind">vendas</span></div><div><p>Recebe os avisos de compra e de reembolso e dá ou retira o acesso.</p></div></div>
+<div class="tool"><div class="name">Canvas do browser<span class="kind">imagens</span></div><div><p>Desenha a capa do ebook e o cartão de talento para a aluna guardar e partilhar.</p></div></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">Problemas reais e como foram resolvidos</h2><p class="muted prose">Decisões tomadas para que a app seja segura, justa para quem compra e fácil para quem ensina.</p></div><div class="lessons">
+<div class="lesson"><div><span class="tag prob">Problema</span><p>O conteúdo pago estava no código da app, e qualquer pessoa com conhecimentos técnicos o podia ler.</p></div><div><span class="tag fix">Solução</span><p>As aulas e os prompts passaram para a base de dados. Quem não comprou não recebe nada, e a leitora não recebe o conteúdo do workshop.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Dar acesso à mão, compra a compra, não funciona num lançamento.</p></div><div><span class="tag fix">Solução</span><p>A ligação à Hotmart dá e retira acessos sozinha, e o painel permite corrigir um caso à mão.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>No workshop, quem fica presa não quer interromper a turma.</p></div><div><span class="tag fix">Solução</span><p>O botão «Preciso de ajuda» e o aviso «Parada há X min» mostram à formadora quem precisa dela, sem ninguém ter de pedir em voz alta.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Um ebook lido não é um ebook escrito.</p></div><div><span class="tag fix">Solução</span><p>Cada exercício preenche os prompts seguintes e uma página do livro vivo da aluna. Os carimbos só se ganham a fazer.</p></div></div>
+</div></div></section>
+<section class="block" aria-labelledby="t-numeros"><div class="wrap"><div class="head"><p class="eyebrow">Em números</p><h2 id="t-numeros">A app em números</h2></div><div class="numbers"><div class="num"><b>22</b><span class="muted">aulas guiadas</span></div><div class="num"><b>~12 h</b><span class="muted">de trabalho guiado nas trilhas</span></div><div class="num"><b>7</b><span class="muted">aulas na Biblioteca do workshop</span></div><div class="num"><b>13</b><span class="muted">problemas resolvidos em «Quando ficas presa»</span></div></div></div></section>
+<section class="block" aria-labelledby="t-limites"><div class="wrap"><div class="two"><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">Com franqueza</p><h2 id="t-limites">Limites atuais</h2><ul class="list"><li>O Supabase gratuito envia poucos emails por hora. Para uma turma inteira entrar no mesmo dia, é preciso ligar um servidor de email próprio.</li><li>Ainda tem poucos testes automáticos.</li><li>O programa de 4 semanas e a mentoria aparecem como «Em breve».</li></ul></div><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">A seguir</p><h2>Próximos passos</h2><ul class="list"><li>Juntar testes automáticos às partes mais sensíveis: acessos, Hotmart e painel.</li><li>Abrir o programa «Do Talento ao Produto» e a mentoria dentro da mesma escada.</li><li>Adaptar a plataforma para outras formadoras, escolas e empresas que vendem cursos e workshops.</li></ul></div></div></div></section>
+<section class="block" aria-labelledby="t-papel"><div class="wrap"><div class="role"><p class="eyebrow">O meu papel</p><h2 id="t-papel">Lenira Leitão</h2><p>O método ORIGEM, as aulas, os prompts, a escada de produtos e o desenho de cada ecrã são meus. A app foi construída com ferramentas de IA, a partir dos meus pedidos e das minhas decisões.</p><p class="muted">Pensei em cada pessoa que entra: a leitora que só comprou o ebook, a aluna que está presa a meio do workshop e a formadora que tem de acompanhar uma turma inteira ao mesmo tempo.</p></div></div></section>
+</main><footer><div class="wrap"><p>Academia ORIGEM. A app está em <a href="https://academia-origem-preparacao.lovable.app" target="_blank" rel="noopener">academia-origem-preparacao.lovable.app</a> (é preciso ter comprado o ebook ou o workshop para entrar).</p><p>Aprende. Cria. Conquista.</p></div></footer></body></html>

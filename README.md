@@ -91,6 +91,18 @@ Marcações online com lembretes por WhatsApp e avisos para o salão. Feita em h
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+<a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/academia-origem.html"><img src="projetos/academia-origem.png" alt="Academia ORIGEM" width="100%"></a>
+
+**[Academia ORIGEM](https://academia-origem-preparacao.lovable.app)**<br>
+<sub>APP · ENSINO E COMUNIDADE</sub>
+
+A plataforma de estudo do meu ebook e do meu workshop. Cada aluna encontra as aulas, os prompts já preenchidos com as suas respostas, um passaporte de carimbos e a turma. No dia do workshop tem o horário ao vivo e um botão «Preciso de ajuda». Eu acompanho tudo num painel em tempo real, e a ligação à Hotmart dá e retira acessos sozinha. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/academia-origem.html)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 <a href="https://vertice-ai-citizen.lovable.app"><img src="projetos/vertice.png" alt="VÉRTICE" width="100%"></a>
