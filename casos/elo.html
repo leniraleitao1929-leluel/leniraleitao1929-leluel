@@ -1,7 +1,7 @@
 <!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ELO · Estudo de caso</title><meta name="description" content="A ELO liga quem vive na diáspora à obra em Cabo Verde: cada envio e cada pagamento com data, recibo e foto, à vista dos dois lados.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"><style>
-:root{--hero:#2A1F7A;--hero-2:#B8235F;--accent:#FFC23A;--accent-ink:#B01E58;--on-accent:#1B1530;--bg:#FFF8EE;--surface:#FFFFFF;--ink:#1B1530;--muted:#5E5470;--line:#EEDFC8;--ok:#0B766D;--warn:#B01E58;--on-hero:#FFFFFF;--on-hero-soft:#F3E6FF;--font-display:"Bricolage Grotesque", Figtree, system-ui, sans-serif;--font-body:Figtree, "Segoe UI", system-ui, sans-serif;--font-mono:"JetBrains Mono", ui-monospace, monospace;--display-weight:800;--em-style:normal;--brand-tracking:0;--font-h3:Figtree, "Segoe UI", system-ui, sans-serif}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;600&display=swap"><style>
+:root{--hero:#FFC23A;--hero-2:#FFC23A;--accent:#D9286A;--accent-ink:#B01E58;--on-accent:#FFFFFF;--ghost-border:#1B1530;--hero-eyebrow:#1B1530;--font-em:"Instrument Serif", Georgia, serif;--em-weight:400;--bg:#FFF8EE;--surface:#FFFFFF;--ink:#1B1530;--muted:#5E5470;--line:#EEDFC8;--ok:#0B766D;--warn:#B01E58;--on-hero:#1B1530;--on-hero-soft:#3D3355;--font-display:"Bricolage Grotesque", Figtree, system-ui, sans-serif;--font-body:Figtree, "Segoe UI", system-ui, sans-serif;--font-mono:"JetBrains Mono", ui-monospace, monospace;--display-weight:800;--em-style:italic;--brand-tracking:0;--font-h3:Figtree, "Segoe UI", system-ui, sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.125rem;line-height:1.65}
@@ -25,13 +25,13 @@ p{margin:0}
 .brand .mark{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent);font-family:var(--font-display);font-weight:800;font-size:1.2rem}
 .brand b{font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:var(--brand-tracking)}
 .hero h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:var(--display-weight);letter-spacing:-0.02em;max-width:18ch}
-.hero h1 em{font-style:var(--em-style);color:var(--accent)}
+.hero h1 em{font-style:var(--em-style);color:var(--accent);font-family:var(--font-em,inherit);font-weight:var(--em-weight,inherit)}
 .hero .lede{font-size:1.25rem;color:var(--on-hero-soft);max-width:40rem}
 .hero .lede strong{color:var(--on-hero)}
 .links{display:flex;flex-wrap:wrap;gap:.75rem}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem}
 .btn.solid{background:var(--accent);color:var(--on-accent)}
-.btn.ghost{border:2px solid rgba(255,255,255,.45);color:var(--on-hero)}
+.btn.ghost{border:2px solid var(--ghost-border,rgba(255,255,255,.45));color:var(--on-hero)}
 .facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-family:var(--font-mono);font-size:.9rem;color:var(--on-hero-soft)}
 .facts b{color:var(--on-hero);font-weight:600}
 section.block{padding-block:3.5rem;border-bottom:1px solid var(--line)}
@@ -75,12 +75,12 @@ section.block>.wrap{display:grid;gap:1.6rem}
 .chips li{background:var(--surface);border:1px solid var(--line);border-radius:1.1rem 1.1rem 1.1rem .3rem;padding:.55rem 1rem;font-size:1.05rem}
 footer{padding-block:2.5rem 3rem}
 footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
-@media (prefers-color-scheme:dark){:root{--bg:#120C33;--surface:#1D1650;--ink:#FFF4E4;--muted:#C9BFE6;--line:#2E2668;--accent-ink:#FFC23A;--ok:#4FD8CB;--warn:#FF5C93;color-scheme:dark}}</style></head><body>
+@media (prefers-color-scheme:dark){:root{--bg:#120C33;--surface:#1D1650;--ink:#FFF4E4;--muted:#C9BFE6;--line:#2E2668;--accent-ink:#FF8FB5;--ok:#4FD8CB;--warn:#FF5C93;color-scheme:dark}}</style></head><body>
 <a class="skip" href="#problema">Saltar para o conteúdo</a>
 <header class="hero"><div class="wrap">
 <a class="back" href="../index.html">← Todos os projetos de Lenira Leitão</a>
 <div class="brand" aria-hidden="true"><span class="mark">∞</span><b>ELO</b></div>
-<p class="eyebrow" style="color:var(--accent)">Estudo de caso · App · Cabo Verde e diáspora, 2026</p>
+<p class="eyebrow" style="color:var(--hero-eyebrow,var(--accent))">Estudo de caso · App · Cabo Verde e diáspora, 2026</p>
 <h1>Constrói na terra, com o coração <em>tranquilo.</em></h1><p class="lede">A ELO é o elo entre quem vive na diáspora e a casa que se está a erguer em Cabo Verde. <strong>Quem envia vê tudo. Quem coordena na terra fica protegido</strong>, porque cada pagamento tem recibo e foto. A ELO não toca no dinheiro: só regista, organiza e mostra.</p><div class="links">
 <a class="btn solid" href="https://elo-cabo-verde.lovable.app" target="_blank" rel="noopener">Abrir a ELO ↗</a>
 <a class="btn ghost" href="https://elo-cabo-verde.lovable.app/demonstracao" target="_blank" rel="noopener">Ver a obra de exemplo ↗</a>
