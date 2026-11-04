@@ -103,6 +103,18 @@ A plataforma de estudo do meu ebook e do meu workshop. Cada aluna encontra as au
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+<a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/elo.html"><img src="projetos/elo.png" alt="ELO" width="100%"></a>
+
+**[ELO](https://elo-cabo-verde.lovable.app)**<br>
+<sub>APP · CABO VERDE E DIÁSPORA</sub>
+
+Para quem constrói casa em Cabo Verde a partir da diáspora. Cada envio e cada pagamento fica com data, recibo e foto, à vista de quem envia e de quem coordena na terra. A casa ganha cor a cada fase concluída. A ELO não mexe no dinheiro: só regista, organiza e mostra. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/elo.html)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 <a href="https://vertice-ai-citizen.lovable.app"><img src="projetos/vertice.png" alt="VÉRTICE" width="100%"></a>
