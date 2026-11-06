@@ -36,32 +36,33 @@ Aquilo de que mais gosto:
 
 **Comunicar com quem está do outro lado.** Criei o **Pequenos Encantos**, uma marca de músicas personalizadas, vídeos encantados e contos mágicos para famílias, que hoje junta uma comunidade de **mais de 32 000 pessoas no Facebook** e **7 900 no Instagram**. Foi aí que aprendi a contar histórias que tocam as pessoas.
 
-**Construir com inteligência artificial.** Comecei a criar apps e sites com IA e cada projeto nasceu de alguém real: a **Voz Clara** para a minha irmã, que é cega, e o **BlueTime** em homenagem à minha mãe, **Cuxe Lopes**, cabeleireira durante mais de 30 anos, a quem ajudei muito no salão até ir para a universidade. Não paro no "parece pronto": testo no telemóvel, protejo os dados e corrijo até estar certo.
+**Construir com inteligência artificial.** Comecei a criar apps e sites com IA e cada projeto nasceu de alguém real: a **Tato Digital** para a minha irmã, que é cega, a **ELO** para quem constrói casa em Cabo Verde a partir da diáspora, e o **BlueTime** em homenagem à minha mãe, **Cuxe Lopes**, cabeleireira durante mais de 30 anos, a quem ajudei muito no salão até ir para a universidade. Não paro no "parece pronto": testo no telemóvel, protejo os dados e corrijo até estar certo.
 
 **Ensinar o que aprendo.** Criei o **Método ORIGEM**, o workshop e o ebook *O Teu Talento Merece Ser Encontrado*, para que mais pessoas transformem o que sabem num projeto digital.
 
 <p align="center">
   <a href="https://www.facebook.com/share/1CCWDAb1ev/"><img src="https://img.shields.io/badge/Facebook-32%20000%2B%20seguidores-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Pequenos Encantos no Facebook: mais de 32 000 seguidores"></a>
   <a href="https://www.instagram.com/pequenosencantos.brilho/"><img src="https://img.shields.io/badge/Instagram-7%20900%20seguidores-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Pequenos Encantos no Instagram: 7 900 seguidores"></a>
-  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-8%20projetos-6D28D9?style=for-the-badge" alt="8 projetos">
+  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-10%20projetos-6D28D9?style=for-the-badge" alt="10 projetos">
 </p>
 
 <br>
 
 ### Neste momento
 
-
 🪄 A criar apps úteis com IA, do problema real à publicação
 
-🎓 A preparar a **Academia ORIGEM**, uma app de estudo e de acompanhamento dos alunos
+🎓 A **Academia ORIGEM**, a plataforma de estudo do meu ebook e do meu workshop, já está publicada
 
 🔍 A aprender a fundo arquitetura de apps, bases de dados e testes automáticos
 
 ♿ A tornar cada projeto acessível a quem usa leitor de ecrã
 
-`Novidade nov 2026:` O [BlueTime Agenda](https://agenda-fluxo-azul.lovable.app) ficou completo, com notificações, dois idiomas e testes automáticos. [Ler o caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo)
+`Novidade nov 2026:` A **Voz Clara** cresceu e passou a chamar-se **[Tato Digital](https://tatodigital.lovable.app)**, com duas áreas: a VozClara, para o dia a dia, e os Estudos, com os livros lidos página a página. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
 
-`Novidade nov 2026:` Publiquei a **[Voz Clara](https://tatodigital.lovable.app)**, que ajuda pessoas cegas ou com baixa visão no dia a dia: cores, cartas, documentos e onde estão.
+`Novidade nov 2026:` Publiquei a **[ELO](https://elo-cabo-verde.lovable.app)**, para acompanhar a construção de uma casa em Cabo Verde a partir da diáspora. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/elo.html)
+
+`Novidade nov 2026:` O [BlueTime Agenda](https://agenda-fluxo-azul.lovable.app) ficou completo, com notificações, dois idiomas e testes automáticos. [Ler o caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo)
 
 <br>
 
@@ -69,14 +70,26 @@ Aquilo de que mais gosto:
 
 <table>
 <tr>
+<td colspan="2" valign="top">
+
+<a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/academia-origem.html"><img src="projetos/academia-origem.png" alt="Academia ORIGEM" width="100%"></a>
+
+**[Academia ORIGEM](https://academia-origem-preparacao.lovable.app)**<br>
+<sub>APP · ENSINO E COMUNIDADE</sub>
+
+A plataforma de estudo do meu ebook e do meu workshop. Cada aluna encontra as aulas, os prompts já preenchidos com as suas respostas, um passaporte de carimbos e a turma. No dia do workshop tem o horário ao vivo e um botão «Preciso de ajuda». Eu acompanho tudo num painel em tempo real, e a ligação à Hotmart dá e retira acessos sozinha. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/academia-origem.html)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
-<a href="https://tatodigital.lovable.app"><img src="projetos/voz-clara.png" alt="Voz Clara" width="100%"></a>
+<a href="https://tatodigital.lovable.app"><img src="projetos/tato-digital.png" alt="Tato Digital" width="100%"></a>
 
-**[Voz Clara](https://tatodigital.lovable.app)**<br>
+**[Tato Digital](https://tatodigital.lovable.app)**<br>
 <sub>APP · ACESSIBILIDADE</sub>
 
-Para pessoas cegas ou com baixa visão: diz a cor da roupa, lê cartas e rótulos com a câmara, diz onde a pessoa está e lê documentos em voz alta. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
+Para pessoas cegas ou com baixa visão. A VozClara, para o dia a dia: diz a cor da roupa, lê cartas com a câmara, diz onde está e o que há perto. Os Estudos: livros lidos página a página, resumos e testes. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
 
 </td>
 <td width="50%" valign="top">
@@ -87,18 +100,6 @@ Para pessoas cegas ou com baixa visão: diz a cor da roupa, lê cartas e rótulo
 <sub>APP · SALÕES E BARBEARIAS</sub>
 
 Marcações online com lembretes por WhatsApp e avisos para o salão. Feita em homenagem à minha mãe, cabeleireira durante mais de 30 anos. [Caso de estudo](https://agenda-fluxo-azul.lovable.app/caso-de-estudo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/bluetime.html)
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-<a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/academia-origem.html"><img src="projetos/academia-origem.png" alt="Academia ORIGEM" width="100%"></a>
-
-**[Academia ORIGEM](https://academia-origem-preparacao.lovable.app)**<br>
-<sub>APP · ENSINO E COMUNIDADE</sub>
-
-A plataforma de estudo do meu ebook e do meu workshop. Cada aluna encontra as aulas, os prompts já preenchidos com as suas respostas, um passaporte de carimbos e a turma. No dia do workshop tem o horário ao vivo e um botão «Preciso de ajuda». Eu acompanho tudo num painel em tempo real, e a ligação à Hotmart dá e retira acessos sozinha. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/academia-origem.html)
 
 </td>
 </tr>
@@ -179,10 +180,6 @@ O guia passo a passo para transformar o que sabes fazer num ebook, numa landing 
 Vídeos animados e músicas personalizadas para famílias. Um vídeo chegou a 3,3 milhões de visualizações no Instagram. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/pequenos-encantos.html)
 
 </td>
-</tr>
-<tr>
-<td width="50%"></td>
-<td width="50%"></td>
 </tr>
 </table>
 
