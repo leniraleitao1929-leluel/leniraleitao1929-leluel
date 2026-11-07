@@ -43,7 +43,7 @@ Aquilo de que mais gosto:
 <p align="center">
   <a href="https://www.facebook.com/share/1CCWDAb1ev/"><img src="https://img.shields.io/badge/Facebook-32%20000%2B%20seguidores-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Pequenos Encantos no Facebook: mais de 32 000 seguidores"></a>
   <a href="https://www.instagram.com/pequenosencantos.brilho/"><img src="https://img.shields.io/badge/Instagram-7%20900%20seguidores-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Pequenos Encantos no Instagram: 7 900 seguidores"></a>
-  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-10%20projetos-6D28D9?style=for-the-badge" alt="10 projetos">
+  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-11%20projetos-6D28D9?style=for-the-badge" alt="11 projetos">
 </p>
 
 <br>
@@ -59,6 +59,8 @@ Aquilo de que mais gosto:
 ♿ A tornar cada projeto acessível a quem usa leitor de ecrã
 
 `Novidade nov 2026:` A **Voz Clara** cresceu e passou a chamar-se **[Tato Digital](https://tatodigital.lovable.app)**, com duas áreas: a VozClara, para o dia a dia, e os Estudos, com os livros lidos página a página. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
+
+`Novidade nov 2026:` Reconstruí o **[TáxiComigo](https://taxicomigo.lovable.app)**, o meu projeto de transporte para Cabo Verde, agora com contas reais e pedidos em tempo real. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/taxicomigo.html)
 
 `Novidade nov 2026:` Publiquei a **[ELO](https://elo-cabo-verde.lovable.app)**, para acompanhar a construção de uma casa em Cabo Verde a partir da diáspora. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/elo.html)
 
@@ -112,6 +114,18 @@ Marcações online com lembretes por WhatsApp e avisos para o salão. Feita em h
 <sub>APP · CABO VERDE E DIÁSPORA</sub>
 
 Para quem constrói casa em Cabo Verde a partir da diáspora. Cada envio e cada pagamento fica com data, recibo e foto, à vista de quem envia e de quem coordena na terra. A casa ganha cor a cada fase concluída. A ELO não mexe no dinheiro: só regista, organiza e mostra. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/elo.html)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+<a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/taxicomigo.html"><img src="projetos/taxicomigo.png" alt="TáxiComigo" width="100%"></a>
+
+**[TáxiComigo](https://taxicomigo.lovable.app)**<br>
+<sub>APP · MOBILIDADE EM CABO VERDE</sub>
+
+Pedir um táxi por ilha e localidade, com o preço estimado em escudos e contacto por WhatsApp. Passageiro, motorista e administração, com pedidos em tempo real e regras de segurança testadas na base de dados. Desenhei-o em 2025 e reconstruí-o em 2026 a partir das capturas de ecrã. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/taxicomigo.html)
 
 </td>
 </tr>
