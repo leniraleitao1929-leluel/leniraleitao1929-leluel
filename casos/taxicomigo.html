@@ -1,0 +1,137 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TáxiComigo · Estudo de caso</title><meta name="description" content="O TáxiComigo liga passageiros e motoristas em Cabo Verde, por ilha e localidade, com preços em escudos. Projeto de 2025 reconstruído em 2026, com contas reais e pedidos em tempo real.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"><style>
+:root{--hero:#0B4F7A;--hero-2:#2593C9;--accent:#F3975F;--accent-ink:#A6461B;--on-accent:#1B2433;--ghost-border:rgba(255,255,255,.6);--hero-eyebrow:#FFD2B5;--bg:#F5FCFF;--surface:#FFFFFF;--ink:#1B2433;--muted:#4A5868;--line:#D6E8F2;--ok:#15803D;--warn:#A6461B;--on-hero:#FFFFFF;--on-hero-soft:#E3F2FA;--font-display:Nunito, system-ui, sans-serif;--font-body:Nunito, "Segoe UI", system-ui, sans-serif;--font-mono:"JetBrains Mono", ui-monospace, monospace;--display-weight:800;--em-style:normal;--brand-tracking:0;--font-h3:Nunito, system-ui, sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.125rem;line-height:1.65}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:8px;font-weight:700;z-index:20}
+.skip:focus{left:16px}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.12;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:var(--display-weight);letter-spacing:-0.01em}
+h3{font-size:1.25rem;font-weight:700;font-family:var(--font-h3,var(--font-display))}
+p{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.prose{max-width:40rem;display:grid;gap:1rem}
+.muted{color:var(--muted)}
+.back{display:inline-block;font-size:.95rem;color:var(--on-hero-soft);text-decoration:none;margin-bottom:.4rem}
+.back:hover{color:var(--on-hero)}
+.hero{background:linear-gradient(140deg,var(--hero) 0%,var(--hero-2) 100%);color:var(--on-hero)}
+.hero .wrap{padding-block:3rem 3rem;display:grid;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand .mark{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent);font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.brand b{font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:var(--brand-tracking)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:var(--display-weight);letter-spacing:-0.02em;max-width:18ch}
+.hero h1 em{font-style:var(--em-style);color:var(--accent);font-family:var(--font-em,inherit);font-weight:var(--em-weight,inherit)}
+.hero .lede{font-size:1.25rem;color:var(--on-hero-soft);max-width:40rem}
+.hero .lede strong{color:var(--on-hero)}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn.solid{background:var(--accent);color:var(--on-accent)}
+.btn.ghost{border:2px solid var(--ghost-border,rgba(255,255,255,.45));color:var(--on-hero)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-family:var(--font-mono);font-size:.9rem;color:var(--on-hero-soft)}
+.facts b{color:var(--on-hero);font-weight:600}
+section.block{padding-block:3.5rem;border-bottom:1px solid var(--line)}
+section.block>.wrap{display:grid;gap:1.6rem}
+.head{display:grid;gap:.6rem}
+.quote{border-left:5px solid var(--accent);padding:.4rem 0 .4rem 1.2rem;font-size:1.3rem;font-family:var(--font-display);font-weight:500;max-width:40rem}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem;display:grid;gap:.4rem;align-content:start}
+.feat .say{font-family:var(--font-mono);font-size:.85rem;color:var(--accent-ink)}
+.group-label{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.flow{list-style:none;margin:0;padding:0;display:grid;counter-reset:passo}
+.flow li{counter-increment:passo;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding-bottom:1.4rem;position:relative}
+.flow li::before{content:counter(passo);width:3rem;height:3rem;border-radius:50%;background:var(--hero);color:var(--on-hero);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:1.5rem;top:3rem;bottom:0;width:2px;background:var(--line)}
+.flow .who{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.flow h3{margin-top:.1rem}
+.stack{display:grid;gap:.8rem}
+.tool{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:.4rem 1.4rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}
+.tool .name{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.1rem}
+.tool .kind{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);display:block;font-weight:400;margin-top:.15rem}
+@media (max-width:640px){.tool{grid-template-columns:minmax(0,1fr)}}
+.lessons{display:grid;gap:.9rem}
+.lesson{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem}
+.lesson .tag{font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:.3rem}
+.lesson .tag.prob{color:var(--warn)}
+.lesson .tag.fix{color:var(--ok)}
+@media (max-width:640px){.lesson{grid-template-columns:minmax(0,1fr);gap:.7rem}}
+.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem}
+.num{border-top:4px solid var(--accent);padding-top:.7rem}
+.num b{display:block;font-family:var(--font-display);font-size:2.3rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.05}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;align-items:start}
+.shots figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:.6rem .9rem;font-size:.95rem;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.6rem}
+.list{margin:0;padding-left:1.2rem;display:grid;gap:.55rem}
+.list li::marker{color:var(--accent-ink)}
+.role{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--hero-2);border-radius:12px;padding:1.4rem 1.5rem;display:grid;gap:.8rem;max-width:44rem}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:1.1rem 1.1rem 1.1rem .3rem;padding:.55rem 1rem;font-size:1.05rem}
+footer{padding-block:2.5rem 3rem}
+footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1A26;--surface:#10283A;--ink:#E8F4FA;--muted:#A9C3D3;--line:#1F3F55;--accent-ink:#F7A574;--ok:#4ADE80;--warn:#F7A574;color-scheme:dark}}</style></head><body>
+<a class="skip" href="#problema">Saltar para o conteúdo</a>
+<header class="hero"><div class="wrap">
+<a class="back" href="../index.html">← Todos os projetos de Lenira Leitão</a>
+<div class="brand" aria-hidden="true"><span class="mark">T</span><b>TáxiComigo</b></div>
+<p class="eyebrow" style="color:var(--hero-eyebrow,var(--accent))">Estudo de caso · App · Mobilidade em Cabo Verde, 2025–2026</p>
+<h1>Um táxi em Cabo Verde, <em>pensado para as ilhas.</em></h1><p class="lede">O TáxiComigo liga passageiros e motoristas <strong>por ilha e localidade, com preços em escudos</strong> e contacto por WhatsApp. Idealizei-o em 2025; perdi a conta onde estava e reconstruí-o em 2026 a partir das capturas de ecrã, desta vez com contas reais e pedidos em tempo real.</p><div class="links">
+<a class="btn solid" href="https://taxicomigo.lovable.app" target="_blank" rel="noopener">Abrir o TáxiComigo ↗</a>
+<a class="btn ghost" href="https://taxicomigo.lovable.app/sobre" target="_blank" rel="noopener">Ver a história do projeto ↗</a>
+</div><p class="facts"><span><b>9</b> ilhas e 26 localidades</span><span><b>3</b> áreas: passageiro, motorista, administração</span><span><b>51</b> verificações de segurança na base de dados</span></p></div></header><main>
+<section class="block" id="problema" aria-labelledby="t-problema"><div class="wrap"><div class="head"><p class="eyebrow">Porque nasceu</p><h2 id="t-problema">Apanhar um táxi não devia depender de conhecer o número certo</h2></div><div class="prose"><p>Em muitas localidades de Cabo Verde, o transporte combina-se por telefone, com o motorista que alguém conhece. Para quem chega de fora, ou para quem precisa à noite, nem sempre é fácil saber quem está disponível, quanto vai custar e se a viagem é segura.</p><p>As apps conhecidas lá fora não estão pensadas para cá: as ilhas, as localidades, os escudos e o WhatsApp, que é como as pessoas falam.</p><p>Em setembro de 2025 desenhei o TáxiComigo: a praia, o azul-turquesa, os botões coral e os cartões dos motoristas. Quando perdi o acesso à conta, ficaram as capturas e as conversas de planeamento. Em 2026 reconstruí-o a partir delas, sem fingir que recuperei o código original.</p></div>
+</div></section>
+<section class="block" aria-labelledby="t-faz"><div class="wrap"><div class="head"><p class="eyebrow">O que faz</p><h2 id="t-faz">As funções de uma app de transporte, pensadas para as ilhas</h2><p class="muted prose">Há uma demonstração com pessoas fictícias e, ao lado, contas reais ligadas à base de dados.</p></div>
+<p class="group-label">Para o passageiro</p><div class="features">
+<div class="feat"><h3>Origem e destino com referência</h3><p>Escolhe a ilha e a localidade, junta um ponto de referência («junto à farmácia») ou usa a localização do telemóvel.</p></div>
+<div class="feat"><h3>Escolher o motorista ou Chamada Rápida</h3><p>Vê os motoristas perto, com viatura, matrícula, avaliação e preço estimado em CVE. Ou faz um pedido para todos.</p></div>
+<div class="feat"><h3>Acompanhar a viagem</h3><p>Do pedido à chegada, em tempo real: aceite, a caminho, chegou, em curso, concluída. No fim, avalia.</p><p class="say">«O motorista chegou. Confirme a matrícula antes de entrar.»</p></div>
+</div>
+<p class="group-label">Para o motorista</p><div class="features">
+<div class="feat"><h3>Registo e aprovação</h3><p>Regista a viatura e fica à espera de aprovação. Só recebe pedidos depois de aprovado e com a assinatura validada.</p></div>
+<div class="feat"><h3>Pedidos em tempo real</h3><p>Os pedidos da sua ilha aparecem sem recarregar a página. Aceita ou recusa e avança cada etapa.</p></div>
+<div class="feat"><h3>Contacto só se quiser</h3><p>O passageiro só vê o telefone do motorista numa viagem aceite, e só se o motorista o autorizar.</p></div>
+</div>
+<p class="group-label">Para a administração</p><div class="features">
+<div class="feat"><h3>Aprovar e acompanhar</h3><p>Aprova ou suspende motoristas, vê todas as viagens e cancela quando é preciso.</p></div>
+<div class="feat"><h3>Preços e localidades</h3><p>Muda o valor base, o preço por km e o mínimo, e liga ou desliga localidades.</p></div>
+<div class="feat"><h3>Registo de tudo</h3><p>Cada decisão fica registada com data e com quem a tomou.</p></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-shots"><div class="wrap"><div class="head"><p class="eyebrow">Ecrãs</p><h2 id="t-shots">Como se vê</h2></div><div class="shots"><figure><img src="img/taxi-inicio.jpg" alt="Início, reconstruído a partir das capturas de 2025" loading="lazy"><figcaption>Início, reconstruído a partir das capturas de 2025</figcaption></figure><figure><img src="img/taxi-motoristas.jpg" alt="Escolher o motorista, com o preço estimado em CVE" loading="lazy"><figcaption>Escolher o motorista, com o preço estimado em CVE</figcaption></figure><figure><img src="img/taxi-acompanhar.jpg" alt="Acompanhar a viagem, passo a passo" loading="lazy"><figcaption>Acompanhar a viagem, passo a passo</figcaption></figure><figure><img src="img/taxi-motorista.jpg" alt="Área do motorista" loading="lazy"><figcaption>Área do motorista</figcaption></figure><figure><img src="img/taxi-admin.jpg" alt="Painel da administração" loading="lazy"><figcaption>Painel da administração</figcaption></figure><figure><img src="img/taxi-conta.jpg" alt="Entrar com uma conta real" loading="lazy"><figcaption>Entrar com uma conta real</figcaption></figure></div><p class="muted" style="margin-top:1rem;font-size:.95rem">Maria Santos, Carlos Lima e Ana Costa são motoristas fictícios da demonstração, com os nomes das capturas de 2025.</p></div></section>
+<section class="block" aria-labelledby="t-pedido"><div class="wrap"><div class="head"><p class="eyebrow">Por dentro</p><h2 id="t-pedido">De um pedido a uma viagem concluída</h2><p class="muted prose">O que acontece com contas reais.</p></div><ol class="flow">
+<li><div><span class="who">Passageiro</span><h3>Pedir</h3><p>Escolhe origem e destino na mesma ilha e pede a um motorista ou a todos. A estimativa é calculada no servidor.</p></div></li>
+<li><div><span class="who">Motorista</span><h3>Receber e aceitar</h3><p>O pedido aparece logo. Se dois motoristas aceitarem ao mesmo tempo, só um consegue: a base de dados garante-o.</p></div></li>
+<li><div><span class="who">Os dois</span><h3>Seguir as etapas</h3><p>A caminho, chegou, em curso, concluída. Cada passo só pode ser dado por quem deve, e fica registado.</p></div></li>
+<li><div><span class="who">Motorista</span><h3>Registar o valor</h3><p>O pagamento é combinado e feito diretamente. O motorista regista o valor recebido.</p></div></li>
+<li><div><span class="who">Passageiro</span><h3>Avaliar</h3><p>Dá de 1 a 5 estrelas. A média aparece aos próximos passageiros.</p></div></li>
+</ol></div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feita</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2><p class="muted prose">Cada linha diz o que a ferramenta é e para que serve nesta app.</p></div>
+<p class="group-label">Construir e publicar</p><div class="stack">
+<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Onde o projeto vive e é publicado, em taxicomigo.lovable.app.</p></div></div>
+<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda o código e o histórico de cada alteração.</p></div></div>
+<div class="tool"><div class="name">Claude<span class="kind">assistente de IA</span></div><div><p>Ajudou a reconstruir a app a partir das capturas, a escrever as regras e os testes.</p></div></div>
+</div>
+<p class="group-label">A app por dentro</p><div class="stack">
+<div class="tool"><div class="name">Lovable Cloud (Supabase)<span class="kind">base de dados e contas</span></div><div><p>Contas com email, regras de segurança por pessoa e avisos em tempo real quando uma viagem muda.</p></div></div>
+<div class="tool"><div class="name">OpenStreetMap e Leaflet<span class="kind">mapa gratuito</span></div><div><p>Mostra a partida e o destino. A linha entre os dois é reta e o ecrã diz que é ilustrativa.</p></div></div>
+<div class="tool"><div class="name">React, TanStack Start e Tailwind<span class="kind">a base da app</span></div><div><p>Os ecrãs, as cores das capturas de 2025 e a adaptação ao telemóvel.</p></div></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">O que decidi e porquê</h2><p class="muted prose">Escolhas feitas para o TáxiComigo ser honesto e seguro.</p></div><div class="lessons">
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Perdi a conta onde o projeto foi feito em 2025.</p></div><div><span class="tag fix">Solução</span><p>Reconstruí a partir das capturas e contei isso na própria app, numa página sobre a história do projeto. Não finjo que recuperei o código original.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Num serviço de transporte, dois motoristas podem aceitar o mesmo pedido ao mesmo tempo.</p></div><div><span class="tag fix">Solução</span><p>A aceitação é feita numa única operação na base de dados: só um consegue, o outro recebe uma mensagem clara.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Sem serviço de rotas, não sei a distância real pela estrada.</p></div><div><span class="tag fix">Solução</span><p>A estimativa usa a linha reta com um fator de estrada, e o ecrã diz sempre que é uma estimativa.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Mostrar o telefone de toda a gente seria perigoso.</p></div><div><span class="tag fix">Solução</span><p>O número só aparece numa viagem aceite, e o do motorista só se ele autorizar.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Não quis fingir pessoas, contactos ou tarifas.</p></div><div><span class="tag fix">Solução</span><p>Os motoristas da demonstração estão marcados como fictícios, os botões de WhatsApp não ligam a números inventados e os preços estão identificados como valores de teste.</p></div></div>
+</div></div></section>
+<section class="block" aria-labelledby="t-numeros"><div class="wrap"><div class="head"><p class="eyebrow">Em números</p><h2 id="t-numeros">O TáxiComigo em números</h2></div><div class="numbers"><div class="num"><b>9</b><span class="muted">ilhas</span></div><div class="num"><b>26</b><span class="muted">localidades</span></div><div class="num"><b>7</b><span class="muted">estados da viagem</span></div><div class="num"><b>51</b><span class="muted">verificações de segurança</span></div></div></div></section>
+<section class="block" aria-labelledby="t-limites"><div class="wrap"><div class="two"><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">Com franqueza</p><h2 id="t-limites">Limites atuais</h2><ul class="list"><li>Não é um serviço em funcionamento: ainda não há motoristas a trabalhar nem pagamentos pela app.</li><li>As distâncias são em linha reta e os tempos são estimativas.</li><li>Os preços são valores de teste, não tarifas oficiais.</li></ul></div><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">A seguir</p><h2>Próximos passos</h2><ul class="list"><li>Testar com motoristas reais numa localidade.</li><li>Rotas pela estrada e a posição do motorista durante a viagem.</li><li>Avisos no telemóvel, Kriolu e inglês.</li></ul></div></div></div></section>
+<section class="block" aria-labelledby="t-papel"><div class="wrap"><div class="role"><p class="eyebrow">O meu papel</p><h2 id="t-papel">Lenira Leitão</h2><p>A ideia, o desenho de 2025 e as decisões são meus. Conheço como o transporte se combina nas ilhas e quis uma app que fale a mesma língua: localidades, escudos e WhatsApp.</p><p class="muted">A reconstrução foi feita com ferramentas de IA, a partir das minhas capturas, dos meus pedidos e das minhas escolhas, com as regras de segurança testadas na base de dados.</p></div></div></section>
+</main><footer><div class="wrap"><p>TáxiComigo. A app está em <a href="https://taxicomigo.lovable.app" target="_blank" rel="noopener">taxicomigo.lovable.app</a>.</p><p>Feito com morabeza.</p></div></footer></body></html>
