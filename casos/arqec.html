@@ -1,0 +1,162 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ARQEC · Estudo de caso</title><meta name="description" content="Site e CRM para a ARQEC, atelier do arquiteto de interiores Edelvino Cristiano, em Almada: pedidos de orçamento num painel privado, tabela de preços com margem e propostas em PDF com a marca do atelier.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap"><style>
+:root{--hero:#161715;--hero-2:#24221d;--accent:#C9A273;--accent-ink:#8A6435;--on-accent:#161715;--ghost-border:rgba(201,162,115,.65);--hero-eyebrow:#C9A273;--bg:#F6F2EC;--surface:#FFFDF9;--ink:#1B1C1A;--muted:#5C574F;--line:#E2D9CB;--ok:#3F6B3A;--warn:#A0472E;--on-hero:#F4EFE7;--on-hero-soft:#C9C1B4;--font-display:"Cormorant Garamond", Georgia, serif;--font-body:Manrope, "Segoe UI", system-ui, sans-serif;--font-mono:Manrope, "Segoe UI", system-ui, sans-serif;--display-weight:500;--em-style:italic;--brand-tracking:.18em;--font-h3:"Cormorant Garamond", Georgia, serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.125rem;line-height:1.65}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:8px;font-weight:700;z-index:20}
+.skip:focus{left:16px}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.12;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:var(--display-weight);letter-spacing:-0.01em}
+h3{font-size:1.25rem;font-weight:700;font-family:var(--font-h3,var(--font-display))}
+p{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.prose{max-width:40rem;display:grid;gap:1rem}
+.muted{color:var(--muted)}
+.back{display:inline-block;font-size:.95rem;color:var(--on-hero-soft);text-decoration:none;margin-bottom:.4rem}
+.back:hover{color:var(--on-hero)}
+.hero{background:linear-gradient(140deg,var(--hero) 0%,var(--hero-2) 100%);color:var(--on-hero)}
+.hero .wrap{padding-block:3rem 3rem;display:grid;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand .mark{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent);font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.brand b{font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:var(--brand-tracking)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:var(--display-weight);letter-spacing:-0.02em;max-width:18ch}
+.hero h1 em{font-style:var(--em-style);color:var(--accent);font-family:var(--font-em,inherit);font-weight:var(--em-weight,inherit)}
+.hero .lede{font-size:1.25rem;color:var(--on-hero-soft);max-width:40rem}
+.hero .lede strong{color:var(--on-hero)}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn.solid{background:var(--accent);color:var(--on-accent)}
+.btn.ghost{border:2px solid var(--ghost-border,rgba(255,255,255,.45));color:var(--on-hero)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-family:var(--font-mono);font-size:.9rem;color:var(--on-hero-soft)}
+.facts b{color:var(--on-hero);font-weight:600}
+section.block{padding-block:3.5rem;border-bottom:1px solid var(--line)}
+section.block>.wrap{display:grid;gap:1.6rem}
+.head{display:grid;gap:.6rem}
+.quote{border-left:5px solid var(--accent);padding:.4rem 0 .4rem 1.2rem;font-size:1.3rem;font-family:var(--font-display);font-weight:500;max-width:40rem}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem;display:grid;gap:.4rem;align-content:start}
+.feat .say{font-family:var(--font-mono);font-size:.85rem;color:var(--accent-ink)}
+.group-label{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.flow{list-style:none;margin:0;padding:0;display:grid;counter-reset:passo}
+.flow li{counter-increment:passo;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding-bottom:1.4rem;position:relative}
+.flow li::before{content:counter(passo);width:3rem;height:3rem;border-radius:50%;background:var(--hero);color:var(--on-hero);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:1.5rem;top:3rem;bottom:0;width:2px;background:var(--line)}
+.flow .who{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.flow h3{margin-top:.1rem}
+.stack{display:grid;gap:.8rem}
+.tool{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:.4rem 1.4rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}
+.tool .name{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.1rem}
+.tool .kind{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);display:block;font-weight:400;margin-top:.15rem}
+@media (max-width:640px){.tool{grid-template-columns:minmax(0,1fr)}}
+.lessons{display:grid;gap:.9rem}
+.lesson{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem}
+.lesson .tag{font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:.3rem}
+.lesson .tag.prob{color:var(--warn)}
+.lesson .tag.fix{color:var(--ok)}
+@media (max-width:640px){.lesson{grid-template-columns:minmax(0,1fr);gap:.7rem}}
+.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem}
+.num{border-top:4px solid var(--accent);padding-top:.7rem}
+.num b{display:block;font-family:var(--font-display);font-size:2.3rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.05}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;align-items:start}
+.shots figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:.6rem .9rem;font-size:.95rem;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.6rem}
+.list{margin:0;padding-left:1.2rem;display:grid;gap:.55rem}
+.list li::marker{color:var(--accent-ink)}
+.role{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--hero-2);border-radius:12px;padding:1.4rem 1.5rem;display:grid;gap:.8rem;max-width:44rem}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:1.1rem 1.1rem 1.1rem .3rem;padding:.55rem 1rem;font-size:1.05rem}
+footer{padding-block:2.5rem 3rem}
+footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
+@media (prefers-color-scheme:dark){:root{--bg:#161715;--surface:#1F201D;--ink:#F4EFE7;--muted:#B9B2A6;--line:#3A352D;--accent-ink:#D9B88E;--ok:#9BC48F;--warn:#E39A7F;color-scheme:dark}}
+.hero{background:radial-gradient(900px 420px at 85% -10%,#3a2f22 0%,transparent 60%),var(--hero)}
+.eyebrow{letter-spacing:.22em;font-weight:700;font-size:.74rem}
+.brand img{height:44px;width:auto}
+h3{font-size:1.45rem;font-weight:600}
+.num b{font-weight:500}
+.flow li::before{background:var(--accent);color:var(--on-accent);font-weight:600}
+.btn{border-radius:2px}.btn.solid{color:var(--on-accent)}
+.feat,.tool,.lesson,.shots figure,.role{border-radius:4px}
+.price{display:grid;gap:.5rem;max-width:44rem}.price table{width:100%;border-collapse:collapse;font-size:1rem}.price td{border-bottom:1px solid var(--line);padding:.6rem .2rem;vertical-align:top}.price td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.price tr.tot td{font-weight:700;border-bottom:2px solid var(--accent)}
+</style></head><body>
+<a class="skip" href="#problema">Saltar para o conteúdo</a>
+<header class="hero"><div class="wrap">
+<a class="back" href="../index.html">← Todos os projetos de Lenira Leitão</a>
+<div class="brand" aria-hidden="true"><b>ARQEC</b></div>
+<p class="eyebrow" style="color:var(--hero-eyebrow)">Estudo de caso · Site e CRM · Arquitetura de interiores, 2026</p>
+<h1>Um atelier de interiores, <em>do primeiro clique à proposta em PDF.</em></h1><p class="lede">A ARQEC é o atelier do arquiteto de interiores <strong>Edelvino Cristiano</strong>, em Almada e na Grande Lisboa. Fiz o site e o sistema que está por trás dele: <strong>os pedidos de orçamento chegam a um painel privado e transformam-se em propostas em PDF</strong>, com a marca do atelier, os preços dele e o IVA calculado.</p><div class="links">
+<a class="btn solid" href="https://arqec.lovable.app" target="_blank" rel="noopener">Abrir o site da ARQEC ↗</a>
+<a class="btn ghost" href="https://arqec.lovable.app/como-trabalho" target="_blank" rel="noopener">Ver a maqueta 3D ↗</a>
+</div><p class="facts"><span><b>7</b> páginas públicas</span><span><b>28</b> serviços e trabalhos na tabela de preços</span><span><b>22</b> testes automáticos aos cálculos</span></p></div></header><main>
+<section class="block" id="problema" aria-labelledby="t-problema"><div class="wrap"><div class="head"><p class="eyebrow">Porque nasceu</p><h2 id="t-problema">Um bom trabalho precisa de ser encontrado e de responder depressa</h2></div><div class="prose"><p>O Edelvino faz projetos de interiores, modelação 3D e acompanhamento de obra. Precisava de um site à altura desse trabalho e de uma forma simples de receber pedidos e responder com um orçamento claro.</p><p>Numa conversa gravada, explicou-me como calcula um orçamento: preço por m², metro linear, unidade ou valor global, com materiais e mão de obra, uma margem, os honorários de projeto à parte e o IVA. A partir daí, o site ganhou um CRM: um painel onde cada pedido pode virar uma proposta pronta a enviar.</p></div><p class="quote">Do formulário do site ao PDF que o cliente assina, tudo no mesmo sítio.</p></div></section>
+<section class="block" aria-labelledby="t-faz"><div class="wrap"><div class="head"><p class="eyebrow">O que entreguei</p><h2 id="t-faz">Tudo o que foi feito, discriminado</h2></div>
+<p class="group-label">O site, para os clientes</p><div class="features">
+<div class="feat"><h3>Sete páginas à medida</h3><p>Início, Serviços, Como trabalho, Projetos, Sobre, Contacto e Privacidade, nas cores e letras da marca, pensadas primeiro para o telemóvel.</p></div>
+<div class="feat"><h3>Pedido de orçamento em 3 passos</h3><p>O espaço, o serviço, a área, o prazo e o orçamento previsto, com consentimento e política de privacidade.</p></div>
+<div class="feat"><h3>WhatsApp com mensagem escrita</h3><p>O botão muda a mensagem conforme a página: quem vê a cozinha em 3D fala do 3D, quem está num projeto refere esse projeto.</p><p class="say">«Olá Edelvino! Vim pelo site da ARQEC. Vi a cozinha em 3D e gostava de ver o meu espaço em 3D antes da obra.»</p></div>
+<div class="feat"><h3>Maqueta 3D da cozinha</h3><p>Na página Como trabalho, uma cozinha monta-se em 3D ao descer: planta, volumes e materiais. Em telemóveis mais fracos, mostra uma imagem.</p></div>
+<div class="feat"><h3>Portefólio honesto</h3><p>A página Projetos está pronta para obras reais, mas só mostra fotografias com autorização dos clientes. Até lá, mostra imagens de inspiração identificadas.</p></div>
+<div class="feat"><h3>Partilha e pesquisa</h3><p>Ícone, imagem de partilha para WhatsApp e redes, título e descrição para o Google e mapa do site.</p></div>
+</div>
+<p class="group-label">O painel e o CRM, para o atelier</p><div class="features">
+<div class="feat"><h3>Pedidos organizados</h3><p>Cada pedido do site com estado (Novo → Contactado → Reunião → Proposta enviada → Ganho ou Perdido), notas internas e exportação para Excel.</p></div>
+<div class="feat"><h3>Tabela de preços com margem</h3><p>17 serviços da lista de faturação do atelier e 11 trabalhos de obra. O preço de venda calcula-se sozinho: (valor base + outros custos) × (1 + margem).</p></div>
+<div class="feat"><h3>Propostas num minuto</h3><p>Criar a partir de um pedido copia os dados do cliente. Escolhe-se da tabela, põem-se as quantidades e o total aparece. Projeto e obra ficam separados.</p></div>
+<div class="feat"><h3>Honorários, IVA e retenção</h3><p>Calculadora de honorários por hora, IVA por taxa (23 %, 13 %, 6 % ou 0 %) e retenção na fonte quando se aplica.</p></div>
+<div class="feat"><h3>PDF com a marca do atelier</h3><p>Logótipo, NIF, contactos, tabelas, totais, condições e espaço para assinatura. O IVA aparece só no fim, como o atelier pediu.</p></div>
+<div class="feat"><h3>Entrada segura</h3><p>Só a conta do atelier vê pedidos, preços e propostas. Entrada com Google ou palavra-passe forte, com recuperação por email.</p></div>
+</div>
+<p class="group-label">Conteúdos e apoio</p><div class="features">
+<div class="feat"><h3>Publicações para as redes</h3><p>6 publicações com as imagens e as legendas, na identidade da ARQEC, e um plano de publicação.</p></div>
+<div class="feat"><h3>Guias de uso</h3><p>Um guia do painel de pedidos e um guia do CRM em PDF, com capturas e perguntas frequentes.</p></div>
+<div class="feat"><h3>Preços de obra de partida</h3><p>Os 11 trabalhos de obra começam com médias do mercado português, identificadas para o atelier rever e pôr a sua margem.</p></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-shots"><div class="wrap"><div class="head"><p class="eyebrow">Ecrãs</p><h2 id="t-shots">Como se vê</h2><p class="muted prose">As capturas do painel usam clientes de exemplo. Nenhum dado real aparece aqui.</p></div><div class="shots">
+<figure><img src="img/arqec-inicio.jpg" alt="Início do site, no computador" loading="lazy"><figcaption>Início do site, no computador</figcaption></figure>
+<figure><img src="img/arqec-telemovel.jpg" alt="Início e pedido de orçamento, no telemóvel" loading="lazy"><figcaption>Início e pedido de orçamento, no telemóvel</figcaption></figure>
+<figure><img src="img/arqec-3d.jpg" alt="A maqueta 3D da cozinha, na página Como trabalho" loading="lazy"><figcaption>A maqueta 3D da cozinha, na página Como trabalho</figcaption></figure>
+<figure><img src="img/arqec-pedido.jpg" alt="Painel: um pedido aberto, com WhatsApp, estado e «Criar proposta»" loading="lazy"><figcaption>Painel: um pedido aberto, com WhatsApp, estado e «Criar proposta»</figcaption></figure>
+<figure><img src="img/arqec-preco.jpg" alt="Tabela de preços: o preço de venda atualiza-se com a margem" loading="lazy"><figcaption>Tabela de preços: o preço de venda atualiza-se com a margem</figcaption></figure>
+<figure><img src="img/arqec-proposta.jpg" alt="Proposta: cliente, título e totais sempre à vista" loading="lazy"><figcaption>Proposta: cliente, título e totais sempre à vista</figcaption></figure>
+<figure><img src="img/arqec-pdf.jpg" alt="A proposta em PDF que o cliente recebe" loading="lazy"><figcaption>A proposta em PDF que o cliente recebe</figcaption></figure>
+</div></div></section>
+<section class="block" aria-labelledby="t-pedido"><div class="wrap"><div class="head"><p class="eyebrow">Por dentro</p><h2 id="t-pedido">De um pedido a uma proposta aceite</h2></div><ol class="flow">
+<li><div><span class="who">Cliente</span><h3>Pede um orçamento</h3><p>Preenche os 3 passos no site. O pedido fica guardado e aparece no painel como «Novo».</p></div></li>
+<li><div><span class="who">Atelier</span><h3>Responde</h3><p>Abre o pedido e fala com o cliente por WhatsApp, telefone ou email, com um toque.</p></div></li>
+<li><div><span class="who">Atelier</span><h3>Cria a proposta</h3><p>«Criar proposta» copia o nome, os contactos, a localidade e a área. Escolhe os serviços e os trabalhos da tabela e escreve as quantidades.</p></div></li>
+<li><div><span class="who">Atelier</span><h3>Envia o PDF</h3><p>Descarrega o PDF com a marca da ARQEC e envia-o. Ao marcar como enviada, o pedido passa sozinho a «Proposta enviada».</p></div></li>
+<li><div><span class="who">Os dois</span><h3>Fecham</h3><p>Proposta aceite, o pedido passa a «Ganho». Recusada, passa a «Perdido». Para uma alteração, duplica-se uma nova versão.</p></div></li>
+</ol></div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2></div>
+<p class="group-label">Construir e publicar</p><div class="stack">
+<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Onde o site vive e é publicado, em arqec.lovable.app.</p></div></div>
+<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda o código e o histórico. Cada alteração passou por um pedido de revisão aprovado antes de ser publicada.</p></div></div>
+<div class="tool"><div class="name">Claude<span class="kind">assistente de IA</span></div><div><p>Ajudou a escrever o código, os testes e os textos, a partir das minhas instruções e das escolhas do atelier.</p></div></div>
+</div>
+<p class="group-label">O site por dentro</p><div class="stack">
+<div class="tool"><div class="name">Lovable Cloud (Supabase)<span class="kind">base de dados e contas</span></div><div><p>Guarda pedidos, preços e propostas. Regras na base de dados garantem que só a conta de administrador os vê.</p></div></div>
+<div class="tool"><div class="name">Three.js<span class="kind">3D no navegador</span></div><div><p>Desenha a maqueta da cozinha que se monta ao descer a página.</p></div></div>
+<div class="tool"><div class="name">React, TanStack Start e Tailwind<span class="kind">a base do site</span></div><div><p>As páginas, a identidade da ARQEC e a adaptação ao telemóvel.</p></div></div>
+<div class="tool"><div class="name">Vitest<span class="kind">testes automáticos</span></div><div><p>Confirma que preços, totais, IVA, retenção e numeração das propostas estão sempre certos.</p></div></div>
+</div>
+</div></section>
+<section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">O que decidi e porquê</h2></div><div class="lessons">
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Somar euros com casas decimais dá erros de arredondamento.</p></div><div><span class="tag fix">Solução</span><p>Todas as contas são feitas em cêntimos inteiros e testadas: preço unitário, linhas, IVA por taxa e retenção.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Mudar um preço na tabela podia alterar propostas já enviadas.</p></div><div><span class="tag fix">Solução</span><p>Cada proposta guarda os preços do dia em que foi feita. A tabela só afeta as propostas seguintes.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>O cliente não queria a coluna do IVA em cada linha do PDF.</p></div><div><span class="tag fix">Solução</span><p>O PDF mostra o IVA só no fim. No painel, o atelier continua a ver e a escolher a taxa de cada linha, porque há serviços a 0 %.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>A maqueta 3D ficava em branco em alguns telemóveis Android.</p></div><div><span class="tag fix">Solução</span><p>Modo leve, verificação de que o desenho apareceu e uma imagem de reserva só quando o 3D falha.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Um portefólio de arquitetura sem obras é tentador de «encher».</p></div><div><span class="tag fix">Solução</span><p>Não inventei projetos: a página diz que as obras chegam em breve e o código só aceita fotografias com autorização escrita.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>O PDF da proposta levava o selo da plataforma.</p></div><div><span class="tag fix">Solução</span><p>Escondi o selo no PDF, para o documento do cliente ter só a marca da ARQEC.</p></div></div>
+</div></div></section>
+<section class="block" aria-labelledby="t-numeros"><div class="wrap"><div class="head"><p class="eyebrow">Em números</p><h2 id="t-numeros">A ARQEC em números</h2></div><div class="numbers"><div class="num"><b>7</b><span class="muted">páginas públicas</span></div><div class="num"><b>3</b><span class="muted">áreas no painel: pedidos, propostas, preços</span></div><div class="num"><b>28</b><span class="muted">serviços e trabalhos na tabela</span></div><div class="num"><b>22</b><span class="muted">testes aos cálculos</span></div></div></div></section>
+<section class="block" aria-labelledby="t-limites"><div class="wrap"><div class="two"><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">Com franqueza</p><h2 id="t-limites">Limites atuais</h2><ul class="list"><li>Ainda não há fotografias de obras reais: esperam pela autorização dos clientes.</li><li>Os emails automáticos de resposta aos pedidos ainda não estão ligados.</li><li>O site usa o endereço arqec.lovable.app, ainda sem domínio próprio.</li><li>Os preços de obra iniciais são médias de mercado, para o atelier rever.</li></ul></div><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">A seguir</p><h2>Próximos passos</h2><ul class="list"><li>Publicar as primeiras obras, com fotografias autorizadas.</li><li>Emails automáticos quando chega um pedido.</li><li>Domínio próprio.</li></ul></div></div></div></section>
+<section class="block" aria-labelledby="t-papel"><div class="wrap"><div class="role"><p class="eyebrow">O meu papel</p><h2 id="t-papel">Lenira Leitão</h2><p>Fiz o site, o painel e o CRM a partir das conversas com o Edelvino, da gravação em que explicou como calcula os orçamentos e da lista de faturação do atelier. Escrevi os textos, testei no telemóvel e no computador e preparei os guias de uso.</p><p class="muted">O trabalho de arquitetura, os serviços e os preços são do atelier. O código foi feito com ferramentas de IA, a partir dos meus pedidos e das minhas escolhas. Publicado com autorização da ARQEC.</p></div></div></section>
+</main><footer><div class="wrap"><p>ARQEC · Arq.º Edelvino Cristiano. O site está em <a href="https://arqec.lovable.app" target="_blank" rel="noopener">arqec.lovable.app</a>.</p><p>As cores e as letras desta página são as da ARQEC.</p></div></footer></body></html>

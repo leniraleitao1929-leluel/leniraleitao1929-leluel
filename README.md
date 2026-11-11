@@ -43,7 +43,7 @@ Aquilo de que mais gosto:
 <p align="center">
   <a href="https://www.facebook.com/share/1CCWDAb1ev/"><img src="https://img.shields.io/badge/Facebook-32%20000%2B%20seguidores-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Pequenos Encantos no Facebook: mais de 32 000 seguidores"></a>
   <a href="https://www.instagram.com/pequenosencantos.brilho/"><img src="https://img.shields.io/badge/Instagram-7%20900%20seguidores-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Pequenos Encantos no Instagram: 7 900 seguidores"></a>
-  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-11%20projetos-6D28D9?style=for-the-badge" alt="11 projetos">
+  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-12%20projetos-6D28D9?style=for-the-badge" alt="12 projetos">
 </p>
 
 <br>
@@ -57,6 +57,8 @@ Aquilo de que mais gosto:
 🔍 A aprender a fundo arquitetura de apps, bases de dados e testes automáticos
 
 ♿ A tornar cada projeto acessível a quem usa leitor de ecrã
+
+`Novidade nov 2026:` Fiz o site e o CRM da **[ARQEC](https://arqec.lovable.app)**, atelier de arquitetura de interiores em Almada: os pedidos do site viram propostas em PDF com os preços, a margem e o IVA do atelier. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/arqec.html)
 
 `Novidade nov 2026:` A **Voz Clara** cresceu e passou a chamar-se **[Tato Digital](https://tatodigital.lovable.app)**, com duas áreas: a VozClara, para o dia a dia, e os Estudos, com os livros lidos página a página. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
 
@@ -80,6 +82,18 @@ Aquilo de que mais gosto:
 <sub>APP · ENSINO E COMUNIDADE</sub>
 
 A plataforma de estudo do meu ebook e do meu workshop. Cada aluna encontra as aulas, os prompts já preenchidos com as suas respostas, um passaporte de carimbos e a turma. No dia do workshop tem o horário ao vivo e um botão «Preciso de ajuda». Eu acompanho tudo num painel em tempo real, e a ligação à Hotmart dá e retira acessos sozinha. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/academia-origem.html)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+<a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/arqec.html"><img src="projetos/arqec.png" alt="ARQEC" width="100%"></a>
+
+**[ARQEC](https://arqec.lovable.app)**<br>
+<sub>SITE + CRM · ARQUITETURA DE INTERIORES</sub>
+
+Site e CRM para o atelier do arquiteto de interiores Edelvino Cristiano, em Almada. Pedido de orçamento em 3 passos, maqueta 3D, painel de pedidos, tabela de preços com margem e propostas em PDF com a marca do atelier. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/arqec.html)
 
 </td>
 </tr>
