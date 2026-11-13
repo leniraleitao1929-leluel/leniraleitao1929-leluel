@@ -112,18 +112,7 @@ footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
 <li><div><span class="who">Motorista</span><h3>Registar o valor</h3><p>O pagamento é combinado e feito diretamente. O motorista regista o valor recebido.</p></div></li>
 <li><div><span class="who">Passageiro</span><h3>Avaliar</h3><p>Dá de 1 a 5 estrelas. A média aparece aos próximos passageiros.</p></div></li>
 </ol></div></section>
-<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feita</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2><p class="muted prose">Cada linha diz o que a ferramenta é e para que serve nesta app.</p></div>
-<p class="group-label">Construir e publicar</p><div class="stack">
-<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Onde o projeto vive e é publicado, em taxicomigo.lovable.app.</p></div></div>
-<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda o código e o histórico de cada alteração.</p></div></div>
-<div class="tool"><div class="name">Claude<span class="kind">assistente de IA</span></div><div><p>Ajudou a reconstruir a app a partir das capturas, a escrever as regras e os testes.</p></div></div>
-</div>
-<p class="group-label">A app por dentro</p><div class="stack">
-<div class="tool"><div class="name">Lovable Cloud (Supabase)<span class="kind">base de dados e contas</span></div><div><p>Contas com email, regras de segurança por pessoa e avisos em tempo real quando uma viagem muda.</p></div></div>
-<div class="tool"><div class="name">OpenStreetMap e Leaflet<span class="kind">mapa gratuito</span></div><div><p>Mostra a partida e o destino. A linha entre os dois é reta e o ecrã diz que é ilustrativa.</p></div></div>
-<div class="tool"><div class="name">React, TanStack Start e Tailwind<span class="kind">a base da app</span></div><div><p>Os ecrãs, as cores das capturas de 2025 e a adaptação ao telemóvel.</p></div></div>
-</div>
-</div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">Tecnologias</h2></div><p class="prose">React, TanStack Start e Tailwind · Supabase · OpenStreetMap e Leaflet para os mapas.</p></div></section>
 <section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">O que decidi e porquê</h2><p class="muted prose">Escolhas feitas para o TáxiComigo ser honesto e seguro.</p></div><div class="lessons">
 <div class="lesson"><div><span class="tag prob">Problema</span><p>Perdi a conta onde o projeto foi feito em 2025.</p></div><div><span class="tag fix">Solução</span><p>Reconstruí a partir das capturas e contei isso na própria app, numa página sobre a história do projeto. Não finjo que recuperei o código original.</p></div></div>
 <div class="lesson"><div><span class="tag prob">Problema</span><p>Num serviço de transporte, dois motoristas podem aceitar o mesmo pedido ao mesmo tempo.</p></div><div><span class="tag fix">Solução</span><p>A aceitação é feita numa única operação na base de dados: só um consegue, o outro recebe uma mensagem clara.</p></div></div>

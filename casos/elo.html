@@ -124,21 +124,7 @@ footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
 <li><div><span class="who">Pessoa de confiança</span><h3>Ir ver a fase acabada</h3><p>Quem coordena pede para concluir a fase, com fotos. A pessoa de confiança vai à obra e deixa o seu parecer.</p></div></li>
 <li><div><span class="who">Diáspora · quem envia</span><h3>Aceitar, e a casa ganha cor</h3><p>Com as fotos e o parecer, aceita ou diz o que falta. Ao aceitar, a casa pinta mais uma parte e chega a hora da etapa de pagamento combinada.</p></div></li>
 </ol></div></section>
-<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feita</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2><p class="muted prose">Cada linha diz o que a ferramenta é e para que serve nesta app.</p></div>
-<p class="group-label">Construir e publicar</p><div class="stack">
-<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Criou a primeira versão e é onde a app está publicada, em elo-cabo-verde.lovable.app.</p></div></div>
-<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda o código e o histórico de cada alteração. Cada melhoria chegou num pedido de alteração (pull request) com a explicação e os testes, e só entrou na app depois de eu a aprovar: 23 no total.</p></div></div>
-<div class="tool"><div class="name">Claude Code<span class="kind">assistente de programação com IA</span></div><div><p>Escreveu, testou e corrigiu o código a partir dos meus pedidos e das minhas decisões, sempre em português.</p></div></div>
-</div>
-<p class="group-label">A app por dentro</p><div class="stack">
-<div class="tool"><div class="name">React, TanStack Start, TypeScript e Tailwind<span class="kind">a base da app</span></div><div><p>Os ecrãs, as cores e as animações, que respeitam quem prefere menos movimento. A app instala-se no telemóvel.</p></div></div>
-<div class="tool"><div class="name">Lovable Cloud (Supabase, PostgreSQL)<span class="kind">contas e base de dados</span></div><div><p>As regras de quem pode ver, registar, confirmar, propor e aceitar estão escritas na própria base de dados. Mesmo que alguém contorne a app, a base de dados recusa.</p></div></div>
-<div class="tool"><div class="name">Web Push, pg_net e pg_cron<span class="kind">avisos no telemóvel</span></div><div><p>A base de dados avisa quem segue a obra, e uma tarefa diária avisa quando a licença está a caducar.</p></div></div>
-<div class="tool"><div class="name">Service worker e IndexedDB<span class="kind">rede fraca</span></div><div><p>A app abre sem rede e guarda no telemóvel o que se regista até haver rede.</p></div></div>
-<div class="tool"><div class="name">SVG<span class="kind">desenho</span></div><div><p>A casa é desenhada em código: cada parte acende quando a fase fica concluída.</p></div></div>
-<div class="tool"><div class="name">Vitest, Playwright e axe<span class="kind">testes</span></div><div><p>Testes automáticos da lógica, percursos completos no browser com três pessoas, e verificação de acessibilidade em modo claro e escuro.</p></div></div>
-</div>
-</div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">Tecnologias</h2></div><p class="prose">React, TanStack Start, TypeScript e Tailwind · Supabase (PostgreSQL) · Web Push, pg_net e pg_cron · service worker e IndexedDB para rede fraca · testes com Vitest, Playwright e axe.</p></div></section>
 <section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">O que decidi e porquê</h2><p class="muted prose">Escolhas feitas para a ELO ser útil, segura e reconhecível.</p></div><div class="lessons">
 <div class="lesson"><div><span class="tag prob">Problema</span><p>Uma app de remessas teria de mexer em dinheiro, e isso exige licenças bancárias.</p></div><div><span class="tag fix">Solução</span><p>A ELO não toca no dinheiro: regista, organiza e mostra. Continua-se a enviar pelo banco de sempre.</p></div></div>
 <div class="lesson"><div><span class="tag prob">Problema</span><p>Regras que só existem no ecrã podem ser contornadas.</p></div><div><span class="tag fix">Solução</span><p>As regras estão na base de dados e foram testadas contra tentativas de as quebrar: 149 verificações, todas a passar.</p></div></div>

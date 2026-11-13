@@ -135,19 +135,7 @@ h3{font-size:1.45rem;font-weight:600}
 <li><div><span class="who">Atelier</span><h3>Envia o PDF</h3><p>Descarrega o PDF com a marca da ARQEC e envia-o. Ao marcar como enviada, o pedido passa sozinho a «Proposta enviada».</p></div></li>
 <li><div><span class="who">Os dois</span><h3>Fecham</h3><p>Proposta aceite, o pedido passa a «Ganho». Recusada, passa a «Perdido». Para uma alteração, duplica-se uma nova versão.</p></div></li>
 </ol></div></section>
-<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2></div>
-<p class="group-label">Construir e publicar</p><div class="stack">
-<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Onde o site vive e é publicado, em arqec.lovable.app.</p></div></div>
-<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda o código e o histórico. Cada alteração passou por um pedido de revisão aprovado antes de ser publicada.</p></div></div>
-<div class="tool"><div class="name">Claude<span class="kind">assistente de IA</span></div><div><p>Ajudou a escrever o código, os testes e os textos, a partir das minhas instruções e das escolhas do atelier.</p></div></div>
-</div>
-<p class="group-label">O site por dentro</p><div class="stack">
-<div class="tool"><div class="name">Lovable Cloud (Supabase)<span class="kind">base de dados e contas</span></div><div><p>Guarda pedidos, preços e propostas. Regras na base de dados garantem que só a conta de administrador os vê.</p></div></div>
-<div class="tool"><div class="name">Three.js<span class="kind">3D no navegador</span></div><div><p>Desenha a maqueta da cozinha que se monta ao descer a página.</p></div></div>
-<div class="tool"><div class="name">React, TanStack Start e Tailwind<span class="kind">a base do site</span></div><div><p>As páginas, a identidade da ARQEC e a adaptação ao telemóvel.</p></div></div>
-<div class="tool"><div class="name">Vitest<span class="kind">testes automáticos</span></div><div><p>Confirma que preços, totais, IVA, retenção e numeração das propostas estão sempre certos.</p></div></div>
-</div>
-</div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">Tecnologias</h2></div><p class="prose">React, TanStack Start e Tailwind · Supabase · Three.js para a maqueta 3D · testes automáticos com Vitest.</p></div></section>
 <section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">O que decidi e porquê</h2></div><div class="lessons">
 <div class="lesson"><div><span class="tag prob">Problema</span><p>Somar euros com casas decimais dá erros de arredondamento.</p></div><div><span class="tag fix">Solução</span><p>Todas as contas são feitas em cêntimos inteiros e testadas: preço unitário, linhas, IVA por taxa e retenção.</p></div></div>
 <div class="lesson"><div><span class="tag prob">Problema</span><p>Mudar um preço na tabela podia alterar propostas já enviadas.</p></div><div><span class="tag fix">Solução</span><p>Cada proposta guarda os preços do dia em que foi feita. A tabela só afeta as propostas seguintes.</p></div></div>

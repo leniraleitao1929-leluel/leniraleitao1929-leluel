@@ -171,20 +171,7 @@ h3{font-size:1.3rem;font-weight:600}
 <li><div><span class="who">Os dois</span><h3>Aceite, projeto e pagamentos</h3><p>Proposta aceite, o pedido vira cliente e projeto em 7 passos. O sinal, o pagamento final e as mensalidades ficam registados.</p></div></li>
 </ol></div></section>
 
-<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2></div>
-<p class="group-label">Construir e publicar</p><div class="stack">
-<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Onde o site vive e é publicado, em leluel.lovable.app.</p></div></div>
-<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda o código e o histórico. Cada alteração passou por um pedido de revisão aprovado antes de ser publicada: 21 até agora.</p></div></div>
-<div class="tool"><div class="name">Claude<span class="kind">assistente de IA</span></div><div><p>Ajudou a escrever o código, os testes e os textos, a partir das minhas instruções e das minhas escolhas.</p></div></div>
-</div>
-<p class="group-label">O site por dentro</p><div class="stack">
-<div class="tool"><div class="name">Lovable Cloud (Supabase)<span class="kind">base de dados e contas</span></div><div><p>Pedidos, clientes, projetos, pagamentos, propostas e tarefas. Regras na base de dados garantem que só a conta de administração os vê. Os pedidos do site entram por uma função com limite por hora.</p></div></div>
-<div class="tool"><div class="name">Google PageSpeed Insights<span class="kind">velocidade e imagens</span></div><div><p>A Google abre o site como um navegador num telemóvel e devolve a nota de velocidade e a verificação das descrições das imagens.</p></div></div>
-<div class="tool"><div class="name">Brevo<span class="kind">envio de emails</span></div><div><p>Envia o relatório do diagnóstico e os avisos de novo pedido. Sem a chave, o site continua a funcionar sem emails.</p></div></div>
-<div class="tool"><div class="name">React, TanStack Start e Tailwind<span class="kind">a base do site</span></div><div><p>As páginas, as animações, a identidade da LELUEL e a adaptação ao telemóvel.</p></div></div>
-<div class="tool"><div class="name">Vitest, Playwright e axe<span class="kind">testes</span></div><div><p>24 testes automáticos ao diagnóstico, aos valores e às propostas. Cada alteração visual foi vista em computador e telemóvel, com verificação de acessibilidade.</p></div></div>
-</div>
-</div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">Tecnologias</h2></div><p class="prose">React, TanStack Start e Tailwind · Supabase · Google PageSpeed Insights · Brevo para os emails · testes com Vitest, Playwright e axe.</p></div></section>
 
 <section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">O que decidi e porquê</h2></div><div class="lessons">
 <div class="lesson"><div><span class="tag prob">Problema</span><p>No site antigo de um cliente, feito no Canva, o diagnóstico dizia «sem contacto com um toque». Não era verdade: os botões existiam, mas só apareciam depois de a página abrir.</p></div><div><span class="tag fix">Solução</span><p>Comparei o código real de cada site com o resultado. O contacto passou a ser procurado em toda a página, e o que não se consegue ver fica «por confirmar», a meio ponto, e não entra na proposta.</p></div></div>
