@@ -1,0 +1,221 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LELUEL · Estudo de caso</title><meta name="description" content="O site, o CRM e o diagnóstico grátis da LELUEL, a marca de Lenira Leitão: pedidos que viram propostas em PDF, projetos, pagamentos e mensalidades, e um diagnóstico que envia o relatório por email.">
+<meta property="og:title" content="LELUEL · Estudo de caso"><meta property="og:image" content="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/projetos/leluel.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap"><style>
+
+:root{--hero:#0f0c29;--hero-2:#1e1b4b;--accent:#8b5cf6;--accent-ink:#6d28d9;--on-accent:#ffffff;--ghost-border:rgba(196,181,253,.6);--hero-eyebrow:#fde68a;--bg:#f7f5ff;--surface:#ffffff;--ink:#1e1b4b;--muted:#4c4677;--line:#ddd6fe;--ok:#047857;--warn:#be185d;--on-hero:#f5f3ff;--on-hero-soft:#c9c2f2;--font-display:"Fraunces", Georgia, serif;--font-body:Manrope, "Segoe UI", system-ui, sans-serif;--font-mono:Manrope, "Segoe UI", system-ui, sans-serif;--display-weight:500;--em-style:italic;--brand-tracking:.2em;--font-h3:"Fraunces", Georgia, serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.125rem;line-height:1.65}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:8px;font-weight:700;z-index:20}
+.skip:focus{left:16px}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.12;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:var(--display-weight);letter-spacing:-0.01em}
+h3{font-size:1.25rem;font-weight:700;font-family:var(--font-h3,var(--font-display))}
+p{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.prose{max-width:40rem;display:grid;gap:1rem}
+.muted{color:var(--muted)}
+.back{display:inline-block;font-size:.95rem;color:var(--on-hero-soft);text-decoration:none;margin-bottom:.4rem}
+.back:hover{color:var(--on-hero)}
+.hero{background:linear-gradient(140deg,var(--hero) 0%,var(--hero-2) 100%);color:var(--on-hero)}
+.hero .wrap{padding-block:3rem 3rem;display:grid;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand .mark{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent);font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.brand b{font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:var(--brand-tracking)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:var(--display-weight);letter-spacing:-0.02em;max-width:18ch}
+.hero h1 em{font-style:var(--em-style);color:var(--accent);font-family:var(--font-em,inherit);font-weight:var(--em-weight,inherit)}
+.hero .lede{font-size:1.25rem;color:var(--on-hero-soft);max-width:40rem}
+.hero .lede strong{color:var(--on-hero)}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn.solid{background:var(--accent);color:var(--on-accent)}
+.btn.ghost{border:2px solid var(--ghost-border,rgba(255,255,255,.45));color:var(--on-hero)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-family:var(--font-mono);font-size:.9rem;color:var(--on-hero-soft)}
+.facts b{color:var(--on-hero);font-weight:600}
+section.block{padding-block:3.5rem;border-bottom:1px solid var(--line)}
+section.block>.wrap{display:grid;gap:1.6rem}
+.head{display:grid;gap:.6rem}
+.quote{border-left:5px solid var(--accent);padding:.4rem 0 .4rem 1.2rem;font-size:1.3rem;font-family:var(--font-display);font-weight:500;max-width:40rem}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem;display:grid;gap:.4rem;align-content:start}
+.feat .say{font-family:var(--font-mono);font-size:.85rem;color:var(--accent-ink)}
+.group-label{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.flow{list-style:none;margin:0;padding:0;display:grid;counter-reset:passo}
+.flow li{counter-increment:passo;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding-bottom:1.4rem;position:relative}
+.flow li::before{content:counter(passo);width:3rem;height:3rem;border-radius:50%;background:var(--hero);color:var(--on-hero);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:1.5rem;top:3rem;bottom:0;width:2px;background:var(--line)}
+.flow .who{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.flow h3{margin-top:.1rem}
+.stack{display:grid;gap:.8rem}
+.tool{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:.4rem 1.4rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}
+.tool .name{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.1rem}
+.tool .kind{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);display:block;font-weight:400;margin-top:.15rem}
+@media (max-width:640px){.tool{grid-template-columns:minmax(0,1fr)}}
+.lessons{display:grid;gap:.9rem}
+.lesson{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem}
+.lesson .tag{font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:.3rem}
+.lesson .tag.prob{color:var(--warn)}
+.lesson .tag.fix{color:var(--ok)}
+@media (max-width:640px){.lesson{grid-template-columns:minmax(0,1fr);gap:.7rem}}
+.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem}
+.num{border-top:4px solid var(--accent);padding-top:.7rem}
+.num b{display:block;font-family:var(--font-display);font-size:2.3rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.05}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;align-items:start}
+.shots figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:.6rem .9rem;font-size:.95rem;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.6rem}
+.list{margin:0;padding-left:1.2rem;display:grid;gap:.55rem}
+.list li::marker{color:var(--accent-ink)}
+.role{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--hero-2);border-radius:12px;padding:1.4rem 1.5rem;display:grid;gap:.8rem;max-width:44rem}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:1.1rem 1.1rem 1.1rem .3rem;padding:.55rem 1rem;font-size:1.05rem}
+footer{padding-block:2.5rem 3rem}
+footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
+@media (prefers-color-scheme:dark){:root{--bg:#0f0c29;--surface:#1a1640;--ink:#f5f3ff;--muted:#c9c2f2;--line:#2e2a63;--accent-ink:#c4b5fd;--ok:#6ee7b7;--warn:#f9a8d4;color-scheme:dark}}
+.hero{background:radial-gradient(700px 420px at 88% -10%,rgba(109,40,217,.55) 0%,transparent 60%),radial-gradient(600px 380px at 0% 110%,rgba(190,24,93,.35) 0%,transparent 60%),var(--hero)}
+.hero h1 em{color:#c4b5fd}
+.btn.solid{background:linear-gradient(100deg,#6d28d9,#be185d);color:#fff}
+.brand img{width:44px;height:44px}
+.eyebrow{letter-spacing:.22em;font-weight:700;font-size:.74rem}
+h3{font-size:1.3rem;font-weight:600}
+.num b{font-weight:500;color:var(--accent-ink)}
+.flow li::before{background:linear-gradient(135deg,#6d28d9,#be185d);color:#fff;font-weight:600}
+.feat .say{color:var(--accent-ink)}
+.shots figure.wide{grid-column:1/-1}
+.badge{display:inline-block;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .55rem;border-radius:999px;background:rgba(253,230,138,.18);color:var(--accent-ink);font-weight:700}
+</style></head><body>
+<a class="skip" href="#problema">Saltar para o conteúdo</a>
+<header class="hero"><div class="wrap">
+<a class="back" href="../index.html">← Todos os projetos de Lenira Leitão</a>
+<div class="brand" aria-hidden="true"><img src="img/leluel-planeta.svg" alt="" width="44" height="44"><b>LELUEL</b></div>
+<p class="eyebrow" style="color:var(--hero-eyebrow)">Estudo de caso · Site, CRM e diagnóstico · A minha marca, 2026</p>
+<h1>A minha marca, <em>do primeiro clique ao pagamento recebido.</em></h1>
+<p class="lede">A LELUEL é a marca com que faço sites e apps para pequenos negócios. Construí o site e, por trás dele, <strong>um CRM completo</strong>: os pedidos chegam do site, ganham um próximo passo, viram <strong>propostas em PDF</strong> e terminam em <strong>pagamentos e mensalidades</strong>. E um <strong>diagnóstico grátis</strong> que analisa o site de quem visita, envia o relatório por email e já deixa a proposta escrita.</p>
+<div class="links">
+<a class="btn solid" href="https://leluel.lovable.app" target="_blank" rel="noopener">Abrir o site ↗</a>
+<a class="btn ghost" href="https://leluel.lovable.app/demo" target="_blank" rel="noopener">Experimentar o CRM ↗</a>
+<a class="btn ghost" href="https://leluel.lovable.app/diagnostico" target="_blank" rel="noopener">Fazer o diagnóstico ↗</a>
+</div>
+<p class="facts"><span><b>22</b> páginas no mapa do site</span><span><b>6</b> áreas no CRM</span><span><b>12</b> pontos no diagnóstico</span><span><b>24</b> testes automáticos</span></p>
+</div></header><main>
+
+<section class="block" id="problema" aria-labelledby="t-problema"><div class="wrap"><div class="head"><p class="eyebrow">Porque nasceu</p><h2 id="t-problema">Um site que mostra o trabalho e trabalha sozinho</h2></div><div class="prose">
+<p>Eu precisava de um sítio para mostrar o que faço, com preços à vista e sem jargão. Mas também de uma forma de <strong>nunca perder um pedido</strong>: quem pede pelo site, pelo WhatsApp ou pelo Instagram tem de ficar registado, com o próximo passo marcado.</p>
+<p>E queria levar o CRM às reuniões e mostrá-lo a funcionar no meu ecrã, sem depender dos dados de um cliente. Daí nasceu o <strong>modo demonstração</strong>: o mesmo CRM, com dados de exemplo para quatro tipos de negócio, onde nada fica guardado.</p>
+<p>Por fim, o <strong>diagnóstico grátis</strong>: uma forma honesta de começar uma conversa. A pessoa vê o que está bem e o que falta no seu site, recebe o relatório por email, e eu recebo o pedido no CRM com tudo o que foi encontrado.</p>
+</div><p class="quote">Do diagnóstico grátis ao pagamento recebido, tudo no mesmo sítio, com o nome do negócio.</p></div></section>
+
+<section class="block" aria-labelledby="t-faz"><div class="wrap"><div class="head"><p class="eyebrow">O que entreguei</p><h2 id="t-faz">Tudo o que foi feito, discriminado</h2></div>
+
+<p class="group-label">O site, para quem procura</p><div class="features">
+<div class="feat"><h3>Planeta em órbita</h3><p>No início, um planeta a rodar com os meus projetos em órbita, à frente e atrás dele, e uma lua que se esconde por trás. Em telemóveis, continua leve.</p></div>
+<div class="feat"><h3>O CRM a nascer, ao vivo</h3><p>Uma secção mostra o CRM a construir-se em 7 passos: marca, separadores, números do dia, pedidos, próximo passo, proposta e pagamento. Com movimento reduzido, mostra o resultado final.</p></div>
+<div class="feat"><h3>7 serviços com preço à vista</h3><p>Cada serviço tem a sua página: para quem é, o antes e o depois, o que inclui, o prazo, o preço e as perguntas frequentes. O menu não mostra preços; ficam dentro de cada página.</p></div>
+<div class="feat"><h3>6 projetos reais</h3><p>ARQEC, Academia ORIGEM, ELO, Tato Digital, BlueTime e Pequenos Encantos, cada um com a sua página.</p></div>
+<div class="feat"><h3>Contacto que chega ao CRM</h3><p>O formulário guarda o pedido no CRM, com consentimento, e envia-me um aviso por email. O botão de WhatsApp leva a mensagem já escrita.</p></div>
+<div class="feat"><h3>Encontrado e partilhável</h3><p>Título e descrição para o Google em cada página, imagem de partilha para WhatsApp e redes, mapa do site com 22 endereços e regras para o Google.</p></div>
+</div>
+
+<p class="group-label">O diagnóstico grátis</p><div class="features">
+<div class="feat"><h3>12 pontos, sem jargão</h3><p>Ligação segura, título, descrição para o Google, título principal, descrições das imagens, telemóvel, língua, imagem de partilha, mapa do site, regras para o Google, velocidade e contacto com um toque. Uma nota de 0 a 100.</p></div>
+<div class="feat"><h3>Velocidade medida pela Google</h3><p>A velocidade no telemóvel vem do PageSpeed Insights da própria Google: a nota oficial e o tempo até aparecer o conteúdo principal. Corre ao mesmo tempo que o resto da análise.</p></div>
+<div class="feat"><h3>Justo com sites do Canva e do Wix</h3><p>Nesses sites, os botões e as imagens são montados no navegador. O diagnóstico procura os contactos nos dados da página e marca como «por confirmar» o que não consegue ver, em vez de acusar sem provas.</p></div>
+<div class="feat"><h3>Relatório por email</h3><p>A pessoa recebe a nota e os 12 pontos, com os botões para falar comigo. Eu recebo um aviso de novo pedido. O pedido fica no CRM com a nota e o que falta.</p><p class="say">«O diagnóstico do seu site: 54/100»</p></div>
+<div class="feat"><h3>Seguro por dentro</h3><p>Recusa endereços internos e IPs diretos, segue redireccionamentos um a um, corta páginas acima de 2 MB e espera no máximo 10 segundos. No máximo 5 diagnósticos por hora por aparelho.</p></div>
+<div class="feat"><h3>Um exemplo com cara própria</h3><p>Enquanto analisa, um site fictício de uma padaria é «lido» por uma linha de luz, com os avisos a aparecer em cima de cada parte e a nota dentro de um planeta.</p></div>
+</div>
+
+<p class="group-label">O CRM, para o dia a dia</p><div class="features">
+<div class="feat"><h3>Hoje</h3><p>Os números do dia (pedidos novos, conversas marcadas, ganhos do mês, mensalidades) e o que fazer hoje, com os atrasados assinalados.</p></div>
+<div class="feat"><h3>Pedidos</h3><p>De onde veio (site, WhatsApp, Instagram, telefone…), estado, próximo passo com data, motivo de perda, notas internas, WhatsApp e chamada com um toque, e exportação para Excel.</p></div>
+<div class="feat"><h3>Clientes e projetos</h3><p>Um pedido ganho vira cliente e projeto. Cada projeto avança em 7 passos, da conversa inicial ao acompanhamento, com prazo e preço.</p></div>
+<div class="feat"><h3>Pagamentos e mensalidades</h3><p>Sinal, pagamento final, extras e mensalidades, com datas e o que já foi pago. As mensalidades do mês lançam-se com um botão.</p></div>
+<div class="feat"><h3>Propostas em PDF</h3><p>Capa com a marca, índice, informações, quem somos, o que inclui, orçamento, IVA, fases de pagamento, como decorre e espaço para assinaturas. No telemóvel, a folha A4 encolhe inteira.</p></div>
+<div class="feat"><h3>Proposta escrita a partir do diagnóstico</h3><p>Num pedido de diagnóstico, «Criar proposta» escreve o que foi encontrado, o que proponho e o que muda, escolhe entre página nova e correções e preenche o prazo. Sem promessas de lugares no Google.</p></div>
+</div>
+
+<p class="group-label">Para mostrar e para vender</p><div class="features">
+<div class="feat"><h3>Modo demonstração</h3><p>O mesmo CRM com dados de exemplo para quatro negócios: atelier e obras, salão, formação e serviços. Nada fica guardado e há um botão para repor tudo.</p></div>
+<div class="feat"><h3>A marca CRM LELUEL</h3><p>Todos os painéis que faço levam «CRM LELUEL» com o nome do cliente por baixo. Na ARQEC, por exemplo, aparece «CRM LELUEL · ARQEC · Edelvino Cristiano».</p></div>
+<div class="feat"><h3>Entrada segura</h3><p>Entrada com Google ou palavra-passe, com recuperação por email. Só a conta de administração vê pedidos, clientes, projetos, pagamentos e propostas.</p></div>
+</div>
+</div></section>
+
+<section class="block" aria-labelledby="t-shots"><div class="wrap"><div class="head"><p class="eyebrow">Ecrãs</p><h2 id="t-shots">Como se vê</h2><p class="muted prose">As capturas do CRM são do modo demonstração, com dados de exemplo. Nenhum cliente real aparece aqui.</p></div><div class="shots">
+<figure class="wide"><img src="img/leluel-inicio.jpg" alt="Início do site LELUEL: o planeta com os projetos em órbita" loading="lazy"><figcaption>Início: o planeta com os projetos em órbita</figcaption></figure>
+<figure class="wide"><img src="img/leluel-telemovel.jpg" alt="No telemóvel: início, diagnóstico e CRM" loading="lazy"><figcaption>No telemóvel: início, diagnóstico e CRM</figcaption></figure>
+<figure><img src="img/leluel-diagnostico-inicio.jpg" alt="O diagnóstico em destaque no início, com o campo para escrever o site" loading="lazy"><figcaption>O diagnóstico em destaque no início</figcaption></figure>
+<figure><img src="img/leluel-crm-nascer.jpg" alt="A secção «Veja o seu CRM a nascer», a construir-se passo a passo" loading="lazy"><figcaption>«Veja o seu CRM a nascer», passo a passo</figcaption></figure>
+<figure><img src="img/leluel-diagnostico.jpg" alt="Página do diagnóstico grátis, com o exemplo da padaria fictícia" loading="lazy"><figcaption>Diagnóstico grátis, com o exemplo da padaria fictícia</figcaption></figure>
+<figure><img src="img/leluel-servicos.jpg" alt="Os serviços lado a lado, com preços à vista" loading="lazy"><figcaption>Os serviços lado a lado, com preços à vista</figcaption></figure>
+<figure><img src="img/leluel-demo.jpg" alt="Modo demonstração: escolher o tipo de negócio" loading="lazy"><figcaption>Demonstração: escolher o tipo de negócio</figcaption></figure>
+<figure><img src="img/leluel-hoje.jpg" alt="CRM: o ecrã Hoje, com os números do dia" loading="lazy"><figcaption>CRM: o ecrã Hoje</figcaption></figure>
+<figure><img src="img/leluel-pedido.jpg" alt="CRM: um pedido aberto, com WhatsApp, próximo passo e «Criar proposta»" loading="lazy"><figcaption>Um pedido aberto, com próximo passo e «Criar proposta»</figcaption></figure>
+<figure><img src="img/leluel-projetos.jpg" alt="CRM: projetos em 7 passos" loading="lazy"><figcaption>Projetos em 7 passos</figcaption></figure>
+<figure><img src="img/leluel-pagamentos.jpg" alt="CRM: pagamentos e mensalidades" loading="lazy"><figcaption>Pagamentos e mensalidades</figcaption></figure>
+<figure><img src="img/leluel-proposta.jpg" alt="CRM: o editor da proposta, com os totais sempre à vista" loading="lazy"><figcaption>O editor da proposta</figcaption></figure>
+<figure class="wide"><img src="img/leluel-pdf.jpg" alt="A proposta em PDF: capa, o que inclui e orçamento" loading="lazy"><figcaption>A proposta em PDF: capa, o que inclui e orçamento</figcaption></figure>
+</div></div></section>
+
+<section class="block" aria-labelledby="t-pedido"><div class="wrap"><div class="head"><p class="eyebrow">Por dentro</p><h2 id="t-pedido">De um diagnóstico a um cliente com mensalidade</h2></div><ol class="flow">
+<li><div><span class="who">Visitante</span><h3>Faz o diagnóstico</h3><p>Escreve o endereço do site e o email. Em menos de um minuto vê a nota, os 12 pontos e o que fazer a seguir.</p></div></li>
+<li><div><span class="who">Automático</span><h3>Relatório e aviso</h3><p>A pessoa recebe o relatório por email. Eu recebo o aviso de novo pedido, e o pedido entra no CRM com a nota e o que falta.</p></div></li>
+<li><div><span class="who">LELUEL</span><h3>Próximo passo</h3><p>Abro o pedido, respondo por WhatsApp com um toque e marco a conversa com data. Se o dia passar, o pedido aparece como atrasado.</p></div></li>
+<li><div><span class="who">LELUEL</span><h3>Proposta já escrita</h3><p>«Criar proposta» escreve o que encontrei, o que proponho e o que muda, com o serviço e o prazo. Reviso e descarrego o PDF.</p></div></li>
+<li><div><span class="who">Os dois</span><h3>Aceite, projeto e pagamentos</h3><p>Proposta aceite, o pedido vira cliente e projeto em 7 passos. O sinal, o pagamento final e as mensalidades ficam registados.</p></div></li>
+</ol></div></section>
+
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2></div>
+<p class="group-label">Construir e publicar</p><div class="stack">
+<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Onde o site vive e é publicado, em leluel.lovable.app.</p></div></div>
+<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda o código e o histórico. Cada alteração passou por um pedido de revisão aprovado antes de ser publicada: 21 até agora.</p></div></div>
+<div class="tool"><div class="name">Claude<span class="kind">assistente de IA</span></div><div><p>Ajudou a escrever o código, os testes e os textos, a partir das minhas instruções e das minhas escolhas.</p></div></div>
+</div>
+<p class="group-label">O site por dentro</p><div class="stack">
+<div class="tool"><div class="name">Lovable Cloud (Supabase)<span class="kind">base de dados e contas</span></div><div><p>Pedidos, clientes, projetos, pagamentos, propostas e tarefas. Regras na base de dados garantem que só a conta de administração os vê. Os pedidos do site entram por uma função com limite por hora.</p></div></div>
+<div class="tool"><div class="name">Google PageSpeed Insights<span class="kind">velocidade e imagens</span></div><div><p>A Google abre o site como um navegador num telemóvel e devolve a nota de velocidade e a verificação das descrições das imagens.</p></div></div>
+<div class="tool"><div class="name">Brevo<span class="kind">envio de emails</span></div><div><p>Envia o relatório do diagnóstico e os avisos de novo pedido. Sem a chave, o site continua a funcionar sem emails.</p></div></div>
+<div class="tool"><div class="name">React, TanStack Start e Tailwind<span class="kind">a base do site</span></div><div><p>As páginas, as animações, a identidade da LELUEL e a adaptação ao telemóvel.</p></div></div>
+<div class="tool"><div class="name">Vitest, Playwright e axe<span class="kind">testes</span></div><div><p>24 testes automáticos ao diagnóstico, aos valores e às propostas. Cada alteração visual foi vista em computador e telemóvel, com verificação de acessibilidade.</p></div></div>
+</div>
+</div></section>
+
+<section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">O que decidi e porquê</h2></div><div class="lessons">
+<div class="lesson"><div><span class="tag prob">Problema</span><p>No site antigo de um cliente, feito no Canva, o diagnóstico dizia «sem contacto com um toque». Não era verdade: os botões existiam, mas só apareciam depois de a página abrir.</p></div><div><span class="tag fix">Solução</span><p>Comparei o código real de cada site com o resultado. O contacto passou a ser procurado em toda a página, e o que não se consegue ver fica «por confirmar», a meio ponto, e não entra na proposta.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>A primeira medida de velocidade só via o tempo de resposta do servidor. Um site com fotografias pesadas podia parecer rápido.</p></div><div><span class="tag fix">Solução</span><p>Passou a usar a nota da Google para telemóvel. Sem a chave da Google, volta à medida simples e diz com franqueza que é «resposta do servidor».</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>No telemóvel, o PDF da proposta aparecia cortado e os 7 passos sobrepunham-se.</p></div><div><span class="tag fix">Solução</span><p>A folha A4 encolhe inteira no ecrã e fica no tamanho real ao imprimir. Os passos ficam em duas filas e as linhas vazias não aparecem.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Uma proposta que convence pode cair no exagero.</p></div><div><span class="tag fix">Solução</span><p>A proposta só fala do que foi medido e termina sempre igual: volto a fazer o diagnóstico no fim e não prometo o primeiro lugar no Google.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Mostrar um CRM numa reunião sem expor os dados de clientes.</p></div><div><span class="tag fix">Solução</span><p>Um modo demonstração com quatro negócios de exemplo, que não toca na base de dados e se repõe com um botão.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>O exemplo animado do diagnóstico tinha, por acaso, a mesma nota que um site real tinha tido, e parecia um desenho.</p></div><div><span class="tag fix">Solução</span><p>Um site fictício com aspeto real, uma padaria com endereço «.exemplo», textos, preços e o resultado do Google tal como aparece sem descrição.</p></div></div>
+</div></div></section>
+
+<section class="block" aria-labelledby="t-numeros"><div class="wrap"><div class="head"><p class="eyebrow">Em números</p><h2 id="t-numeros">A LELUEL em números</h2></div><div class="numbers">
+<div class="num"><b>7</b><span class="muted">serviços com página própria</span></div>
+<div class="num"><b>6</b><span class="muted">áreas no CRM</span></div>
+<div class="num"><b>4</b><span class="muted">negócios no modo demonstração</span></div>
+<div class="num"><b>12</b><span class="muted">pontos no diagnóstico</span></div>
+<div class="num"><b>24</b><span class="muted">testes automáticos</span></div>
+<div class="num"><b>21</b><span class="muted">alterações revistas e publicadas</span></div>
+</div></div></section>
+
+<section class="block" aria-labelledby="t-limites"><div class="wrap"><div class="two"><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">Com franqueza</p><h2 id="t-limites">Limites atuais</h2><ul class="list">
+<li>O site usa o endereço leluel.lovable.app, ainda sem domínio próprio.</li>
+<li>Sem domínio, os emails saem por um endereço do Brevo, com o nome «Lenira · LELUEL» e as respostas a chegarem ao meu email.</li>
+<li>O diagnóstico analisa só a página inicial do site, não o site todo.</li>
+<li>Nas correções a um site existente, o preço fica por preencher: ainda não tenho um preço fixo.</li>
+</ul></div><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">A seguir</p><h2>Próximos passos</h2><ul class="list">
+<li>Domínio leluel.pt e emails a sair do meu domínio.</li>
+<li>Diagnóstico de mais do que uma página.</li>
+<li>Os primeiros clientes a usar o CRM LELUEL no dia a dia.</li>
+</ul></div></div></div></section>
+
+<section class="block" aria-labelledby="t-papel"><div class="wrap"><div class="role"><p class="eyebrow">O meu papel</p><h2 id="t-papel">Lenira Leitão</h2><p>Defini a marca, os serviços, os preços e o que o CRM devia fazer, a pensar no meu dia a dia e nas reuniões com clientes. Escrevi os textos, decidi cada ecrã, testei no telemóvel e no computador e verifiquei o diagnóstico com sites reais. Criei e liguei as contas da Google e do Brevo.</p><p class="muted">O código foi feito com ferramentas de IA, a partir dos meus pedidos e das minhas escolhas. Cada alteração foi revista antes de ser publicada.</p></div></div></section>
+</main>
+<footer><div class="wrap"><p>LELUEL · Lenira Leitão · <a href="https://leluel.lovable.app">leluel.lovable.app</a></p><p><a href="../index.html">← Voltar a todos os projetos</a></p></div></footer>
+</body></html>

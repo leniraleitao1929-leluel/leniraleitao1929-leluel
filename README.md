@@ -43,7 +43,7 @@ Aquilo de que mais gosto:
 <p align="center">
   <a href="https://www.facebook.com/share/1CCWDAb1ev/"><img src="https://img.shields.io/badge/Facebook-32%20000%2B%20seguidores-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Pequenos Encantos no Facebook: mais de 32 000 seguidores"></a>
   <a href="https://www.instagram.com/pequenosencantos.brilho/"><img src="https://img.shields.io/badge/Instagram-7%20900%20seguidores-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Pequenos Encantos no Instagram: 7 900 seguidores"></a>
-  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-12%20projetos-6D28D9?style=for-the-badge" alt="12 projetos">
+  <img src="https://img.shields.io/badge/Cria%C3%A7%C3%B5es-13%20projetos-6D28D9?style=for-the-badge" alt="13 projetos">
 </p>
 
 <br>
@@ -57,6 +57,8 @@ Aquilo de que mais gosto:
 🔍 A aprender a fundo arquitetura de apps, bases de dados e testes automáticos
 
 ♿ A tornar cada projeto acessível a quem usa leitor de ecrã
+
+`Novidade nov 2026:` Fiz o site e o **CRM da minha marca, a [LELUEL](https://leluel.lovable.app)**: pedidos com próximo passo, clientes, projetos, pagamentos e mensalidades, propostas em PDF e um **diagnóstico grátis** que mede o site com a Google, envia o relatório por email e já deixa a proposta escrita. [Experimentar o CRM](https://leluel.lovable.app/demo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
 
 `Novidade nov 2026:` Fiz o site e o CRM da **[ARQEC](https://arqec.lovable.app)**, atelier de arquitetura de interiores em Almada: os pedidos do site viram propostas em PDF com os preços, a margem e o IVA do atelier. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/arqec.html)
 
@@ -73,6 +75,18 @@ Aquilo de que mais gosto:
 ### As minhas criações
 
 <table>
+<tr>
+<td colspan="2" valign="top">
+
+<a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html"><img src="projetos/leluel.png" alt="LELUEL" width="100%"></a>
+
+**[LELUEL](https://leluel.lovable.app)**<br>
+<sub>SITE + CRM + DIAGNÓSTICO · A MINHA MARCA</sub>
+
+O meu site e o CRM por trás dele. Os pedidos chegam do site, do WhatsApp ou do Instagram e ganham um próximo passo; viram clientes, projetos em 7 passos, propostas em PDF e pagamentos com mensalidades. O diagnóstico grátis analisa 12 pontos de qualquer site, com a velocidade medida pela Google, envia o relatório por email e deixa a proposta escrita. Há um modo demonstração para mostrar nas reuniões. [Experimentar o CRM](https://leluel.lovable.app/demo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
+
+</td>
+</tr>
 <tr>
 <td colspan="2" valign="top">
 
@@ -251,5 +265,5 @@ Se tem uma ideia, um negócio que precisa de um site ou de uma app, ou quer apre
 - 🎓 **Formação** para criar o seu próprio projeto digital com IA.
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/lenira-tavares-363bb5269"><img src="https://img.shields.io/badge/Falar%20comigo%20no%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Falar comigo no LinkedIn" height="38"></a>
+  <a href="https://www.linkedin.com/in/leniraleit%C3%A3o291903"><img src="https://img.shields.io/badge/Falar%20comigo%20no%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Falar comigo no LinkedIn" height="38"></a>
 </p>
