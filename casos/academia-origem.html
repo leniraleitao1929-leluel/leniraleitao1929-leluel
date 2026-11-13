@@ -121,19 +121,7 @@ footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
 <li><div><span class="who">Tempo real · painel</span><h3>Acompanhar a turma</h3><p>O progresso de cada aluna chega ao painel da formadora. Os pedidos de ajuda aparecem com um número no menu.</p></div></li>
 <li><div><span class="who">Hotmart · reembolso</span><h3>Retirar o acesso</h3><p>Um reembolso, chargeback ou cancelamento retira o acesso automaticamente.</p></div></li>
 </ol></div></section>
-<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feita</p><h2 id="t-feita">As ferramentas, explicadas sem jargão</h2><p class="muted prose">Cada linha diz o que a ferramenta é e para que serve nesta app.</p></div>
-<p class="group-label">Construir e publicar</p><div class="stack">
-<div class="tool"><div class="name">Lovable<span class="kind">construtor de apps web</span></div><div><p>Onde a app está publicada, em academia-origem-preparacao.lovable.app.</p></div></div>
-<div class="tool"><div class="name">GitHub<span class="kind">arquivo do código</span></div><div><p>Guarda o código e o histórico de cada alteração, com a explicação do porquê.</p></div></div>
-<div class="tool"><div class="name">Claude Code<span class="kind">assistente de programação com IA</span></div><div><p>Escreveu e corrigiu o código a partir dos pedidos e das decisões da Lenira.</p></div></div>
-</div>
-<p class="group-label">A app por dentro</p><div class="stack">
-<div class="tool"><div class="name">Supabase<span class="kind">base de dados, contas e ficheiros</span></div><div><p>Guarda o progresso, a comunidade e os acessos. As regras de quem vê o quê estão na própria base de dados, não só no ecrã.</p></div></div>
-<div class="tool"><div class="name">Supabase Realtime<span class="kind">tempo real</span></div><div><p>Atualiza o painel da formadora e a comunidade sem recarregar a página.</p></div></div>
-<div class="tool"><div class="name">Edge Function da Hotmart<span class="kind">vendas</span></div><div><p>Recebe os avisos de compra e de reembolso e dá ou retira o acesso.</p></div></div>
-<div class="tool"><div class="name">Canvas do browser<span class="kind">imagens</span></div><div><p>Desenha a capa do ebook e o cartão de talento para a aluna guardar e partilhar.</p></div></div>
-</div>
-</div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">Tecnologias</h2></div><p class="prose">Supabase (base de dados, contas e tempo real), funções no servidor ligadas à Hotmart e Canvas do navegador.</p></div></section>
 <section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">Problemas reais e como foram resolvidos</h2><p class="muted prose">Decisões tomadas para que a app seja segura, justa para quem compra e fácil para quem ensina.</p></div><div class="lessons">
 <div class="lesson"><div><span class="tag prob">Problema</span><p>O conteúdo pago estava no código da app, e qualquer pessoa com conhecimentos técnicos o podia ler.</p></div><div><span class="tag fix">Solução</span><p>As aulas e os prompts passaram para a base de dados. Quem não comprou não recebe nada, e a leitora não recebe o conteúdo do workshop.</p></div></div>
 <div class="lesson"><div><span class="tag prob">Problema</span><p>Dar acesso à mão, compra a compra, não funciona num lançamento.</p></div><div><span class="tag fix">Solução</span><p>A ligação à Hotmart dá e retira acessos sozinha, e o painel permite corrigir um caso à mão.</p></div></div>
