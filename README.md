@@ -58,6 +58,8 @@ Aquilo de que mais gosto:
 
 ♿ A tornar cada projeto acessível a quem usa leitor de ecrã
 
+`Novidade nov 2026:` A LELUEL ganhou a **Sophie**, uma assistente de IA com memória: no site responde só com os meus serviços e preços e passa-me os contactos para o CRM; no painel resume o dia e escreve rascunhos. Juntei também uma **área de cliente**, marcações no calendário e artigos para o Google. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
+
 `Novidade nov 2026:` Fiz o site e o **CRM da minha marca, a [LELUEL](https://leluel.lovable.app)**: pedidos com próximo passo, clientes, projetos, pagamentos e mensalidades, propostas em PDF e um **diagnóstico grátis** que mede o site com a Google, envia o relatório por email e já deixa a proposta escrita. [Experimentar o CRM](https://leluel.lovable.app/demo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
 
 `Novidade nov 2026:` Fiz o site e o CRM da **[ARQEC](https://arqec.lovable.app)**, atelier de arquitetura de interiores em Almada: os pedidos do site viram propostas em PDF com os preços, a margem e o IVA do atelier. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/arqec.html)
@@ -83,7 +85,7 @@ Aquilo de que mais gosto:
 **[LELUEL](https://leluel.lovable.app)**<br>
 <sub>SITE + CRM + DIAGNÓSTICO · A MINHA MARCA</sub>
 
-O meu site e o CRM por trás dele. Os pedidos chegam do site, do WhatsApp ou do Instagram e ganham um próximo passo; viram clientes, projetos em 7 passos, propostas em PDF e pagamentos com mensalidades. O diagnóstico grátis analisa 12 pontos de qualquer site, com a velocidade medida pela Google, envia o relatório por email e deixa a proposta escrita. Há um modo demonstração para mostrar nas reuniões. [Experimentar o CRM](https://leluel.lovable.app/demo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
+O meu site e o CRM por trás dele. Os pedidos chegam do site, do WhatsApp ou do Instagram e ganham um próximo passo; viram clientes, projetos em 7 passos, propostas em PDF e pagamentos com mensalidades. O diagnóstico grátis analisa 12 pontos de qualquer site, com a velocidade medida pela Google, envia o relatório por email e deixa a proposta escrita. Há um modo demonstração para mostrar nas reuniões. E a Sophie, uma assistente de IA com memória, responde no site e ajuda no painel; cada cliente tem a sua área para acompanhar o projeto. [Experimentar o CRM](https://leluel.lovable.app/demo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
 
 </td>
 </tr>
