@@ -1,0 +1,199 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LELUEL LK · Estudo de caso</title><meta name="description" content="LELUEL LK: um estúdio de conteúdos com IA, pago com Stripe, que cria um mês de publicações em português de Portugal, com imagens, guiões de Reels, plano em PDF e kit do perfil.">
+<meta property="og:title" content="LELUEL LK · Estudo de caso"><meta property="og:image" content="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/projetos/lk.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap"><style>
+
+:root{--hero:#0f0c29;--hero-2:#1e1b4b;--accent:#8b5cf6;--accent-ink:#6d28d9;--on-accent:#ffffff;--ghost-border:rgba(196,181,253,.6);--hero-eyebrow:#fde68a;--bg:#f7f5ff;--surface:#ffffff;--ink:#1e1b4b;--muted:#4c4677;--line:#ddd6fe;--ok:#047857;--warn:#be185d;--on-hero:#f5f3ff;--on-hero-soft:#c9c2f2;--font-display:"Fraunces", Georgia, serif;--font-body:Manrope, "Segoe UI", system-ui, sans-serif;--font-mono:Manrope, "Segoe UI", system-ui, sans-serif;--display-weight:500;--em-style:italic;--brand-tracking:.2em;--font-h3:"Fraunces", Georgia, serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.125rem;line-height:1.65}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:8px;font-weight:700;z-index:20}
+.skip:focus{left:16px}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.12;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:var(--display-weight);letter-spacing:-0.01em}
+h3{font-size:1.25rem;font-weight:700;font-family:var(--font-h3,var(--font-display))}
+p{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.prose{max-width:40rem;display:grid;gap:1rem}
+.muted{color:var(--muted)}
+.back{display:inline-block;font-size:.95rem;color:var(--on-hero-soft);text-decoration:none;margin-bottom:.4rem}
+.back:hover{color:var(--on-hero)}
+.hero{background:linear-gradient(140deg,var(--hero) 0%,var(--hero-2) 100%);color:var(--on-hero)}
+.hero .wrap{padding-block:3rem 3rem;display:grid;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand .mark{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:var(--on-accent);font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.brand b{font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:var(--brand-tracking)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:var(--display-weight);letter-spacing:-0.02em;max-width:18ch}
+.hero h1 em{font-style:var(--em-style);color:var(--accent);font-family:var(--font-em,inherit);font-weight:var(--em-weight,inherit)}
+.hero .lede{font-size:1.25rem;color:var(--on-hero-soft);max-width:40rem}
+.hero .lede strong{color:var(--on-hero)}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn.solid{background:var(--accent);color:var(--on-accent)}
+.btn.ghost{border:2px solid var(--ghost-border,rgba(255,255,255,.45));color:var(--on-hero)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-family:var(--font-mono);font-size:.9rem;color:var(--on-hero-soft)}
+.facts b{color:var(--on-hero);font-weight:600}
+section.block{padding-block:3.5rem;border-bottom:1px solid var(--line)}
+section.block>.wrap{display:grid;gap:1.6rem}
+.head{display:grid;gap:.6rem}
+.quote{border-left:5px solid var(--accent);padding:.4rem 0 .4rem 1.2rem;font-size:1.3rem;font-family:var(--font-display);font-weight:500;max-width:40rem}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem;display:grid;gap:.4rem;align-content:start}
+.feat .say{font-family:var(--font-mono);font-size:.85rem;color:var(--accent-ink)}
+.group-label{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.flow{list-style:none;margin:0;padding:0;display:grid;counter-reset:passo}
+.flow li{counter-increment:passo;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding-bottom:1.4rem;position:relative}
+.flow li::before{content:counter(passo);width:3rem;height:3rem;border-radius:50%;background:var(--hero);color:var(--on-hero);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.2rem}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:1.5rem;top:3rem;bottom:0;width:2px;background:var(--line)}
+.flow .who{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.flow h3{margin-top:.1rem}
+.stack{display:grid;gap:.8rem}
+.tool{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:.4rem 1.4rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}
+.tool .name{font-family:var(--font-h3,var(--font-display));font-weight:700;font-size:1.1rem}
+.tool .kind{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);display:block;font-weight:400;margin-top:.15rem}
+@media (max-width:640px){.tool{grid-template-columns:minmax(0,1fr)}}
+.lessons{display:grid;gap:.9rem}
+.lesson{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem}
+.lesson .tag{font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:.3rem}
+.lesson .tag.prob{color:var(--warn)}
+.lesson .tag.fix{color:var(--ok)}
+@media (max-width:640px){.lesson{grid-template-columns:minmax(0,1fr);gap:.7rem}}
+.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem}
+.num{border-top:4px solid var(--accent);padding-top:.7rem}
+.num b{display:block;font-family:var(--font-display);font-size:2.3rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.05}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;align-items:start}
+.shots figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:.6rem .9rem;font-size:.95rem;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.6rem}
+.list{margin:0;padding-left:1.2rem;display:grid;gap:.55rem}
+.list li::marker{color:var(--accent-ink)}
+.role{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--hero-2);border-radius:12px;padding:1.4rem 1.5rem;display:grid;gap:.8rem;max-width:44rem}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:1.1rem 1.1rem 1.1rem .3rem;padding:.55rem 1rem;font-size:1.05rem}
+footer{padding-block:2.5rem 3rem}
+footer .wrap{display:grid;gap:.6rem;color:var(--muted);font-size:.95rem}
+@media (prefers-color-scheme:dark){:root{--bg:#0f0c29;--surface:#1a1640;--ink:#f5f3ff;--muted:#c9c2f2;--line:#2e2a63;--accent-ink:#c4b5fd;--ok:#6ee7b7;--warn:#f9a8d4;color-scheme:dark}}
+.hero{background:radial-gradient(700px 420px at 88% -10%,rgba(109,40,217,.55) 0%,transparent 60%),radial-gradient(600px 380px at 0% 110%,rgba(190,24,93,.35) 0%,transparent 60%),var(--hero)}
+.hero h1 em{color:#c4b5fd}
+.btn.solid{background:linear-gradient(100deg,#6d28d9,#be185d);color:#fff}
+.brand img{width:44px;height:44px}
+.eyebrow{letter-spacing:.22em;font-weight:700;font-size:.74rem}
+h3{font-size:1.3rem;font-weight:600}
+.num b{font-weight:500;color:var(--accent-ink)}
+.flow li::before{background:linear-gradient(135deg,#6d28d9,#be185d);color:#fff;font-weight:600}
+.feat .say{color:var(--accent-ink)}
+.shots figure.wide{grid-column:1/-1}
+.badge{display:inline-block;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .55rem;border-radius:999px;background:rgba(253,230,138,.18);color:var(--accent-ink);font-weight:700}
+</style>
+<style>.intro-video{width:min(22rem,100%);aspect-ratio:1;border-radius:22px;display:block;box-shadow:0 30px 80px -30px rgba(139,92,246,.6)}</style>
+</head><body>
+<a class="skip" href="#problema">Saltar para o conteúdo</a>
+<header class="hero"><div class="wrap">
+<a class="back" href="../index.html">← Todos os projetos de Lenira Leitão</a>
+<p class="eyebrow" style="color:var(--hero-eyebrow)">Estudo de caso · Produto próprio · Conteúdos com IA, 2026</p>
+<video class="intro-video" poster="img/lk-intro-final.jpg" autoplay muted playsinline preload="auto" aria-label="A abertura animada da LELUEL LK"><source src="img/lk-intro.webm" type="video/webm"><source src="img/lk-intro.mp4" type="video/mp4"></video>
+<h1>LELUEL LK: <em>um mês de publicações, pronto em minutos.</em></h1>
+<p class="lede">A LK é o estúdio de conteúdos da LELUEL. A pessoa conta a sua marca e recebe <strong>30 publicações</strong> para as redes sociais, em português de Portugal: textos, <strong>imagens prontas</strong> com as cores da marca, <strong>guiões de Reels</strong>, o <strong>plano do mês em PDF</strong> e o <strong>kit do perfil</strong>. Experimenta-se grátis e paga-se com o Stripe.</p>
+<div class="links">
+<a class="btn solid" href="https://leluel.lovable.app/lk" target="_blank" rel="noopener">Abrir a LK ↗</a>
+<a class="btn ghost" href="#ecras">Ver os ecrãs</a>
+</div>
+<p class="facts"><span><b>3</b> publicações grátis para experimentar</span><span><b>7</b> modelos de imagem</span><span><b>9,90 €</b> o mês, sem mensalidade</span><span><b>83</b> testes automáticos</span></p>
+</div></header><main>
+
+<section class="block" id="problema" aria-labelledby="t-problema"><div class="wrap"><div class="head"><p class="eyebrow">Porque nasceu</p><h2 id="t-problema">Publicar com regularidade é a parte mais difícil</h2></div><div class="prose">
+<p>Um pequeno negócio precisa de aparecer nas redes com regularidade, mas muitas vezes falta tempo e falta saber o que dizer. E não chega o texto: é preciso a imagem, o Reel e um plano para o mês.</p>
+<p>Quis uma ferramenta honesta e em português de Portugal: que use só o que a pessoa conta, não invente clientes nem resultados, e entregue tudo pronto a publicar, do texto à imagem.</p>
+<p class="quote">«Tu imaginas. A LK dá vida.»</p>
+</div></div></section>
+
+<section class="block" aria-labelledby="t-faz"><div class="wrap"><div class="head"><p class="eyebrow">O que entreguei</p><h2 id="t-faz">Tudo o que a LK faz</h2></div>
+<p class="group-label">Experimentar e comprar</p><div class="features">
+<div class="feat"><h3>Amostra grátis, sem cartão</h3><p>3 publicações com imagens para ver a qualidade antes de pagar. Pode mudar o texto, o estilo, a cor e a foto; copiar e descarregar ficam para depois da compra, com um cadeado.</p></div>
+<div class="feat"><h3>Pagamento com o Stripe</h3><p>9,90 € pelo mês, pagamento único. O site confirma no Stripe o valor, a moeda e o produto antes de abrir o estúdio, e as publicações da amostra passam para o mês comprado.</p></div>
+<div class="feat"><h3>Sem conta para criar</h3><p>Depois de pagar, a pessoa recebe um link privado do estúdio, assinado no servidor, e o mesmo link por email. Se o perder, pede-o de novo com o email da compra.</p></div>
+<div class="feat"><h3>Termos claros</h3><p>Uma página de termos em linguagem simples, com a amostra, os créditos, a livre resolução, o uso do conteúdo e o Livro de Reclamações Eletrónico.</p></div>
+</div>
+<p class="group-label">O estúdio</p><div class="features">
+<div class="feat"><h3>A marca em 2 minutos</h3><p>Negócio, o que vende, cliente ideal, tom de voz, objetivo, redes, o que a distingue e provas reais. A IA só usa as provas que a pessoa escrever.</p></div>
+<div class="feat"><h3>30 publicações, cada uma com um objetivo</h3><p>Guardar, comentar, partilhar, seguir ou comprar, numa mistura pensada para o mês. Ganchos variados, nada de palavras vazias e nada de «comenta SIM se…», que as redes castigam.</p><p class="say">«Feito para: as pessoas guardarem»</p></div>
+<div class="feat"><h3>Editar antes de usar</h3><p>Cada publicação pode ser editada: gancho, legenda, chamada para ação e hashtags. A imagem atualiza logo.</p></div>
+<div class="feat"><h3>Créditos justos</h3><p>Só são gastos quando as publicações ficam prontas. Se a criação falhar, não se perde nada.</p></div>
+</div>
+<p class="group-label">Imagens, Reels e plano</p><div class="features">
+<div class="feat"><h3>7 modelos de imagem</h3><p>Noite, Claro, Cor, Editorial, Minimal, Ousado e Moldura, com a cor da marca. Carrosséis com capa, slides numerados e um fecho com a marca. Desenhadas no próprio telemóvel, sem custos por imagem.</p></div>
+<div class="feat"><h3>Fotos da própria marca</h3><p>A pessoa pode pôr as suas fotos de fundo. Ficam só no aparelho dela, não vão para o servidor.</p></div>
+<div class="feat"><h3>Guião de Reels e montagem</h3><p>Cada Reel traz cenas com a duração, o texto no ecrã, o que dizer e o que filmar. A LK monta o vídeo com os vídeos da pessoa: corta cada um, põe o texto e junta o fecho com a marca.</p></div>
+<div class="feat"><h3>Plano do mês em PDF</h3><p>Capa, estratégia, calendário e todas as publicações com a imagem. Também há as imagens em .zip e os textos em .txt.</p></div>
+<div class="feat"><h3>Kit do perfil</h3><p>3 sugestões de bio com até 150 caracteres, capas para os destaques e um Story por publicação a anunciar o post.</p></div>
+<div class="feat"><h3>Abertura animada</h3><p>A animação original da marca LK, convertida de GIF em vídeo leve: toca uma vez e fica no logótipo. Com «reduzir movimento» ligado, mostra só a imagem final.</p></div>
+</div>
+<p class="group-label">No painel da LELUEL</p><div class="features">
+<div class="feat"><h3>Vendas à vista</h3><p>Amostras, compras, valor recebido e compras de teste, com a lista de cada pacote. «Ver o estúdio» abre o que o cliente vê, para ajudar quando há dúvidas.</p></div>
+</div>
+</div></section>
+
+<section class="block" id="ecras" aria-labelledby="t-shots"><div class="wrap"><div class="head"><p class="eyebrow">Ecrãs</p><h2 id="t-shots">Como se vê</h2><p class="muted prose">As capturas usam um atelier de interiores fictício, o «Atelier Linha Clara», com dados de exemplo. Nenhum cliente real aparece aqui.</p></div><div class="shots">
+<figure class="wide"><img src="img/lk-pagina.jpg" alt="A página da LK no computador, com a abertura animada e o exemplo do calendário" loading="lazy"><figcaption>A página da LK, com a abertura animada</figcaption></figure>
+<figure class="wide"><img src="img/lk-estudio.jpg" alt="O estúdio: a marca à esquerda e o calendário do mês à direita" loading="lazy"><figcaption>O estúdio: a marca e o calendário do mês</figcaption></figure>
+<figure class="wide"><img src="img/lk-modelos.jpg" alt="A mesma capa de carrossel nos 7 modelos: Noite, Claro, Cor, Editorial, Minimal, Ousado e Moldura" loading="lazy"><figcaption>A mesma capa nos 7 modelos</figcaption></figure>
+<figure class="wide"><img src="img/lk-carrossel.jpg" alt="Um carrossel completo no modelo Ousado: capa, slides numerados e fecho" loading="lazy"><figcaption>Um carrossel completo: capa, slides e fecho</figcaption></figure>
+<figure><img src="img/lk-pagina-movel.jpg" alt="A página da LK no telemóvel, com o botão Experimentar grátis" loading="lazy"><figcaption>No telemóvel: «Experimentar grátis»</figcaption></figure>
+<figure><img src="img/lk-amostra.jpg" alt="A amostra grátis com o cartão Gostas do que vês e o botão para desbloquear o mês" loading="lazy"><figcaption>A amostra e o «Desbloquear o mês»</figcaption></figure>
+<figure><img src="img/lk-publicacao.jpg" alt="Uma publicação aberta no telemóvel, com as imagens do carrossel" loading="lazy"><figcaption>Uma publicação, com as imagens prontas</figcaption></figure>
+<figure><img src="img/lk-reel.jpg" alt="O guião de um Reel, com as cenas, o texto no ecrã e o que filmar" loading="lazy"><figcaption>O guião do Reel, cena a cena</figcaption></figure>
+<figure><img src="img/lk-montar.jpg" alt="Montar o Reel: escolher um vídeo para cada cena" loading="lazy"><figcaption>Montar o Reel com os vídeos da pessoa</figcaption></figure>
+<figure><img src="img/lk-kit.jpg" alt="O kit do perfil, com as sugestões de bio" loading="lazy"><figcaption>Kit do perfil: sugestões de bio</figcaption></figure>
+<figure><img src="img/lk-destaques.jpg" alt="As capas dos destaques com a cor da marca" loading="lazy"><figcaption>Capas dos destaques</figcaption></figure>
+<figure class="wide"><img src="img/lk-stories.jpg" alt="Stories a anunciar cada publicação, com Novo post e Vê no perfil" loading="lazy"><figcaption>Stories a anunciar cada publicação</figcaption></figure>
+<figure class="wide"><img src="img/lk-pdf.jpg" alt="O plano do mês em PDF: capa, estratégia, calendário e publicações" loading="lazy"><figcaption>O plano do mês em PDF</figcaption></figure>
+</div></div></section>
+
+<section class="block" aria-labelledby="t-pedido"><div class="wrap"><div class="head"><p class="eyebrow">Por dentro</p><h2 id="t-pedido">Da curiosidade ao mês publicado</h2></div><ol class="flow">
+<li><div><span class="who">Visitante</span><h3>Experimenta grátis</h3><p>Conta a marca e recebe 3 publicações com imagens. Vê, edita e muda o estilo, sem cartão.</p></div></li>
+<li><div><span class="who">Visitante</span><h3>Desbloqueia o mês</h3><p>Paga 9,90 € na página segura do Stripe. Ao voltar, o site confirma o pagamento e abre o estúdio completo, com a amostra já incluída.</p></div></li>
+<li><div><span class="who">Automático</span><h3>A LK escreve o mês</h3><p>As publicações saem em lotes de 5, cada uma com um objetivo, e o calendário vai enchendo. O link do estúdio chega por email.</p></div></li>
+<li><div><span class="who">Cliente</span><h3>Revê, descarrega e publica</h3><p>Imagens em .zip, plano em PDF, guiões de Reels e o kit do perfil. Os Reels montam-se com os vídeos da própria pessoa.</p></div></li>
+</ol></div></section>
+
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">Tecnologias</h2></div><p class="prose">React, TanStack Start e Tailwind · Supabase · Stripe Checkout · modelo de IA com saída estruturada · Canvas e MediaRecorder para as imagens e os Reels, no próprio aparelho · Brevo para os emails · testes com Vitest e Playwright.</p></div></section>
+
+<section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">O que decidi e porquê</h2></div><div class="lessons">
+<div class="lesson"><div><span class="tag prob">Problema</span><p>A primeira versão mandava logo para o pagamento, sem a pessoa ver o resultado.</p></div><div><span class="tag fix">Solução</span><p>Uma amostra grátis de 3 publicações, com limites por aparelho e por dia para controlar o custo. Quem compra a partir da amostra não perde o que já criou.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>As imagens só com texto eram limpas, mas genéricas para um arquiteto, que vende com fotografias.</p></div><div><span class="tag fix">Solução</span><p>Fotos da própria marca no fundo, 7 modelos com desenho próprio por tipo de publicação e carrosséis com capa, números e fecho.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Transformar um carrossel num vídeo não é um Reel: experimentei e não fazia sentido.</p></div><div><span class="tag fix">Solução</span><p>Deixei essa ideia e fiz um guião completo (cenas, texto no ecrã, voz, o que filmar) e uma montagem com os vídeos que a própria pessoa filma.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>Na revisão para clientes, vi que duas pessoas na mesma rede móvel podiam abrir a mesma amostra.</p></div><div><span class="tag fix">Solução</span><p>A amostra passou a ser por aparelho, com um limite por ligação. Ninguém vê a amostra de outra pessoa.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>O Multibanco só confirma o pagamento mais tarde, e a pessoa ficava sem acesso ao estúdio.</p></div><div><span class="tag fix">Solução</span><p>Na LK, só cartão, que confirma na hora. O endereço de regresso do pagamento passou a ser verificado no servidor.</p></div></div>
+<div class="lesson"><div><span class="tag prob">Problema</span><p>A IA a pensar mais escrevia melhor, mas 10 publicações de uma vez podiam passar o tempo máximo do servidor.</p></div><div><span class="tag fix">Solução</span><p>Lotes de 5 publicações. O calendário enche aos poucos e cada lote fica guardado, por isso uma falha nunca apaga o que já foi feito.</p></div></div>
+</div></div></section>
+
+<section class="block" aria-labelledby="t-numeros"><div class="wrap"><div class="head"><p class="eyebrow">Em números</p><h2 id="t-numeros">A LK em números</h2></div><div class="numbers">
+<div class="num"><b>30</b><span class="muted">publicações por mês</span></div>
+<div class="num"><b>7</b><span class="muted">modelos de imagem</span></div>
+<div class="num"><b>5</b><span class="muted">objetivos por publicação</span></div>
+<div class="num"><b>3</b><span class="muted">sugestões de bio</span></div>
+<div class="num"><b>83</b><span class="muted">testes automáticos</span></div>
+<div class="num"><b>12</b><span class="muted">alterações revistas e publicadas</span></div>
+</div></div></section>
+
+<section class="block" aria-labelledby="t-limites"><div class="wrap"><div class="two"><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">Com franqueza</p><h2 id="t-limites">Limites atuais</h2><ul class="list">
+<li>Ainda em modo de teste: os pagamentos reais abrem quando a faturação estiver tratada.</li>
+<li>A LK não cria fotografias. Desenha as imagens com o texto e as cores, e sugere que foto ou vídeo fazer.</li>
+<li>Os Reels montam-se no browser: funcionam no Chrome e no Safari, não em todos.</li>
+<li>Ainda sem testemunhos de clientes.</li>
+</ul></div><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">A seguir</p><h2>Próximos passos</h2><ul class="list">
+<li>Pagamentos reais e faturas emitidas a cada venda.</li>
+<li>Domínio próprio e casa própria para a LK.</li>
+<li>Uma galeria de exemplos reais e testemunhos, com autorização.</li>
+<li>Pacotes de 3 meses ou mensalidade, se houver procura.</li>
+</ul></div></div></div></section>
+
+<section class="block" aria-labelledby="t-papel"><div class="wrap"><div class="role"><p class="eyebrow">O meu papel</p><h2 id="t-papel">Lenira Leitão</h2><p>Tive a ideia e defini o produto, o nome, o preço e a amostra grátis. Escolhi a animação da marca. Decidi o que cada publicação devia ter e o que a IA não pode fazer (inventar dados, prometer resultados). Testei a compra do princípio ao fim e pedi as mudanças que faltavam: ver antes de pagar, fotos próprias, modelos com mais desenho e guiões de Reels em vez de vídeos falsos.</p><p class="muted">O código foi feito com ferramentas de IA, a partir dos meus pedidos e das minhas escolhas. Cada alteração foi revista antes de ser publicada.</p></div></div></section>
+</main>
+<footer><div class="wrap"><p>LELUEL LK · Lenira Leitão · <a href="https://leluel.lovable.app/lk">leluel.lovable.app/lk</a></p><p><a href="../index.html">← Voltar a todos os projetos</a></p></div></footer>
+</body></html>

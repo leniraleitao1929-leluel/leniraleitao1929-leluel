@@ -102,7 +102,7 @@ h3{font-size:1.3rem;font-weight:600}
 <a class="btn ghost" href="https://leluel.lovable.app/demo" target="_blank" rel="noopener">Experimentar o CRM ↗</a>
 <a class="btn ghost" href="https://leluel.lovable.app/diagnostico" target="_blank" rel="noopener">Fazer o diagnóstico ↗</a>
 </div>
-<p class="facts"><span><b>22</b> páginas no mapa do site</span><span><b>6</b> áreas no CRM</span><span><b>12</b> pontos no diagnóstico</span><span><b>24</b> testes automáticos</span></p>
+<p class="facts"><span><b>22</b> páginas no mapa do site</span><span><b>6</b> áreas no CRM</span><span><b>12</b> pontos no diagnóstico</span><span><b>83</b> testes automáticos</span></p>
 </div></header><main>
 
 <section class="block" id="problema" aria-labelledby="t-problema"><div class="wrap"><div class="head"><p class="eyebrow">Porque nasceu</p><h2 id="t-problema">Um site que mostra o trabalho e trabalha sozinho</h2></div><div class="prose">
@@ -150,6 +150,8 @@ h3{font-size:1.3rem;font-weight:600}
 
 <p class="group-label">Para os clientes</p><div class="features">
 <div class="feat"><h3>Área de cliente</h3><p>Cada cliente recebe um link só seu para ver o passo do projeto, as datas, as propostas com o total e os pagamentos. O link é assinado no servidor, por isso não se adivinha o de outra pessoa, e as notas internas não aparecem.</p></div>
+<div class="feat"><h3>Pagar online, com o Stripe</h3><p>Na área de cliente, cada pagamento por fazer tem o botão «Pagar online». Ao voltar, o site confirma no Stripe a sessão, o cliente e o valor, e só então marca como pago no CRM.</p></div>
+<div class="feat"><h3>Extras escolhidos na página</h3><p>Nas páginas dos serviços, a pessoa marca os extras que quer e o formulário de contacto abre já preenchido com eles e os preços.</p></div>
 <div class="feat"><h3>Marcar a conversa no calendário</h3><p>Na página Contacto, «Escolher dia e hora» abre o meu calendário com os horários livres. A Sophie oferece o mesmo link.</p></div>
 <div class="feat"><h3>Artigos e guias</h3><p>Três guias para o Google, sem jargão: quanto custa um site, como não perder pedidos do WhatsApp e do Instagram, e o que o diagnóstico verifica. Os preços dos artigos são testados contra a tabela do site.</p></div>
 <div class="feat"><h3>Propostas para sites que já estão bem</h3><p>Com 80 ou mais no diagnóstico, a proposta não inventa problemas: diz que o site está bem feito e propõe ir mais longe, com o Agente de IA, o painel de pedidos, o Perfil de Empresa no Google e os emails automáticos.</p></div>
@@ -159,6 +161,8 @@ h3{font-size:1.3rem;font-weight:600}
 <div class="feat"><h3>Modo demonstração</h3><p>O mesmo CRM com dados de exemplo para quatro negócios: atelier e obras, salão, formação e serviços. Nada fica guardado e há um botão para repor tudo.</p></div>
 <div class="feat"><h3>A marca CRM LELUEL</h3><p>Todos os painéis que faço levam «CRM LELUEL» com o nome do cliente por baixo. Na ARQEC, por exemplo, aparece «CRM LELUEL · ARQEC · Edelvino Cristiano».</p></div>
 <div class="feat"><h3>Entrada segura</h3><p>Entrada com Google ou palavra-passe, com recuperação por email. Só a conta de administração vê pedidos, clientes, projetos, pagamentos e propostas.</p></div>
+<div class="feat"><h3>«Ver como o cliente»</h3><p>No CRM, um botão abre a área de cliente tal como o cliente a vê, para confirmar tudo antes de enviar o link.</p></div>
+<div class="feat"><h3>A LELUEL LK no menu e no painel</h3><p>O estúdio de conteúdos <a href="lk.html">LELUEL LK</a> tem destaque no menu do site e um separador próprio no painel, com as vendas e uma compra de teste para simular o pagamento.</p></div>
 </div>
 </div></section>
 
@@ -189,7 +193,7 @@ h3{font-size:1.3rem;font-weight:600}
 <li><div><span class="who">Os dois</span><h3>Aceite, projeto e pagamentos</h3><p>Proposta aceite, o pedido vira cliente e projeto em 7 passos. O sinal, o pagamento final e as mensalidades ficam registados.</p></div></li>
 </ol></div></section>
 
-<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">Tecnologias</h2></div><p class="prose">React, TanStack Start e Tailwind · Supabase · Google PageSpeed Insights · Brevo para os emails · assistente de IA com memória · testes com Vitest, Playwright e axe.</p></div></section>
+<section class="block" id="como-foi-feita" aria-labelledby="t-feita"><div class="wrap"><div class="head"><p class="eyebrow">Como foi feito</p><h2 id="t-feita">Tecnologias</h2></div><p class="prose">React, TanStack Start e Tailwind · Supabase · Google PageSpeed Insights · Brevo para os emails · Stripe para os pagamentos · estatísticas sem cookies · assistente de IA com memória · testes com Vitest, Playwright e axe.</p></div></section>
 
 <section class="block" aria-labelledby="t-aprendi"><div class="wrap"><div class="head"><p class="eyebrow">Decisões</p><h2 id="t-aprendi">O que decidi e porquê</h2></div><div class="lessons">
 <div class="lesson"><div><span class="tag prob">Problema</span><p>No site antigo de um cliente, feito no Canva, o diagnóstico dizia «sem contacto com um toque». Não era verdade: os botões existiam, mas só apareciam depois de a página abrir.</p></div><div><span class="tag fix">Solução</span><p>Comparei o código real de cada site com o resultado. O contacto passou a ser procurado em toda a página, e o que não se consegue ver fica «por confirmar», a meio ponto, e não entra na proposta.</p></div></div>
@@ -205,8 +209,8 @@ h3{font-size:1.3rem;font-weight:600}
 <div class="num"><b>6</b><span class="muted">áreas no CRM</span></div>
 <div class="num"><b>4</b><span class="muted">negócios no modo demonstração</span></div>
 <div class="num"><b>12</b><span class="muted">pontos no diagnóstico</span></div>
-<div class="num"><b>51</b><span class="muted">testes automáticos</span></div>
-<div class="num"><b>32</b><span class="muted">alterações revistas e publicadas</span></div>
+<div class="num"><b>83</b><span class="muted">testes automáticos</span></div>
+<div class="num"><b>50</b><span class="muted">alterações revistas e publicadas</span></div>
 </div></div></section>
 
 <section class="block" aria-labelledby="t-limites"><div class="wrap"><div class="two"><div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">Com franqueza</p><h2 id="t-limites">Limites atuais</h2><ul class="list">
@@ -220,7 +224,7 @@ h3{font-size:1.3rem;font-weight:600}
 <li>Domínio leluel.pt e emails a sair do meu domínio.</li>
 <li>Diagnóstico de mais do que uma página.</li>
 <li>Os primeiros clientes a usar o CRM LELUEL no dia a dia.</li>
-<li>Pagamento do sinal online, depois de a proposta ser aceite.</li>
+<li>Pagamentos reais: para já, o Stripe está em modo de teste até a faturação estar tratada.</li>
 <li>Testemunhos reais de clientes, com autorização.</li>
 </ul></div></div></div></section>
 
