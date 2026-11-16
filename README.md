@@ -58,6 +58,8 @@ Aquilo de que mais gosto:
 
 ♿ A tornar cada projeto acessível a quem usa leitor de ecrã
 
+`Novidade nov 2026:` Na **[Tato Digital](https://tatodigital.lovable.app)**, as fotos recebidas no WhatsApp e no Messenger vão direto para a app: Partilhar → Tato Digital, e a app diz tudo o que vê. Pedido da minha irmã, que é cega. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
+
 `Novidade nov 2026:` Criei a **[LELUEL LK](https://leluel.lovable.app/lk)**, um estúdio de conteúdos com IA: a pessoa conta a sua marca e recebe 30 publicações do mês em português de Portugal, com imagens em 7 modelos, guiões de Reels com montagem automática, plano em PDF e kit do perfil. Amostra grátis e pagamento com o Stripe. Juntei também **pagamentos online** na área de cliente da LELUEL. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/lk.html)
 
 `Novidade nov 2026:` A LELUEL ganhou a **Sophie**, uma assistente de IA com memória: no site responde só com os meus serviços e preços e passa-me os contactos para o CRM; no painel resume o dia e escreve rascunhos. Juntei também uma **área de cliente**, marcações no calendário e artigos para o Google. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
@@ -135,7 +137,7 @@ Site e CRM para o atelier do arquiteto de interiores Edelvino Cristiano, em Alma
 **[Tato Digital](https://tatodigital.lovable.app)**<br>
 <sub>APP · ACESSIBILIDADE</sub>
 
-Para pessoas cegas ou com baixa visão. A VozClara, para o dia a dia: diz a cor da roupa, lê cartas com a câmara, diz onde está e o que há perto. Os Estudos: livros lidos página a página, resumos e testes. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
+Para pessoas cegas ou com baixa visão. A VozClara, para o dia a dia: diz a cor da roupa, lê cartas com a câmara, diz onde está e o que há perto, e descreve as fotos recebidas no WhatsApp e no Messenger. Os Estudos: livros lidos página a página, resumos e testes. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
 
 </td>
 <td width="50%" valign="top">
