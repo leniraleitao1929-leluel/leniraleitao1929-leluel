@@ -58,6 +58,8 @@ Aquilo de que mais gosto:
 
 ♿ A tornar cada projeto acessível a quem usa leitor de ecrã
 
+`Novidade nov 2026:` Criei a **[LELUEL LK](https://leluel.lovable.app/lk)**, um estúdio de conteúdos com IA: a pessoa conta a sua marca e recebe 30 publicações do mês em português de Portugal, com imagens em 7 modelos, guiões de Reels com montagem automática, plano em PDF e kit do perfil. Amostra grátis e pagamento com o Stripe. Juntei também **pagamentos online** na área de cliente da LELUEL. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/lk.html)
+
 `Novidade nov 2026:` A LELUEL ganhou a **Sophie**, uma assistente de IA com memória: no site responde só com os meus serviços e preços e passa-me os contactos para o CRM; no painel resume o dia e escreve rascunhos. Juntei também uma **área de cliente**, marcações no calendário e artigos para o Google. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
 
 `Novidade nov 2026:` Fiz o site e o **CRM da minha marca, a [LELUEL](https://leluel.lovable.app)**: pedidos com próximo passo, clientes, projetos, pagamentos e mensalidades, propostas em PDF e um **diagnóstico grátis** que mede o site com a Google, envia o relatório por email e já deixa a proposta escrita. [Experimentar o CRM](https://leluel.lovable.app/demo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
@@ -85,7 +87,19 @@ Aquilo de que mais gosto:
 **[LELUEL](https://leluel.lovable.app)**<br>
 <sub>SITE + CRM + DIAGNÓSTICO · A MINHA MARCA</sub>
 
-O meu site e o CRM por trás dele. Os pedidos chegam do site, do WhatsApp ou do Instagram e ganham um próximo passo; viram clientes, projetos em 7 passos, propostas em PDF e pagamentos com mensalidades. O diagnóstico grátis analisa 12 pontos de qualquer site, com a velocidade medida pela Google, envia o relatório por email e deixa a proposta escrita. Há um modo demonstração para mostrar nas reuniões. E a Sophie, uma assistente de IA com memória, responde no site e ajuda no painel; cada cliente tem a sua área para acompanhar o projeto. [Experimentar o CRM](https://leluel.lovable.app/demo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
+O meu site e o CRM por trás dele. Os pedidos chegam do site, do WhatsApp ou do Instagram e ganham um próximo passo; viram clientes, projetos em 7 passos, propostas em PDF e pagamentos com mensalidades, que o cliente pode pagar online. O diagnóstico grátis analisa 12 pontos de qualquer site, com a velocidade medida pela Google, envia o relatório por email e deixa a proposta escrita. Há um modo demonstração para mostrar nas reuniões. E a Sophie, uma assistente de IA com memória, responde no site e ajuda no painel; cada cliente tem a sua área para acompanhar o projeto. [Experimentar o CRM](https://leluel.lovable.app/demo) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/leluel.html)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+<a href="https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/lk.html"><img src="projetos/lk.png" alt="LELUEL LK" width="100%"></a>
+
+**[LELUEL LK](https://leluel.lovable.app/lk)**<br>
+<sub>CONTEÚDOS COM IA · PRODUTO PRÓPRIO</sub>
+
+O estúdio de conteúdos da LELUEL. A pessoa conta a sua marca e recebe 30 publicações do mês, cada uma com gancho, legenda, chamada para ação, hashtags e um objetivo (guardar, comentar, partilhar, seguir ou comprar). As imagens saem prontas em 7 modelos, com a cor e as fotos da marca; os Reels trazem o guião cena a cena e montam-se com os vídeos da própria pessoa. Há o plano do mês em PDF e o kit do perfil (bio, destaques e Stories). Experimenta-se grátis, sem cartão, e paga-se com o Stripe. [Abrir a LK](https://leluel.lovable.app/lk) · [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/lk.html)
 
 </td>
 </tr>
