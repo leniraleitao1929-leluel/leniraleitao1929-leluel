@@ -1,0 +1,16 @@
+{
+  "name": "Las Sophias · O Jardim Encantado",
+  "short_name": "Las Sophias",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#8fd3ff",
+  "theme_color": "#8fd3ff",
+  "lang": "pt-PT",
+  "icons": [
+    { "src": "icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

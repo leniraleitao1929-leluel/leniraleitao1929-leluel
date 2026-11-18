@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Las Sophias · O Jardim Encantado</title>
+<meta name="description" content="A Ellen Sophia e a Emilly Sophia brincam no jardim encantado e ensinam inglês a crianças de 4 anos, em português e inglês.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#8fd3ff">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icone-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Las Sophias">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap">
+<style>
+:root{
+  --ceu1:#8fd3ff; --ceu2:#d9f2ff; --relva1:#7ed957; --relva2:#4fb83a;
+  --tinta:#3b2a5c; --rosa:#ff7eb6; --lilas:#b38cff; --amarelo:#ffd84d;
+  --branco:#fff; --sombra:0 6px 0 rgba(59,42,92,.18);
+  --letra:"Baloo 2","Comic Sans MS","Chalkboard SE",system-ui,sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--ceu1);color:var(--tinta);font-family:var(--letra);user-select:none;-webkit-user-select:none;touch-action:manipulation}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:4px solid var(--lilas);outline-offset:3px;border-radius:16px}
+
+/* ---------- palco ---------- */
+#palco{position:fixed;inset:0;overflow:hidden;background:linear-gradient(var(--ceu1),var(--ceu2) 58%)}
+#cenario{position:absolute;inset:0;width:100%;height:100%}
+.nuvem{animation:nuvem 38s linear infinite}
+.nuvem.b{animation-duration:52s;animation-delay:-20s}
+@keyframes nuvem{from{transform:translateX(-30%)}to{transform:translateX(130%)}}
+.sol{transform-origin:center;transform-box:fill-box;animation:gira 30s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.flor{transform-origin:bottom center;transform-box:fill-box;animation:balanca 3s ease-in-out infinite alternate}
+@keyframes balanca{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+.brilho{animation:pisca 2.4s ease-in-out infinite}
+@keyframes pisca{0%,100%{opacity:.2}50%{opacity:1}}
+
+/* ---------- barra de cima ---------- */
+#barra{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:max(10px,env(safe-area-inset-top)) 12px 0;z-index:20}
+.redondo{width:58px;height:58px;border-radius:50%;background:var(--branco);box-shadow:var(--sombra);display:grid;place-items:center;font-size:28px}
+#estrelas{background:var(--branco);box-shadow:var(--sombra);border-radius:999px;padding:6px 16px 4px;font-size:26px;font-weight:800;display:flex;align-items:center;gap:6px}
+#estrelas.pulo{animation:pulo .5s}
+
+/* ---------- zona do jogo ---------- */
+#zona{position:absolute;left:0;right:0;top:calc(max(10px,env(safe-area-inset-top)) + 70px);bottom:calc(33vh + 96px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 12px;z-index:10}
+#titulo{font-size:clamp(24px,6.5vw,40px);font-weight:800;text-align:center;line-height:1.05;margin:0;color:var(--tinta);text-shadow:0 3px 0 #fff}
+#titulo small{display:block;font-size:.55em;color:#7a4fd6}
+
+/* ---------- personagens ---------- */
+.prima{position:absolute;bottom:max(6px,env(safe-area-inset-bottom));height:33vh;max-height:320px;aspect-ratio:200/300;z-index:12;transition:transform .4s}
+#ellen{left:max(2vw,6px)}
+#emilly{right:max(2vw,6px)}
+.prima svg{width:100%;height:100%;overflow:visible}
+.prima .corpo{transform-origin:100px 290px;animation:respira 2.6s ease-in-out infinite}
+@keyframes respira{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.015)}}
+.prima .olhos{transform-origin:100px 118px;animation:piscar 4.2s infinite}
+#emilly .olhos{animation-delay:-1.7s}
+@keyframes piscar{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.prima .boca-aberta{opacity:0}
+.prima.fala .boca-aberta{animation:boca .22s steps(2) infinite}
+.prima.fala .boca-fechada{animation:boca .22s steps(2) infinite reverse}
+@keyframes boca{0%{opacity:0}100%{opacity:1}}
+.prima .braco-d{transform-origin:150px 190px}
+.prima.acena .braco-d{animation:acena .5s ease-in-out 4 alternate}
+@keyframes acena{from{transform:rotate(0)}to{transform:rotate(-120deg)}}
+.prima.salta{animation:salta .55s ease-out 2}
+@keyframes salta{0%,100%{transform:translateY(0)}45%{transform:translateY(-22%)}}
+.prima.roda{animation:roda .9s ease-in-out}
+@keyframes roda{to{transform:rotateY(360deg)}}
+.prima.ri{animation:ri .16s linear 8}
+@keyframes ri{0%,100%{transform:rotate(0)}50%{transform:rotate(3deg) translateY(-2%)}}
+.prima.danca{animation:danca .6s ease-in-out infinite alternate}
+@keyframes danca{from{transform:rotate(-7deg) translateY(0)}to{transform:rotate(7deg) translateY(-5%)}}
+.prima.palmas .maos{animation:palmas .25s ease-in-out 6 alternate}
+.prima .maos{opacity:0}
+.prima.palmas .maos{opacity:1}
+@keyframes palmas{from{transform:scale(.9)}to{transform:scale(1.15)}}
+.prima .bochecha{transition:opacity .3s;opacity:.55}
+.prima.feliz .bochecha{opacity:.95}
+
+/* balão de fala */
+.fala-balao{position:absolute;bottom:calc(33vh + 4px);max-width:min(78vw,420px);background:#fff;border-radius:22px;padding:10px 16px 8px;box-shadow:var(--sombra);font-size:clamp(19px,5vw,24px);line-height:1.15;z-index:15;opacity:0;transform:translateY(10px) scale(.95);transition:.2s}
+.fala-balao.ver{opacity:1;transform:none}
+.fala-balao::after{content:"";position:absolute;bottom:-12px;width:24px;height:24px;background:#fff;transform:rotate(45deg);border-radius:4px}
+#balao-ellen{left:max(3vw,8px)} #balao-ellen::after{left:34px}
+#balao-emilly{right:max(3vw,8px)} #balao-emilly::after{right:34px}
+.fala-balao b{display:block;font-weight:800}
+.fala-balao i{display:block;font-style:normal;font-weight:700;color:#d6337c}
+.fala-balao .quem{font-size:.62em;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#7a4fd6}
+
+/* ---------- cartões e botões ---------- */
+.grelha{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,40vw),1fr));gap:12px;width:min(100%,640px)}
+.cartao{background:#fff;border-radius:26px;box-shadow:var(--sombra);padding:10px 8px 6px;display:flex;flex-direction:column;align-items:center;gap:0;font-weight:800;font-size:20px;line-height:1.05;transition:transform .15s}
+.cartao:active{transform:scale(.94)}
+.cartao .ic{font-size:clamp(40px,11vw,58px);line-height:1.1}
+.cartao small{font-size:.75em;color:#d6337c}
+.cartao.feito{outline:4px solid var(--amarelo)}
+.grande{background:var(--rosa);color:#fff;border-radius:999px;padding:14px 40px 10px;font-size:32px;font-weight:800;box-shadow:0 7px 0 #c94a87;animation:pulsa 1.4s ease-in-out infinite}
+@keyframes pulsa{50%{transform:scale(1.06)}}
+.itens{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(10px,3vw,22px);max-width:640px}
+.item{width:clamp(84px,24vw,120px);height:clamp(84px,24vw,120px);border-radius:28px;background:#fff;box-shadow:var(--sombra);display:grid;place-items:center;font-size:clamp(50px,14vw,72px);transition:transform .15s}
+.item:active{transform:scale(.9)}
+.item.errado{animation:abana .45s}
+@keyframes abana{20%,60%{transform:translateX(-10px) rotate(-6deg)}40%,80%{transform:translateX(10px) rotate(6deg)}}
+.item.certo{animation:voa .7s forwards}
+@keyframes voa{60%{transform:scale(1.3) translateY(-20px)}100%{transform:scale(0) translateY(60px);opacity:0}}
+.cor{width:clamp(70px,20vw,96px);height:clamp(70px,20vw,96px);border-radius:50%;border:6px solid #fff;box-shadow:var(--sombra)}
+.cesto{font-size:clamp(56px,16vw,84px);line-height:1}
+.cesto.pulo,#estrelas.pulo{animation:pulo .5s}
+@keyframes pulo{40%{transform:scale(1.25) rotate(-6deg)}}
+.dentro{font-size:30px;min-height:36px;letter-spacing:2px}
+.balao-ar{position:relative;width:clamp(64px,17vw,86px);height:clamp(80px,21vw,106px);border-radius:50% 50% 48% 48%;box-shadow:inset -8px -10px 0 rgba(0,0,0,.12);animation:flutua 2.6s ease-in-out infinite alternate}
+.balao-ar::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:40px;background:#9b8bb5}
+.balao-ar:nth-child(2n){animation-delay:-1.1s}
+.balao-ar:nth-child(3n){animation-delay:-.6s}
+@keyframes flutua{to{transform:translateY(-14px)}}
+.balao-ar.rebenta{animation:rebenta .35s forwards}
+@keyframes rebenta{to{transform:scale(1.6);opacity:0}}
+.numero{font-size:clamp(60px,18vw,96px);font-weight:800;color:#fff;text-shadow:0 5px 0 #c94a87;line-height:1;min-height:1em}
+.animal{position:relative}
+.animal .comida{position:absolute;font-size:.5em;top:-10px;right:-10px;opacity:0}
+.animal.come .comida{animation:comida .8s forwards}
+@keyframes comida{0%{opacity:1;transform:translate(30px,-40px)}100%{opacity:0;transform:translate(-10px,20px) scale(.4)}}
+.animal.come{animation:salta .5s 2}
+.acoes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:min(100%,460px)}
+.acoes .cartao{font-size:22px}
+
+/* confetis */
+.confeti{position:fixed;top:-20px;width:12px;height:18px;border-radius:3px;z-index:30;animation:cai linear forwards;pointer-events:none}
+@keyframes cai{to{transform:translateY(110vh) rotate(720deg)}}
+
+/* ecrã de início */
+#inicio{position:absolute;inset:0;bottom:33vh;z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(circle at 50% 35%,#fff7 0,transparent 60%)}
+#inicio h1{font-size:clamp(44px,13vw,82px);line-height:.9;margin:0;text-align:center;color:#fff;text-shadow:0 5px 0 #d6337c,0 10px 24px rgba(59,42,92,.25)}
+#inicio h1 small{display:block;font-size:.38em;color:var(--tinta);text-shadow:0 3px 0 #fff;margin-top:8px}
+#aviso{max-width:520px;margin:0 16px;background:#fff8d6;border-radius:16px;padding:8px 14px;font-size:16px;text-align:center;display:none}
+.pais{max-width:440px;margin:0 16px;background:#ffffffd9;border-radius:16px;padding:8px 14px;font-size:15px;color:var(--tinta);text-align:center}
+
+@media (orientation:landscape) and (max-height:520px){
+  .prima{height:60vh}
+  #zona{bottom:8px;left:22vw;right:22vw;top:76px}
+  .fala-balao{bottom:auto;top:70px}
+}
+@media (prefers-reduced-motion:reduce){
+  .nuvem,.sol,.flor,.brilho,.balao-ar,.grande{animation:none!important}
+}
+</style>
+</head>
+<body>
+<div id="palco">
+  <svg id="cenario" viewBox="0 0 400 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="g-sol"><stop offset="0" stop-color="#fff6a8"/><stop offset="1" stop-color="#ffd84d"/></radialGradient>
+      <linearGradient id="g-relva" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8ee36a"/><stop offset="1" stop-color="#46a832"/></linearGradient>
+    </defs>
+    <g class="sol"><circle cx="330" cy="80" r="34" fill="url(#g-sol)"/>
+      <g stroke="#ffd84d" stroke-width="6" stroke-linecap="round"><path d="M330 30v-14M330 144v-14M280 80h-14M394 80h-14M295 45l-10-10M375 125l-10-10M365 45l10-10M285 125l-10 10"/></g></g>
+    <g class="nuvem"><g fill="#fff"><ellipse cx="60" cy="110" rx="40" ry="18"/><ellipse cx="85" cy="98" rx="26" ry="20"/><ellipse cx="45" cy="100" rx="20" ry="15"/></g></g>
+    <g class="nuvem b"><g fill="#fff" opacity=".85"><ellipse cx="40" cy="190" rx="34" ry="14"/><ellipse cx="62" cy="180" rx="22" ry="16"/></g></g>
+    <path d="M0 470 Q100 390 210 440 T400 420 V700 H0Z" fill="#b5ec8f"/>
+    <path d="M0 520 Q120 460 240 505 T400 490 V700 H0Z" fill="url(#g-relva)"/>
+    <!-- árvore encantada -->
+    <g transform="translate(300 330)"><rect x="-10" y="40" width="22" height="120" rx="9" fill="#a0673f"/>
+      <circle cx="0" cy="30" r="52" fill="#5fc94b"/><circle cx="-38" cy="55" r="34" fill="#53b941"/><circle cx="38" cy="55" r="34" fill="#53b941"/>
+      <circle cx="-14" cy="18" r="7" fill="#ff7eb6"/><circle cx="20" cy="44" r="7" fill="#ffd84d"/><circle cx="-30" cy="60" r="7" fill="#ff7eb6"/><circle cx="34" cy="14" r="6" fill="#fff"/></g>
+    <!-- arco-íris -->
+    <g fill="none" stroke-width="9" opacity=".7" transform="translate(70 440)"><path d="M-60 0a60 60 0 0 1 120 0" stroke="#ff6b6b"/><path d="M-51 0a51 51 0 0 1 102 0" stroke="#ffb347"/><path d="M-42 0a42 42 0 0 1 84 0" stroke="#ffe66d"/><path d="M-33 0a33 33 0 0 1 66 0" stroke="#7ed957"/><path d="M-24 0a24 24 0 0 1 48 0" stroke="#6ecbff"/></g>
+    <g id="flores"></g>
+    <g fill="#fff"><circle class="brilho" cx="150" cy="300" r="3"/><circle class="brilho" style="animation-delay:-.8s" cx="230" cy="250" r="2.5"/><circle class="brilho" style="animation-delay:-1.6s" cx="110" cy="230" r="2"/></g>
+  </svg>
+
+  <div id="barra">
+    <button class="redondo" id="casa" aria-label="Voltar ao jardim" hidden>🏠</button>
+    <span></span>
+    <div id="estrelas" aria-label="Estrelas"><span aria-hidden="true">⭐</span><span id="n-estrelas">0</span></div>
+  </div>
+
+  <div id="zona" aria-live="polite"></div>
+
+  <div class="fala-balao" id="balao-ellen" aria-hidden="true"></div>
+  <div class="fala-balao" id="balao-emilly" aria-hidden="true"></div>
+  <button class="prima" id="ellen" aria-label="Ellen Sophia"></button>
+  <button class="prima" id="emilly" aria-label="Emilly Sophia"></button>
+
+  <div id="inicio">
+    <h1>Las Sophias<small>O Jardim Encantado</small></h1>
+    <button class="grande" id="brincar">▶ Brincar</button>
+    <p id="aviso"></p>
+    <p class="pais">Para os pais: as primas falam primeiro em português e depois em inglês americano.<br>Suba o volume do telemóvel.</p>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* =========================================================
+   1. AS PRIMAS — aspeto (mudar aqui quando soubermos como são)
+   cabelo: "puxinhos" | "trancas" | "cachos" | "rabo"
+   ========================================================= */
+const PRIMAS = {
+  ellen:  { nome:"Ellen",  completo:"Ellen Sophia",  pele:"#c98a5e", cabelo:"#3b2416", penteado:"puxinhos", olhos:"#3b2416", vestido:"#ff7eb6", laco:"#ffd84d", tom:1.45 },
+  emilly: { nome:"Emilly", completo:"Emilly Sophia", pele:"#e0a77a", cabelo:"#5a3418", penteado:"cachos",   olhos:"#4a2c17", vestido:"#b38cff", laco:"#ff7eb6", tom:1.7 },
+};
+
+function escurecer(hex, f){
+  const n=parseInt(hex.slice(1),16); const r=(n>>16)*f|0, g=((n>>8)&255)*f|0, b=(n&255)*f|0;
+  return "#"+((1<<24)|(r<<16)|(g<<8)|b).toString(16).slice(1);
+}
+
+function desenhar(id){
+  const p=PRIMAS[id], c=p.cabelo, cs=escurecer(c,.75), pe=p.pele, ps=escurecer(pe,.88), v=p.vestido, vs=escurecer(v,.82);
+  const tras = {
+    puxinhos:`<circle cx="42" cy="78" r="30" fill="${c}"/><circle cx="158" cy="78" r="30" fill="${c}"/>`,
+    trancas:`<path d="M52 120 q-14 40 0 80 q8 14 -4 30" stroke="${c}" stroke-width="18" fill="none" stroke-linecap="round"/><path d="M148 120 q14 40 0 80 q-8 14 4 30" stroke="${c}" stroke-width="18" fill="none" stroke-linecap="round"/>`,
+    cachos:`<g fill="${c}">${[[40,95],[36,130],[44,162],[160,95],[164,130],[156,162],[60,60],[140,60],[100,44],[78,48],[122,48]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="24"/>`).join("")}</g>`,
+    rabo:`<path d="M150 80 q48 10 36 70 q-6 30 -26 40" stroke="${c}" stroke-width="26" fill="none" stroke-linecap="round"/>`,
+  }[p.penteado]||"";
+  const frente = {
+    puxinhos:`<path d="M54 100 q46 -50 92 0 q-10 -40 -46 -42 q-36 2 -46 42z" fill="${c}"/>`,
+    trancas:`<path d="M52 104 q48 -56 96 0 q-6 -44 -48 -46 q-42 2 -48 46z" fill="${c}"/>`,
+    cachos:`<g fill="${c}"><circle cx="70" cy="80" r="18"/><circle cx="92" cy="70" r="18"/><circle cx="114" cy="72" r="18"/><circle cx="132" cy="84" r="16"/></g>`,
+    rabo:`<path d="M52 104 q48 -56 96 0 q-6 -44 -48 -46 q-42 2 -48 46z" fill="${c}"/>`,
+  }[p.penteado]||"";
+  const laco = p.penteado==="cachos"
+    ? `<g transform="translate(128 58) rotate(20)"><path d="M0 0 l-16 -10 v20z M0 0 l16 -10 v20z" fill="${p.laco}"/><circle r="5" fill="${escurecer(p.laco,.8)}"/></g>`
+    : `<g transform="translate(100 52)"><path d="M0 0 l-18 -12 v24z M0 0 l18 -12 v24z" fill="${p.laco}"/><circle r="6" fill="${escurecer(p.laco,.8)}"/></g>`;
+  return `<svg viewBox="0 0 200 300" role="img" aria-label="${p.completo}">
+  <g class="corpo">
+    ${tras}
+    <!-- pernas e sapatos -->
+    <rect x="76" y="238" width="16" height="40" rx="7" fill="${pe}"/><rect x="108" y="238" width="16" height="40" rx="7" fill="${pe}"/>
+    <ellipse cx="82" cy="282" rx="16" ry="9" fill="#ff5d8f"/><ellipse cx="118" cy="282" rx="16" ry="9" fill="#ff5d8f"/>
+    <!-- braço esquerdo -->
+    <path d="M58 182 q-22 26 -14 54" stroke="${pe}" stroke-width="15" fill="none" stroke-linecap="round"/>
+    <!-- vestido -->
+    <path class="vestido" d="M70 160 h60 l30 92 q-60 14 -120 0z" fill="${v}"/>
+    <path d="M70 160 h60 l6 18 h-72z" fill="${vs}"/>
+    <g fill="#fff" opacity=".7"><circle cx="86" cy="214" r="4"/><circle cx="112" cy="226" r="4"/><circle cx="100" cy="200" r="3"/><circle cx="124" cy="206" r="3"/><circle cx="76" cy="236" r="3"/></g>
+    <!-- braço direito (acena) -->
+    <g class="braco-d"><path d="M142 182 q22 26 14 54" stroke="${pe}" stroke-width="15" fill="none" stroke-linecap="round"/><circle cx="156" cy="238" r="9" fill="${pe}"/></g>
+    <circle cx="44" cy="238" r="9" fill="${pe}"/>
+    <g class="maos"><circle cx="100" cy="178" r="11" fill="${pe}"/><path d="M84 168 l-8 -6 M116 168 l8 -6 M100 160 v-8" stroke="#ffd84d" stroke-width="3" stroke-linecap="round"/></g>
+    <!-- pescoço e cabeça -->
+    <rect x="90" y="140" width="20" height="24" rx="8" fill="${ps}"/>
+    <ellipse cx="100" cy="112" rx="50" ry="48" fill="${pe}"/>
+    <ellipse cx="50" cy="116" rx="8" ry="11" fill="${ps}"/><ellipse cx="150" cy="116" rx="8" ry="11" fill="${ps}"/>
+    ${frente}
+    ${laco}
+    <!-- olhos -->
+    <g class="olhos">
+      <ellipse cx="80" cy="118" rx="9" ry="11" fill="#fff"/><ellipse cx="120" cy="118" rx="9" ry="11" fill="#fff"/>
+      <circle cx="81" cy="120" r="6.5" fill="${p.olhos}"/><circle cx="121" cy="120" r="6.5" fill="${p.olhos}"/>
+      <circle cx="83" cy="117" r="2.4" fill="#fff"/><circle cx="123" cy="117" r="2.4" fill="#fff"/>
+      <path d="M70 106 q10 -6 18 -1 M112 105 q8 -5 18 1" stroke="${cs}" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </g>
+    <ellipse class="bochecha" cx="68" cy="134" rx="9" ry="6" fill="#ff8fab"/><ellipse class="bochecha" cx="132" cy="134" rx="9" ry="6" fill="#ff8fab"/>
+    <path d="M97 126 q3 4 6 0" stroke="${escurecer(pe,.7)}" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- boca -->
+    <path class="boca-fechada" d="M88 138 q12 12 24 0" stroke="#8a2d4a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <g class="boca-aberta"><path d="M87 136 q13 22 26 0z" fill="#8a2d4a"/><path d="M93 144 q7 6 14 0" fill="#ff8fab"/></g>
+  </g></svg>`;
+}
+
+/* =========================================================
+   2. VOZES: português de Portugal e inglês americano
+   ========================================================= */
+const voz = { pt:null, en:null, pronto:false };
+function escolherVozes(){
+  const vs = speechSynthesis.getVoices();
+  const achar = (re) => vs.find(v=>re.test(v.lang.replace("_","-")));
+  voz.pt = achar(/^pt-PT/i) || achar(/^pt/i);
+  voz.en = vs.find(v=>/^en-US/i.test(v.lang.replace("_","-")) && /female|samantha|zira|aria|jenny|google us/i.test(v.name)) || achar(/^en-US/i) || achar(/^en/i);
+  voz.pronto = vs.length>0;
+}
+function prepararVozes(){
+  return new Promise(res=>{
+    if(!("speechSynthesis" in window)) return res();
+    escolherVozes(); if(voz.pronto) return res();
+    speechSynthesis.onvoiceschanged = ()=>{ escolherVozes(); res(); };
+    setTimeout(res, 1500);
+  });
+}
+
+let geracao = 0;           // muda quando se muda de ecrã: falas antigas param
+const esperar = (ms)=>new Promise(r=>setTimeout(r,ms));
+
+function dizer(texto, lingua, tom, devagar){
+  return new Promise(res=>{
+    if(!("speechSynthesis" in window) || !texto){ return setTimeout(res, 300 + texto.length*55); }
+    const u = new SpeechSynthesisUtterance(texto);
+    const v = lingua==="pt" ? voz.pt : voz.en;
+    if(v){ u.voice=v; u.lang=v.lang; } else u.lang = lingua==="pt" ? "pt-PT" : "en-US";
+    u.pitch = tom; u.rate = devagar ? .62 : (lingua==="pt" ? .95 : .88);
+    let feito=false; const fim=()=>{ if(!feito){ feito=true; res(); } };
+    u.onend=fim; u.onerror=fim;
+    setTimeout(fim, 1800 + texto.length*110);
+    speechSynthesis.speak(u);
+  });
+}
+
+/** Uma prima diz uma frase em português e depois em inglês. */
+async function fala(quem, pt, en, extra={}){
+  const g = geracao, p = PRIMAS[quem], el = document.getElementById(quem), balao = document.getElementById("balao-"+quem);
+  balao.innerHTML = `<span class="quem">${p.nome}</span>${pt?`<b>${pt}</b>`:""}${en?`<i>${en}</i>`:""}`;
+  balao.classList.add("ver"); el.classList.add("fala");
+  if(extra.anim) animar(quem, extra.anim);
+  if(pt){ await dizer(pt,"pt",p.tom); if(g!==geracao) return; await esperar(180); }
+  if(en){ await dizer(en,"en",p.tom); if(g!==geracao) return; }
+  if(extra.devagar){ await esperar(250); await dizer(extra.devagar,"en",p.tom,true); }
+  el.classList.remove("fala");
+  await esperar(350); if(g===geracao) balao.classList.remove("ver");
+}
+async function rir(quem){
+  const el=document.getElementById(quem); animar(quem,"ri");
+  el.classList.add("fala"); await dizer("Hihihi!","pt",PRIMAS[quem].tom+.2); el.classList.remove("fala");
+}
+function animar(quem, anim, ms=1300){
+  const el=document.getElementById(quem);
+  el.classList.remove(anim); void el.offsetWidth; el.classList.add(anim);
+  if(anim!=="danca") setTimeout(()=>el.classList.remove(anim), ms);
+}
+const outra = (q)=> q==="ellen" ? "emilly" : "ellen";
+const ambas = (anim)=>{ animar("ellen",anim); animar("emilly",anim); };
+
+/* =========================================================
+   3. SONS (sem ficheiros: tocados pelo telemóvel)
+   ========================================================= */
+let audio;
+function som(tipo){
+  try{
+    audio = audio || new (window.AudioContext||window.webkitAudioContext)();
+    const t=audio.currentTime, notas = { certo:[523,659,784,1047], erro:[330,262], pop:[880], estrela:[784,988,1175,1568] }[tipo]||[440];
+    notas.forEach((f,i)=>{
+      const o=audio.createOscillator(), g=audio.createGain();
+      o.type = tipo==="erro" ? "triangle" : "sine"; o.frequency.value=f;
+      g.gain.setValueAtTime(.0001,t+i*.09); g.gain.exponentialRampToValueAtTime(.25,t+i*.09+.02); g.gain.exponentialRampToValueAtTime(.0001,t+i*.09+.28);
+      o.connect(g).connect(audio.destination); o.start(t+i*.09); o.stop(t+i*.09+.3);
+    });
+  }catch(e){}
+}
+let musica=null;
+function tocarMusica(){
+  pararMusica();
+  try{
+    audio = audio || new (window.AudioContext||window.webkitAudioContext)();
+    const melodia=[523,523,784,784,880,880,784,0,698,698,659,659,587,587,523,0];
+    const baixo=[262,196,220,196];
+    let i=0; const passo=.32;
+    const tick=()=>{
+      const t=audio.currentTime+.05, f=melodia[i%melodia.length];
+      const toca=(freq,vol,tipo,dur)=>{ const o=audio.createOscillator(), g=audio.createGain(); o.type=tipo; o.frequency.value=freq;
+        g.gain.setValueAtTime(.0001,t); g.gain.exponentialRampToValueAtTime(vol,t+.02); g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+        o.connect(g).connect(audio.destination); o.start(t); o.stop(t+dur+.02); };
+      if(f) toca(f,.12,"triangle",passo*.9);
+      if(i%4===0) toca(baixo[(i/4)%4],.1,"sine",passo*3.5);
+      i++;
+    };
+    tick(); musica=setInterval(tick, passo*1000);
+  }catch(e){}
+}
+function pararMusica(){ if(musica){ clearInterval(musica); musica=null; } }
+
+function confetis(){
+  const cores=["#ff7eb6","#ffd84d","#7ed957","#6ecbff","#b38cff","#ff9f43"];
+  for(let i=0;i<60;i++){
+    const c=document.createElement("i"); c.className="confeti";
+    c.style.left=Math.random()*100+"vw"; c.style.background=cores[i%cores.length];
+    c.style.animationDuration=(1.6+Math.random()*1.6)+"s"; c.style.animationDelay=(Math.random()*.5)+"s";
+    document.body.appendChild(c); setTimeout(()=>c.remove(),3800);
+  }
+}
+
+/* =========================================================
+   4. ESTRELAS (guardadas só neste telemóvel)
+   ========================================================= */
+let estrelas = 0;
+try{ estrelas = +localStorage.getItem("las-sophias-estrelas")||0; }catch(e){}
+function ganharEstrela(n=1){
+  estrelas+=n; try{ localStorage.setItem("las-sophias-estrelas",estrelas); }catch(e){}
+  const el=document.getElementById("estrelas"); document.getElementById("n-estrelas").textContent=estrelas;
+  el.classList.remove("pulo"); void el.offsetWidth; el.classList.add("pulo"); som("estrela");
+}
+document.getElementById("n-estrelas").textContent=estrelas;
+
+/* =========================================================
+   5. ECRÃS
+   ========================================================= */
+const zona = document.getElementById("zona");
+const casa = document.getElementById("casa");
+const baralhar = (a)=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+let ocupado=false;
+function novoEcra(html){
+  geracao++; pararMusica();
+  if("speechSynthesis" in window) speechSynthesis.cancel();
+  ["ellen","emilly"].forEach(q=>{ const el=document.getElementById(q); el.className="prima"; document.getElementById("balao-"+q).classList.remove("ver"); });
+  zona.innerHTML = html; ocupado=false;
+  return geracao;
+}
+
+const AVENTURAS = [
+  { id:"piquenique", ic:"🧺", pt:"Piquenique", en:"Picnic", fn:piquenique },
+  { id:"vestir",     ic:"👗", pt:"Vestir",     en:"Dress up", fn:vestir },
+  { id:"animais",    ic:"🐮", pt:"Animais",    en:"Animals", fn:animais },
+  { id:"baloes",     ic:"🎈", pt:"Balões",     en:"Balloons", fn:baloes },
+  { id:"dancar",     ic:"🎵", pt:"Dançar",     en:"Dance", fn:dancar },
+];
+let feitas = new Set();
+
+async function jardim(primeiraVez){
+  casa.hidden = true;
+  const g = novoEcra(`<h2 id="titulo">O que vamos fazer?<small>What shall we do?</small></h2>
+    <div class="grelha">${AVENTURAS.map(a=>`<button class="cartao${feitas.has(a.id)?" feito":""}" data-a="${a.id}"><span class="ic" aria-hidden="true">${a.ic}</span>${a.pt}<small>${a.en}</small></button>`).join("")}</div>`);
+  zona.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{ const a=AVENTURAS.find(x=>x.id===b.dataset.a); casa.hidden=false; a.fn(); });
+  if(primeiraVez){
+    animar("ellen","acena",2200);
+    await fala("ellen","Olá! Eu sou a Ellen Sophia!","Hello! I am Ellen Sophia!"); if(g!==geracao) return;
+    animar("emilly","acena",2200);
+    await fala("emilly","E eu sou a Emilly Sophia! Somos primas!","And I am Emilly Sophia! We are cousins!"); if(g!==geracao) return;
+    await rir("ellen"); if(g!==geracao) return;
+    ambas("salta");
+    await fala("ellen","Vamos brincar no jardim encantado?","Let's play in the magic garden!");
+  } else {
+    await fala(Math.random()<.5?"ellen":"emilly","Escolhe outra brincadeira!","Choose another game!");
+  }
+}
+
+async function festa(id){
+  feitas.add(id); ganharEstrela(3); confetis(); ambas("danca"); tocarMusica();
+  const g=geracao;
+  zona.innerHTML=`<h2 id="titulo">Muito bem! 🎉<small>Great job!</small></h2><div class="numero">⭐⭐⭐</div>`;
+  await fala("ellen","Muito bem! Ganhaste três estrelas!","Great job! You got three stars!"); if(g!==geracao) return;
+  await fala("emilly","És o máximo!","You are awesome!",{anim:"salta"}); if(g!==geracao) return;
+  await esperar(1200); if(g!==geracao) return;
+  jardim(false);
+}
+
+/* ---------- 🧺 Piquenique: frutas ---------- */
+const FRUTAS = [
+  { ic:"🍎", pt:"a maçã", nome:"Maçã", en:"apple" },
+  { ic:"🍌", pt:"a banana", nome:"Banana", en:"banana" },
+  { ic:"🍊", pt:"a laranja", nome:"Laranja", en:"orange" },
+  { ic:"🍓", pt:"o morango", nome:"Morango", en:"strawberry" },
+  { ic:"🍇", pt:"as uvas", nome:"Uvas", en:"grapes" },
+  { ic:"🍉", pt:"a melancia", nome:"Melancia", en:"watermelon" },
+];
+async function piquenique(){
+  const g=novoEcra(`<h2 id="titulo">Piquenique<small>Picnic</small></h2><div class="cesto" id="cesto" aria-hidden="true">🧺</div><div class="dentro" id="dentro"></div><div class="itens" id="itens"></div>`);
+  await fala("ellen","Emilly, vamos fazer um piquenique?","Emilly, let's have a picnic!"); if(g!==geracao) return;
+  await fala("emilly","Sim! Ajudas-nos a encher o cesto?","Yes! Can you help us fill the basket?",{anim:"salta"}); if(g!==geracao) return;
+  const ordem = baralhar(FRUTAS).slice(0,4);
+  for(let r=0;r<ordem.length;r++){
+    const alvo=ordem[r], quem = r%2 ? "emilly" : "ellen";
+    const opcoes = baralhar([alvo,...baralhar(FRUTAS.filter(f=>f!==alvo)).slice(0,2)]);
+    const certo = await rondaTocar(g, opcoes.map(f=>({html:f.ic, aria:f.nome, valor:f})), alvo,
+      ()=>fala(quem,`Põe ${alvo.pt} no cesto!`,`Put the ${alvo.en} in the basket!`),
+      async (f)=>{ await rir(outra(quem)); await fala(outra(quem),`Isso é ${f.pt}!`,`That's the ${f.en}!`); });
+    if(certo===null) return;
+    const c=document.getElementById("cesto"); c.classList.remove("pulo"); void c.offsetWidth; c.classList.add("pulo");
+    document.getElementById("dentro").textContent += alvo.ic;
+    ambas("salta");
+    await fala(outra(quem),`${alvo.nome}! Hum, que bom!`,`${cap(alvo.en)}! Yummy!`,{devagar:alvo.en}); if(g!==geracao) return;
+  }
+  festa("piquenique");
+}
+
+/* ---------- 👗 Vestir: cores ---------- */
+const CORES = [
+  { hex:"#ff4d4d", pt:"vermelho", en:"red" }, { hex:"#4d8dff", pt:"azul", en:"blue" },
+  { hex:"#ffd84d", pt:"amarelo", en:"yellow" }, { hex:"#4cc94c", pt:"verde", en:"green" },
+  { hex:"#ff7eb6", pt:"cor-de-rosa", en:"pink" }, { hex:"#9b5cff", pt:"roxo", en:"purple" },
+  { hex:"#ff9f43", pt:"laranja", en:"orange" },
+];
+async function vestir(){
+  const g=novoEcra(`<h2 id="titulo">Vestir as primas<small>Dress up</small></h2><div class="itens" id="itens"></div>`);
+  await fala("emilly","Vamos mudar de roupa! Escolhes a cor?","Let's change clothes! Will you pick the color?"); if(g!==geracao) return;
+  const ordem = baralhar(CORES).slice(0,4);
+  for(let r=0;r<ordem.length;r++){
+    const alvo=ordem[r], quem = r%2 ? "ellen" : "emilly";
+    const opcoes = baralhar([alvo,...baralhar(CORES.filter(c=>c!==alvo)).slice(0,2)]);
+    const certo = await rondaTocar(g, opcoes.map(c=>({html:"", aria:c.pt, valor:c, estilo:`background:${c.hex}`, classe:"cor"})), alvo,
+      ()=>fala(quem,`Eu quero um vestido ${alvo.pt}!`,`I want a ${alvo.en} dress!`),
+      async (c)=>{ await rir(quem); await fala(quem,`Isso é ${c.pt}!`,`That's ${c.en}!`); });
+    if(certo===null) return;
+    PRIMAS[quem]._vestido = PRIMAS[quem]._vestido || PRIMAS[quem].vestido;
+    PRIMAS[quem].vestido = alvo.hex; document.getElementById(quem).innerHTML = desenhar(quem);
+    animar(quem,"roda",900); document.getElementById(quem).classList.add("feliz");
+    await fala(quem,`Que lindo! ${cap(alvo.pt)}!`,`So pretty! ${cap(alvo.en)}!`,{devagar:alvo.en}); if(g!==geracao) return;
+    await rir(outra(quem)); if(g!==geracao) return;
+  }
+  festa("vestir");
+}
+
+/* ---------- 🐮 Animais: dar de comer ---------- */
+const ANIMAIS = [
+  { ic:"🐶", pt:"o cão", nome:"Cão", en:"dog", somPt:"Ão, ão!", somEn:"Woof, woof!" },
+  { ic:"🐱", pt:"o gato", nome:"Gato", en:"cat", somPt:"Miau!", somEn:"Meow!" },
+  { ic:"🐮", pt:"a vaca", nome:"Vaca", en:"cow", somPt:"Muuu!", somEn:"Moo!" },
+  { ic:"🦆", pt:"o pato", nome:"Pato", en:"duck", somPt:"Quá, quá!", somEn:"Quack, quack!" },
+  { ic:"🐑", pt:"a ovelha", nome:"Ovelha", en:"sheep", somPt:"Mééé!", somEn:"Baa!" },
+  { ic:"🐷", pt:"o porco", nome:"Porco", en:"pig", somPt:"Óinc, óinc!", somEn:"Oink, oink!" },
+];
+async function animais(){
+  const g=novoEcra(`<h2 id="titulo">Os animais têm fome<small>The animals are hungry</small></h2><div class="itens" id="itens"></div>`);
+  await fala("ellen","Os animais da quinta têm fome!","The farm animals are hungry!"); if(g!==geracao) return;
+  await fala("emilly","Vamos dar-lhes comida!","Let's feed them!",{anim:"salta"}); if(g!==geracao) return;
+  const ordem = baralhar(ANIMAIS).slice(0,4);
+  for(let r=0;r<ordem.length;r++){
+    const alvo=ordem[r], quem = r%2 ? "emilly" : "ellen";
+    const opcoes = baralhar([alvo,...baralhar(ANIMAIS.filter(a=>a!==alvo)).slice(0,2)]);
+    const certo = await rondaTocar(g, opcoes.map(a=>({html:`<span class="animal">${a.ic}<span class="comida">🥕</span></span>`, aria:a.nome, valor:a})), alvo,
+      ()=>fala(quem,`Dá comida ${alvo.pt.startsWith("o ")?"ao"+alvo.pt.slice(1):"à"+alvo.pt.slice(1)}!`,`Feed the ${alvo.en}!`),
+      async (a)=>{ await rir(outra(quem)); await fala(outra(quem),`Isso é ${a.pt}! ${a.somPt}`,`That's the ${a.en}! ${a.somEn}`); }, true);
+    if(certo===null) return;
+    await fala(quem,`${alvo.somPt}`,`${alvo.somEn}`); if(g!==geracao) return;
+    await rir(outra(quem)); if(g!==geracao) return;
+    await fala(outra(quem),`${alvo.nome}!`,`${cap(alvo.en)}!`,{devagar:alvo.en, anim:"salta"}); if(g!==geracao) return;
+  }
+  festa("animais");
+}
+
+/* ---------- 🎈 Balões: números ---------- */
+const NUM = [["um","one"],["dois","two"],["três","three"],["quatro","four"],["cinco","five"],["seis","six"],["sete","seven"],["oito","eight"],["nove","nine"],["dez","ten"]];
+async function baloes(){
+  const g=novoEcra(`<h2 id="titulo">Vamos contar!<small>Let's count!</small></h2><div class="numero" id="numero"></div><div class="itens" id="itens"></div>`);
+  await fala("emilly","Olha tantos balões!","Look at all the balloons!"); if(g!==geracao) return;
+  await fala("ellen","Rebenta-os e contamos juntas!","Pop them and let's count together!",{anim:"salta"}); if(g!==geracao) return;
+  for(const total of [3,5]){
+    const cores=baralhar(["#ff4d4d","#4d8dff","#ffd84d","#4cc94c","#ff7eb6","#9b5cff","#ff9f43"]);
+    const caixa=document.getElementById("itens");
+    caixa.innerHTML = Array.from({length:total},(_,i)=>`<button class="balao-ar" style="background:${cores[i%cores.length]}" aria-label="Balão"></button>`).join("");
+    let conta=0;
+    await new Promise(fim=>{
+      caixa.querySelectorAll(".balao-ar").forEach(b=>b.onclick=async()=>{
+        if(ocupado||b.classList.contains("rebenta")) return;
+        ocupado=true; b.classList.add("rebenta"); som("pop"); conta++;
+        const [pt,en]=NUM[conta-1]; document.getElementById("numero").textContent=conta;
+        await fala(conta%2?"ellen":"emilly",`${cap(pt)}!`,`${cap(en)}!`,{anim:"salta"});
+        ocupado=false; if(g!==geracao) return;
+        if(conta===total) fim();
+      });
+    });
+    if(g!==geracao) return;
+    ganharEstrela();
+    await fala("ellen",`${cap(NUM[total-1][0])} balões!`,`${cap(NUM[total-1][1])} balloons!`); if(g!==geracao) return;
+    await rir("emilly"); if(g!==geracao) return;
+    document.getElementById("numero").textContent="";
+  }
+  festa("baloes");
+}
+
+/* ---------- 🎵 Dançar: ações do corpo ---------- */
+const ACOES = [
+  { ic:"👏", pt:"Bate palmas!", en:"Clap your hands!", anim:"palmas", t:1600 },
+  { ic:"⬆️", pt:"Salta!", en:"Jump!", anim:"salta", t:1200 },
+  { ic:"🔄", pt:"Dá uma volta!", en:"Turn around!", anim:"roda", t:900 },
+  { ic:"👋", pt:"Diz olá!", en:"Wave hello!", anim:"acena", t:2000 },
+];
+async function dancar(){
+  const g=novoEcra(`<h2 id="titulo">Vamos dançar!<small>Let's dance!</small></h2>
+    <div class="acoes">${ACOES.map((a,i)=>`<button class="cartao" data-i="${i}"><span class="ic" aria-hidden="true">${a.ic}</span>${a.pt}<small>${a.en}</small></button>`).join("")}</div>`);
+  tocarMusica(); ambas("danca");
+  await fala("ellen","Música! Vamos dançar!","Music! Let's dance!"); if(g!==geracao) return;
+  await fala("emilly","Toca num botão e nós fazemos!","Tap a button and we'll do it!"); if(g!==geracao) return;
+  ["ellen","emilly"].forEach(q=>document.getElementById(q).classList.remove("danca"));
+  const usadas=new Set();
+  zona.querySelectorAll("[data-i]").forEach(b=>b.onclick=async()=>{
+    if(ocupado) return; ocupado=true;
+    const a=ACOES[+b.dataset.i]; usadas.add(a.anim); b.classList.add("feito");
+    ambas(a.anim);
+    await fala("ellen",a.pt,a.en); if(g!==geracao) return;
+    await rir("emilly"); if(g!==geracao) return;
+    ocupado=false;
+    if(usadas.size===ACOES.length) festa("dancar");
+  });
+}
+
+/** Uma ronda de «toca no certo». Devolve true quando acerta, null se a criança saiu do ecrã. */
+function rondaTocar(g, opcoes, alvo, pedir, aoErrar, comer){
+  return new Promise(async res=>{
+    const caixa=document.getElementById("itens");
+    caixa.innerHTML = opcoes.map((o,i)=>`<button class="item ${o.classe||""}" data-i="${i}" aria-label="${o.aria}" style="${o.estilo||""}">${o.html}</button>`).join("");
+    ocupado=true; await pedir(); if(g!==geracao) return res(null); ocupado=false;
+    caixa.querySelectorAll("[data-i]").forEach(b=>b.onclick=async()=>{
+      if(ocupado) return; ocupado=true;
+      const o=opcoes[+b.dataset.i];
+      if(o.valor===alvo){
+        som("certo"); ganharEstrela();
+        if(comer){ b.querySelector(".animal")?.classList.add("come"); await esperar(900); }
+        else { b.classList.add("certo"); await esperar(500); }
+        return res(g===geracao ? true : null);
+      }
+      som("erro"); b.classList.remove("errado"); void b.offsetWidth; b.classList.add("errado");
+      await aoErrar(o.valor); if(g!==geracao) return res(null);
+      await pedir(); if(g!==geracao) return res(null);
+      ocupado=false;
+    });
+  });
+}
+const cap=(s)=>s.charAt(0).toUpperCase()+s.slice(1);
+
+/* tocar numa prima: ela ri-se e diz o nome */
+["ellen","emilly"].forEach(q=>document.getElementById(q).addEventListener("click",async()=>{
+  if(ocupado || !document.getElementById("inicio").hidden) return;
+  ocupado=true; await rir(q); await fala(q,`Eu sou a ${PRIMAS[q].completo}!`,`I am ${PRIMAS[q].completo}!`,{anim:"acena"}); ocupado=false;
+}));
+
+/* flores no jardim */
+document.getElementById("flores").innerHTML = [[30,560,"#ff7eb6"],[90,600,"#ffd84d"],[160,580,"#fff"],[230,610,"#b38cff"],[360,575,"#ff7eb6"],[200,545,"#ffd84d"],[330,630,"#fff"]]
+  .map(([x,y,c],i)=>`<g class="flor" style="animation-delay:${-i*.4}s"><path d="M${x} ${y} v26" stroke="#2f8f2a" stroke-width="3"/><g fill="${c}">${[0,72,144,216,288].map(a=>`<circle cx="${x+Math.cos(a*Math.PI/180)*7}" cy="${y+Math.sin(a*Math.PI/180)*7}" r="6"/>`).join("")}</g><circle cx="${x}" cy="${y}" r="4.5" fill="#ff9f43"/></g>`).join("");
+
+document.getElementById("ellen").innerHTML = desenhar("ellen");
+document.getElementById("emilly").innerHTML = desenhar("emilly");
+
+casa.onclick = ()=>jardim(false);
+document.getElementById("brincar").onclick = async ()=>{
+  await prepararVozes();
+  try{ audio = audio || new (window.AudioContext||window.webkitAudioContext)(); audio.resume(); }catch(e){}
+  // desbloqueia a voz no iPhone (tem de começar dentro do toque)
+  if("speechSynthesis" in window){ const u=new SpeechSynthesisUtterance(" "); u.volume=0; speechSynthesis.speak(u); }
+  const aviso=document.getElementById("aviso");
+  if(!("speechSynthesis" in window) || (!voz.pt && voz.pronto)){
+    aviso.style.display="block";
+    aviso.textContent = !("speechSynthesis" in window)
+      ? "Este browser não tem vozes: as primas só aparecem a escrever. Experimente o Chrome ou o Safari."
+      : "Este telemóvel não tem voz em português: as primas falam só em inglês. Pode instalar a voz em Definições › Idioma › Texto para voz.";
+    await esperar(3500);
+  }
+  document.getElementById("inicio").hidden = true;
+  jardim(true);
+};
+</script>
+</body>
+</html>
