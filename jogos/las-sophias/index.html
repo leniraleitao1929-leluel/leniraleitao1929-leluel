@@ -6,7 +6,7 @@
 <title>Las Sophias · O Jardim Encantado</title>
 <meta name="description" content="A Ellen Sophia e a Emilly Sophia brincam no jardim encantado e ensinam inglês a crianças de 4 anos, em português e inglês.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#8fd3ff">
+<meta name="theme-color" content="#c9b4ff">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icone.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icone-192.png">
@@ -30,7 +30,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 
 /* ---------- palco ---------- */
 #palco{position:fixed;inset:0;overflow:hidden;background:linear-gradient(var(--ceu1),var(--ceu2) 58%)}
-#cenario{position:absolute;inset:0;width:100%;height:100%}
+#cenario{position:absolute;inset:0;background:url(jardim.webp) center bottom/cover no-repeat}
+#cenario::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,0) 38%,rgba(255,255,255,0) 70%,rgba(80,40,120,.18))}
 .nuvem{animation:nuvem 38s linear infinite}
 .nuvem.b{animation-duration:52s;animation-delay:-20s}
 @keyframes nuvem{from{transform:translateX(-30%)}to{transform:translateX(130%)}}
@@ -48,57 +49,49 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 #estrelas.pulo{animation:pulo .5s}
 
 /* ---------- zona do jogo ---------- */
-#zona{position:absolute;left:0;right:0;top:calc(max(10px,env(safe-area-inset-top)) + 70px);bottom:calc(33vh + 96px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 12px;z-index:10}
-#titulo{font-size:clamp(24px,6.5vw,40px);font-weight:800;text-align:center;line-height:1.05;margin:0;color:var(--tinta);text-shadow:0 3px 0 #fff}
+#zona{position:absolute;left:0;right:0;top:calc(max(10px,env(safe-area-inset-top)) + 70px);bottom:calc(38vh + 92px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 12px;z-index:10}
+#titulo{font-size:clamp(22px,6vw,36px);font-weight:800;text-align:center;line-height:1.05;margin:0;color:var(--tinta);background:#ffffffe6;border-radius:22px;padding:6px 18px 4px;box-shadow:var(--sombra)}
 #titulo small{display:block;font-size:.55em;color:#7a4fd6}
 
 /* ---------- personagens ---------- */
-.prima{position:absolute;bottom:max(6px,env(safe-area-inset-bottom));height:33vh;max-height:320px;aspect-ratio:200/300;z-index:12;transition:transform .4s}
-#ellen{left:max(2vw,6px)}
-#emilly{right:max(2vw,6px)}
-.prima svg{width:100%;height:100%;overflow:visible}
-.prima .corpo{transform-origin:100px 290px;animation:respira 2.6s ease-in-out infinite}
-@keyframes respira{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.015)}}
-.prima .olhos{transform-origin:100px 118px;animation:piscar 4.2s infinite}
-#emilly .olhos{animation-delay:-1.7s}
-@keyframes piscar{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
-.prima .boca-aberta{opacity:0}
-.prima.fala .boca-aberta{animation:boca .22s steps(2) infinite}
-.prima.fala .boca-fechada{animation:boca .22s steps(2) infinite reverse}
-@keyframes boca{0%{opacity:0}100%{opacity:1}}
-.prima .braco-d{transform-origin:150px 190px}
-.prima.acena .braco-d{animation:acena .5s ease-in-out 4 alternate}
-@keyframes acena{from{transform:rotate(0)}to{transform:rotate(-120deg)}}
+.prima{position:absolute;bottom:max(4px,env(safe-area-inset-bottom));height:38vh;max-height:380px;z-index:12;padding:0;transform-origin:50% 100%}
+#emilly{left:max(1vw,4px)}
+#ellen{right:max(1vw,4px)}
+.prima img{height:100%;width:auto;display:block;filter:drop-shadow(0 8px 10px rgba(59,42,92,.25));animation:respira 2.8s ease-in-out infinite;transform-origin:50% 100%;pointer-events:none}
+#ellen img{animation-delay:-1.3s}
+@keyframes respira{0%,100%{transform:scale(1,1)}50%{transform:scale(1.012,.988)}}
+.prima.fala img{animation:fala .34s ease-in-out infinite alternate;filter:drop-shadow(0 0 14px rgba(255,236,140,.95)) drop-shadow(0 8px 10px rgba(59,42,92,.25))}
+@keyframes fala{from{transform:rotate(-1.5deg) translateY(0)}to{transform:rotate(1.5deg) translateY(-1.5%)}}
+.prima.acena{animation:acena .35s ease-in-out 6 alternate}
+@keyframes acena{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
 .prima.salta{animation:salta .55s ease-out 2}
-@keyframes salta{0%,100%{transform:translateY(0)}45%{transform:translateY(-22%)}}
+@keyframes salta{0%,100%{transform:translateY(0) scale(1,1)}15%{transform:translateY(0) scale(1.06,.92)}45%{transform:translateY(-18%) scale(.96,1.05)}}
 .prima.roda{animation:roda .9s ease-in-out}
 @keyframes roda{to{transform:rotateY(360deg)}}
-.prima.ri{animation:ri .16s linear 8}
-@keyframes ri{0%,100%{transform:rotate(0)}50%{transform:rotate(3deg) translateY(-2%)}}
-.prima.danca{animation:danca .6s ease-in-out infinite alternate}
-@keyframes danca{from{transform:rotate(-7deg) translateY(0)}to{transform:rotate(7deg) translateY(-5%)}}
-.prima.palmas .maos{animation:palmas .25s ease-in-out 6 alternate}
-.prima .maos{opacity:0}
-.prima.palmas .maos{opacity:1}
-@keyframes palmas{from{transform:scale(.9)}to{transform:scale(1.15)}}
-.prima .bochecha{transition:opacity .3s;opacity:.55}
-.prima.feliz .bochecha{opacity:.95}
+.prima.ri{animation:ri .14s linear 10}
+@keyframes ri{0%,100%{transform:rotate(0)}50%{transform:rotate(2.5deg) translateY(-1.5%)}}
+.prima.danca{animation:danca .55s ease-in-out infinite alternate}
+@keyframes danca{from{transform:rotate(-6deg) translateY(0)}to{transform:rotate(6deg) translateY(-5%)}}
+.prima.palmas{animation:palmas .25s ease-in-out 8 alternate}
+@keyframes palmas{from{transform:scale(1)}to{transform:scale(1.06,.95)}}
+.prima.magia::after{content:"✨";position:absolute;top:8%;left:12%;font-size:42px;animation:magia 1s ease-out forwards}
+@keyframes magia{from{opacity:1;transform:scale(.4)}to{opacity:0;transform:scale(2.2) translateY(-30px)}}
 
 /* balão de fala */
-.fala-balao{position:absolute;bottom:calc(33vh + 4px);max-width:min(78vw,420px);background:#fff;border-radius:22px;padding:10px 16px 8px;box-shadow:var(--sombra);font-size:clamp(19px,5vw,24px);line-height:1.15;z-index:15;opacity:0;transform:translateY(10px) scale(.95);transition:.2s}
+.fala-balao{position:absolute;bottom:calc(38vh + 2px);max-width:min(78vw,420px);background:#fff;border-radius:22px;padding:10px 16px 8px;box-shadow:var(--sombra);font-size:clamp(19px,5vw,24px);line-height:1.15;z-index:15;opacity:0;transform:translateY(10px) scale(.95);transition:.2s}
 .fala-balao.ver{opacity:1;transform:none}
 .fala-balao::after{content:"";position:absolute;bottom:-12px;width:24px;height:24px;background:#fff;transform:rotate(45deg);border-radius:4px}
-#balao-ellen{left:max(3vw,8px)} #balao-ellen::after{left:34px}
-#balao-emilly{right:max(3vw,8px)} #balao-emilly::after{right:34px}
+#balao-emilly{left:max(3vw,8px)} #balao-emilly::after{left:44px}
+#balao-ellen{right:max(3vw,8px)} #balao-ellen::after{right:44px}
 .fala-balao b{display:block;font-weight:800}
 .fala-balao i{display:block;font-style:normal;font-weight:700;color:#d6337c}
 .fala-balao .quem{font-size:.62em;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#7a4fd6}
 
 /* ---------- cartões e botões ---------- */
-.grelha{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,40vw),1fr));gap:12px;width:min(100%,640px)}
-.cartao{background:#fff;border-radius:26px;box-shadow:var(--sombra);padding:10px 8px 6px;display:flex;flex-direction:column;align-items:center;gap:0;font-weight:800;font-size:20px;line-height:1.05;transition:transform .15s}
+.grelha{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:min(100%,560px)}
+.cartao{background:#fff;border-radius:24px;box-shadow:var(--sombra);padding:8px 4px 6px;display:flex;flex-direction:column;align-items:center;gap:0;font-weight:800;font-size:clamp(15px,4.4vw,20px);line-height:1.05;transition:transform .15s}
 .cartao:active{transform:scale(.94)}
-.cartao .ic{font-size:clamp(40px,11vw,58px);line-height:1.1}
+.cartao .ic{font-size:clamp(34px,10vw,54px);line-height:1.1}
 .cartao small{font-size:.75em;color:#d6337c}
 .cartao.feito{outline:4px solid var(--amarelo)}
 .grande{background:var(--rosa);color:#fff;border-radius:999px;padding:14px 40px 10px;font-size:32px;font-weight:800;box-shadow:0 7px 0 #c94a87;animation:pulsa 1.4s ease-in-out infinite}
@@ -136,9 +129,9 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 @keyframes cai{to{transform:translateY(110vh) rotate(720deg)}}
 
 /* ecrã de início */
-#inicio{position:absolute;inset:0;bottom:33vh;z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(circle at 50% 35%,#fff7 0,transparent 60%)}
+#inicio{position:absolute;inset:0;bottom:38vh;z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(circle at 50% 35%,#fff7 0,transparent 60%)}
 #inicio h1{font-size:clamp(44px,13vw,82px);line-height:.9;margin:0;text-align:center;color:#fff;text-shadow:0 5px 0 #d6337c,0 10px 24px rgba(59,42,92,.25)}
-#inicio h1 small{display:block;font-size:.38em;color:var(--tinta);text-shadow:0 3px 0 #fff;margin-top:8px}
+#inicio h1 small{display:inline-block;font-size:.38em;color:var(--tinta);text-shadow:none;margin-top:8px;background:#ffffffe6;border-radius:14px;padding:2px 14px 0}
 #aviso{max-width:520px;margin:0 16px;background:#fff8d6;border-radius:16px;padding:8px 14px;font-size:16px;text-align:center;display:none}
 .pais{max-width:440px;margin:0 16px;background:#ffffffd9;border-radius:16px;padding:8px 14px;font-size:15px;color:var(--tinta);text-align:center}
 
@@ -154,26 +147,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 </head>
 <body>
 <div id="palco">
-  <svg id="cenario" viewBox="0 0 400 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <defs>
-      <radialGradient id="g-sol"><stop offset="0" stop-color="#fff6a8"/><stop offset="1" stop-color="#ffd84d"/></radialGradient>
-      <linearGradient id="g-relva" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8ee36a"/><stop offset="1" stop-color="#46a832"/></linearGradient>
-    </defs>
-    <g class="sol"><circle cx="330" cy="80" r="34" fill="url(#g-sol)"/>
-      <g stroke="#ffd84d" stroke-width="6" stroke-linecap="round"><path d="M330 30v-14M330 144v-14M280 80h-14M394 80h-14M295 45l-10-10M375 125l-10-10M365 45l10-10M285 125l-10 10"/></g></g>
-    <g class="nuvem"><g fill="#fff"><ellipse cx="60" cy="110" rx="40" ry="18"/><ellipse cx="85" cy="98" rx="26" ry="20"/><ellipse cx="45" cy="100" rx="20" ry="15"/></g></g>
-    <g class="nuvem b"><g fill="#fff" opacity=".85"><ellipse cx="40" cy="190" rx="34" ry="14"/><ellipse cx="62" cy="180" rx="22" ry="16"/></g></g>
-    <path d="M0 470 Q100 390 210 440 T400 420 V700 H0Z" fill="#b5ec8f"/>
-    <path d="M0 520 Q120 460 240 505 T400 490 V700 H0Z" fill="url(#g-relva)"/>
-    <!-- árvore encantada -->
-    <g transform="translate(300 330)"><rect x="-10" y="40" width="22" height="120" rx="9" fill="#a0673f"/>
-      <circle cx="0" cy="30" r="52" fill="#5fc94b"/><circle cx="-38" cy="55" r="34" fill="#53b941"/><circle cx="38" cy="55" r="34" fill="#53b941"/>
-      <circle cx="-14" cy="18" r="7" fill="#ff7eb6"/><circle cx="20" cy="44" r="7" fill="#ffd84d"/><circle cx="-30" cy="60" r="7" fill="#ff7eb6"/><circle cx="34" cy="14" r="6" fill="#fff"/></g>
-    <!-- arco-íris -->
-    <g fill="none" stroke-width="9" opacity=".7" transform="translate(70 440)"><path d="M-60 0a60 60 0 0 1 120 0" stroke="#ff6b6b"/><path d="M-51 0a51 51 0 0 1 102 0" stroke="#ffb347"/><path d="M-42 0a42 42 0 0 1 84 0" stroke="#ffe66d"/><path d="M-33 0a33 33 0 0 1 66 0" stroke="#7ed957"/><path d="M-24 0a24 24 0 0 1 48 0" stroke="#6ecbff"/></g>
-    <g id="flores"></g>
-    <g fill="#fff"><circle class="brilho" cx="150" cy="300" r="3"/><circle class="brilho" style="animation-delay:-.8s" cx="230" cy="250" r="2.5"/><circle class="brilho" style="animation-delay:-1.6s" cx="110" cy="230" r="2"/></g>
-  </svg>
+  <div id="cenario" aria-hidden="true"></div>
 
   <div id="barra">
     <button class="redondo" id="casa" aria-label="Voltar ao jardim" hidden>🏠</button>
@@ -185,8 +159,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 
   <div class="fala-balao" id="balao-ellen" aria-hidden="true"></div>
   <div class="fala-balao" id="balao-emilly" aria-hidden="true"></div>
-  <button class="prima" id="ellen" aria-label="Ellen Sophia"></button>
-  <button class="prima" id="emilly" aria-label="Emilly Sophia"></button>
+  <button class="prima" id="emilly" aria-label="Emilly Sophia"><img src="emilly.webp" alt="" width="590" height="900"></button>
+  <button class="prima" id="ellen" aria-label="Ellen Sophia"><img src="ellen.webp" alt="" width="580" height="900"></button>
 
   <div id="inicio">
     <h1>Las Sophias<small>O Jardim Encantado</small></h1>
@@ -199,72 +173,12 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 <script>
 "use strict";
 /* =========================================================
-   1. AS PRIMAS — aspeto (mudar aqui quando soubermos como são)
-   cabelo: "puxinhos" | "trancas" | "cachos" | "rabo"
+   1. AS PRIMAS: a Ellen (vestido cor-de-rosa e livro) e a Emilly (vestido azul e varinha)
    ========================================================= */
 const PRIMAS = {
-  ellen:  { nome:"Ellen",  completo:"Ellen Sophia",  pele:"#c98a5e", cabelo:"#3b2416", penteado:"puxinhos", olhos:"#3b2416", vestido:"#ff7eb6", laco:"#ffd84d", tom:1.45 },
-  emilly: { nome:"Emilly", completo:"Emilly Sophia", pele:"#e0a77a", cabelo:"#5a3418", penteado:"cachos",   olhos:"#4a2c17", vestido:"#b38cff", laco:"#ff7eb6", tom:1.7 },
+  ellen:  { nome:"Ellen",  completo:"Ellen Sophia",  cor:"cor-de-rosa", corEn:"pink", tom:1.4 },
+  emilly: { nome:"Emilly", completo:"Emilly Sophia", cor:"azul",        corEn:"blue", tom:1.65 },
 };
-
-function escurecer(hex, f){
-  const n=parseInt(hex.slice(1),16); const r=(n>>16)*f|0, g=((n>>8)&255)*f|0, b=(n&255)*f|0;
-  return "#"+((1<<24)|(r<<16)|(g<<8)|b).toString(16).slice(1);
-}
-
-function desenhar(id){
-  const p=PRIMAS[id], c=p.cabelo, cs=escurecer(c,.75), pe=p.pele, ps=escurecer(pe,.88), v=p.vestido, vs=escurecer(v,.82);
-  const tras = {
-    puxinhos:`<circle cx="42" cy="78" r="30" fill="${c}"/><circle cx="158" cy="78" r="30" fill="${c}"/>`,
-    trancas:`<path d="M52 120 q-14 40 0 80 q8 14 -4 30" stroke="${c}" stroke-width="18" fill="none" stroke-linecap="round"/><path d="M148 120 q14 40 0 80 q-8 14 4 30" stroke="${c}" stroke-width="18" fill="none" stroke-linecap="round"/>`,
-    cachos:`<g fill="${c}">${[[40,95],[36,130],[44,162],[160,95],[164,130],[156,162],[60,60],[140,60],[100,44],[78,48],[122,48]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="24"/>`).join("")}</g>`,
-    rabo:`<path d="M150 80 q48 10 36 70 q-6 30 -26 40" stroke="${c}" stroke-width="26" fill="none" stroke-linecap="round"/>`,
-  }[p.penteado]||"";
-  const frente = {
-    puxinhos:`<path d="M54 100 q46 -50 92 0 q-10 -40 -46 -42 q-36 2 -46 42z" fill="${c}"/>`,
-    trancas:`<path d="M52 104 q48 -56 96 0 q-6 -44 -48 -46 q-42 2 -48 46z" fill="${c}"/>`,
-    cachos:`<g fill="${c}"><circle cx="70" cy="80" r="18"/><circle cx="92" cy="70" r="18"/><circle cx="114" cy="72" r="18"/><circle cx="132" cy="84" r="16"/></g>`,
-    rabo:`<path d="M52 104 q48 -56 96 0 q-6 -44 -48 -46 q-42 2 -48 46z" fill="${c}"/>`,
-  }[p.penteado]||"";
-  const laco = p.penteado==="cachos"
-    ? `<g transform="translate(128 58) rotate(20)"><path d="M0 0 l-16 -10 v20z M0 0 l16 -10 v20z" fill="${p.laco}"/><circle r="5" fill="${escurecer(p.laco,.8)}"/></g>`
-    : `<g transform="translate(100 52)"><path d="M0 0 l-18 -12 v24z M0 0 l18 -12 v24z" fill="${p.laco}"/><circle r="6" fill="${escurecer(p.laco,.8)}"/></g>`;
-  return `<svg viewBox="0 0 200 300" role="img" aria-label="${p.completo}">
-  <g class="corpo">
-    ${tras}
-    <!-- pernas e sapatos -->
-    <rect x="76" y="238" width="16" height="40" rx="7" fill="${pe}"/><rect x="108" y="238" width="16" height="40" rx="7" fill="${pe}"/>
-    <ellipse cx="82" cy="282" rx="16" ry="9" fill="#ff5d8f"/><ellipse cx="118" cy="282" rx="16" ry="9" fill="#ff5d8f"/>
-    <!-- braço esquerdo -->
-    <path d="M58 182 q-22 26 -14 54" stroke="${pe}" stroke-width="15" fill="none" stroke-linecap="round"/>
-    <!-- vestido -->
-    <path class="vestido" d="M70 160 h60 l30 92 q-60 14 -120 0z" fill="${v}"/>
-    <path d="M70 160 h60 l6 18 h-72z" fill="${vs}"/>
-    <g fill="#fff" opacity=".7"><circle cx="86" cy="214" r="4"/><circle cx="112" cy="226" r="4"/><circle cx="100" cy="200" r="3"/><circle cx="124" cy="206" r="3"/><circle cx="76" cy="236" r="3"/></g>
-    <!-- braço direito (acena) -->
-    <g class="braco-d"><path d="M142 182 q22 26 14 54" stroke="${pe}" stroke-width="15" fill="none" stroke-linecap="round"/><circle cx="156" cy="238" r="9" fill="${pe}"/></g>
-    <circle cx="44" cy="238" r="9" fill="${pe}"/>
-    <g class="maos"><circle cx="100" cy="178" r="11" fill="${pe}"/><path d="M84 168 l-8 -6 M116 168 l8 -6 M100 160 v-8" stroke="#ffd84d" stroke-width="3" stroke-linecap="round"/></g>
-    <!-- pescoço e cabeça -->
-    <rect x="90" y="140" width="20" height="24" rx="8" fill="${ps}"/>
-    <ellipse cx="100" cy="112" rx="50" ry="48" fill="${pe}"/>
-    <ellipse cx="50" cy="116" rx="8" ry="11" fill="${ps}"/><ellipse cx="150" cy="116" rx="8" ry="11" fill="${ps}"/>
-    ${frente}
-    ${laco}
-    <!-- olhos -->
-    <g class="olhos">
-      <ellipse cx="80" cy="118" rx="9" ry="11" fill="#fff"/><ellipse cx="120" cy="118" rx="9" ry="11" fill="#fff"/>
-      <circle cx="81" cy="120" r="6.5" fill="${p.olhos}"/><circle cx="121" cy="120" r="6.5" fill="${p.olhos}"/>
-      <circle cx="83" cy="117" r="2.4" fill="#fff"/><circle cx="123" cy="117" r="2.4" fill="#fff"/>
-      <path d="M70 106 q10 -6 18 -1 M112 105 q8 -5 18 1" stroke="${cs}" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    </g>
-    <ellipse class="bochecha" cx="68" cy="134" rx="9" ry="6" fill="#ff8fab"/><ellipse class="bochecha" cx="132" cy="134" rx="9" ry="6" fill="#ff8fab"/>
-    <path d="M97 126 q3 4 6 0" stroke="${escurecer(pe,.7)}" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <!-- boca -->
-    <path class="boca-fechada" d="M88 138 q12 12 24 0" stroke="#8a2d4a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-    <g class="boca-aberta"><path d="M87 136 q13 22 26 0z" fill="#8a2d4a"/><path d="M93 144 q7 6 14 0" fill="#ff8fab"/></g>
-  </g></svg>`;
-}
 
 /* =========================================================
    2. VOZES: português de Portugal e inglês americano
@@ -404,7 +318,7 @@ function novoEcra(html){
 
 const AVENTURAS = [
   { id:"piquenique", ic:"🧺", pt:"Piquenique", en:"Picnic", fn:piquenique },
-  { id:"vestir",     ic:"👗", pt:"Vestir",     en:"Dress up", fn:vestir },
+  { id:"varinha",    ic:"✨", pt:"Varinha",    en:"Magic wand", fn:varinha },
   { id:"animais",    ic:"🐮", pt:"Animais",    en:"Animals", fn:animais },
   { id:"baloes",     ic:"🎈", pt:"Balões",     en:"Balloons", fn:baloes },
   { id:"dancar",     ic:"🎵", pt:"Dançar",     en:"Dance", fn:dancar },
@@ -417,11 +331,13 @@ async function jardim(primeiraVez){
     <div class="grelha">${AVENTURAS.map(a=>`<button class="cartao${feitas.has(a.id)?" feito":""}" data-a="${a.id}"><span class="ic" aria-hidden="true">${a.ic}</span>${a.pt}<small>${a.en}</small></button>`).join("")}</div>`);
   zona.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{ const a=AVENTURAS.find(x=>x.id===b.dataset.a); casa.hidden=false; a.fn(); });
   if(primeiraVez){
-    animar("ellen","acena",2200);
-    await fala("ellen","Olá! Eu sou a Ellen Sophia!","Hello! I am Ellen Sophia!"); if(g!==geracao) return;
     animar("emilly","acena",2200);
-    await fala("emilly","E eu sou a Emilly Sophia! Somos primas!","And I am Emilly Sophia! We are cousins!"); if(g!==geracao) return;
+    await fala("emilly","Olá! Eu sou a Emilly Sophia! O meu vestido é azul!","Hello! I am Emilly Sophia! My dress is blue!"); if(g!==geracao) return;
+    animar("ellen","acena",2200);
+    await fala("ellen","E eu sou a Ellen Sophia! O meu é cor-de-rosa!","And I am Ellen Sophia! Mine is pink!"); if(g!==geracao) return;
+    await fala("emilly","Somos primas!","We are cousins!"); if(g!==geracao) return;
     await rir("ellen"); if(g!==geracao) return;
+    await fala("ellen","Eu adoro livros, e a Emilly tem uma varinha mágica!","I love books, and Emilly has a magic wand!"); if(g!==geracao) return;
     ambas("salta");
     await fala("ellen","Vamos brincar no jardim encantado?","Let's play in the magic garden!");
   } else {
@@ -468,31 +384,33 @@ async function piquenique(){
   festa("piquenique");
 }
 
-/* ---------- 👗 Vestir: cores ---------- */
+/* ---------- ✨ Varinha mágica: cores ---------- */
 const CORES = [
-  { hex:"#ff4d4d", pt:"vermelho", en:"red" }, { hex:"#4d8dff", pt:"azul", en:"blue" },
-  { hex:"#ffd84d", pt:"amarelo", en:"yellow" }, { hex:"#4cc94c", pt:"verde", en:"green" },
-  { hex:"#ff7eb6", pt:"cor-de-rosa", en:"pink" }, { hex:"#9b5cff", pt:"roxo", en:"purple" },
+  { hex:"#ff4d4d", pt:"vermelha", en:"red" }, { hex:"#4d8dff", pt:"azul", en:"blue" },
+  { hex:"#ffd84d", pt:"amarela", en:"yellow" }, { hex:"#4cc94c", pt:"verde", en:"green" },
+  { hex:"#ff7eb6", pt:"cor-de-rosa", en:"pink" }, { hex:"#9b5cff", pt:"roxa", en:"purple" },
   { hex:"#ff9f43", pt:"laranja", en:"orange" },
 ];
-async function vestir(){
-  const g=novoEcra(`<h2 id="titulo">Vestir as primas<small>Dress up</small></h2><div class="itens" id="itens"></div>`);
-  await fala("emilly","Vamos mudar de roupa! Escolhes a cor?","Let's change clothes! Will you pick the color?"); if(g!==geracao) return;
+const estrelaSvg = (hex)=>`<svg viewBox="0 0 100 100" width="78%" height="78%" aria-hidden="true"><path d="M50 6l13 28 30 4-22 21 6 30-27-15-27 15 6-30L7 38l30-4z" fill="${hex}" stroke="#fff" stroke-width="5" stroke-linejoin="round"/><circle cx="38" cy="40" r="5" fill="#fff" opacity=".8"/></svg>`;
+async function varinha(){
+  const g=novoEcra(`<h2 id="titulo">Varinha mágica<small>Magic wand</small></h2><div class="itens" id="itens"></div>`);
+  animar("emilly","magia",1000);
+  await fala("emilly","Olha a minha varinha mágica!","Look at my magic wand!",{anim:"salta"}); if(g!==geracao) return;
+  await fala("ellen","Vamos apanhar estrelas mágicas de cores!","Let's catch magic colored stars!"); if(g!==geracao) return;
   const ordem = baralhar(CORES).slice(0,4);
   for(let r=0;r<ordem.length;r++){
     const alvo=ordem[r], quem = r%2 ? "ellen" : "emilly";
     const opcoes = baralhar([alvo,...baralhar(CORES.filter(c=>c!==alvo)).slice(0,2)]);
-    const certo = await rondaTocar(g, opcoes.map(c=>({html:"", aria:c.pt, valor:c, estilo:`background:${c.hex}`, classe:"cor"})), alvo,
-      ()=>fala(quem,`Eu quero um vestido ${alvo.pt}!`,`I want a ${alvo.en} dress!`),
-      async (c)=>{ await rir(quem); await fala(quem,`Isso é ${c.pt}!`,`That's ${c.en}!`); });
+    const certo = await rondaTocar(g, opcoes.map(c=>({html:estrelaSvg(c.hex), aria:`estrela ${c.pt}`, valor:c})), alvo,
+      ()=>fala(quem,`Toca na estrela ${alvo.pt}!`,`Touch the ${alvo.en} star!`),
+      async (c)=>{ await rir(outra(quem)); await fala(outra(quem),`Essa é ${c.pt}!`,`That one is ${c.en}!`); });
     if(certo===null) return;
-    PRIMAS[quem]._vestido = PRIMAS[quem]._vestido || PRIMAS[quem].vestido;
-    PRIMAS[quem].vestido = alvo.hex; document.getElementById(quem).innerHTML = desenhar(quem);
-    animar(quem,"roda",900); document.getElementById(quem).classList.add("feliz");
-    await fala(quem,`Que lindo! ${cap(alvo.pt)}!`,`So pretty! ${cap(alvo.en)}!`,{devagar:alvo.en}); if(g!==geracao) return;
+    animar("emilly","magia",1000); ambas("roda");
+    await fala("emilly","Abracadabra!","",{}); if(g!==geracao) return;
+    await fala(quem,`${cap(alvo.pt)}!`,`${cap(alvo.en)}!`,{devagar:alvo.en}); if(g!==geracao) return;
     await rir(outra(quem)); if(g!==geracao) return;
   }
-  festa("vestir");
+  festa("varinha");
 }
 
 /* ---------- 🐮 Animais: dar de comer ---------- */
@@ -608,13 +526,6 @@ const cap=(s)=>s.charAt(0).toUpperCase()+s.slice(1);
   if(ocupado || !document.getElementById("inicio").hidden) return;
   ocupado=true; await rir(q); await fala(q,`Eu sou a ${PRIMAS[q].completo}!`,`I am ${PRIMAS[q].completo}!`,{anim:"acena"}); ocupado=false;
 }));
-
-/* flores no jardim */
-document.getElementById("flores").innerHTML = [[30,560,"#ff7eb6"],[90,600,"#ffd84d"],[160,580,"#fff"],[230,610,"#b38cff"],[360,575,"#ff7eb6"],[200,545,"#ffd84d"],[330,630,"#fff"]]
-  .map(([x,y,c],i)=>`<g class="flor" style="animation-delay:${-i*.4}s"><path d="M${x} ${y} v26" stroke="#2f8f2a" stroke-width="3"/><g fill="${c}">${[0,72,144,216,288].map(a=>`<circle cx="${x+Math.cos(a*Math.PI/180)*7}" cy="${y+Math.sin(a*Math.PI/180)*7}" r="6"/>`).join("")}</g><circle cx="${x}" cy="${y}" r="4.5" fill="#ff9f43"/></g>`).join("");
-
-document.getElementById("ellen").innerHTML = desenhar("ellen");
-document.getElementById("emilly").innerHTML = desenhar("emilly");
 
 casa.onclick = ()=>jardim(false);
 document.getElementById("brincar").onclick = async ()=>{
