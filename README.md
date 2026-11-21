@@ -36,7 +36,7 @@ Aquilo de que mais gosto:
 
 **Comunicar com quem está do outro lado.** Criei o **Pequenos Encantos**, uma marca de músicas personalizadas, vídeos encantados e contos mágicos para famílias, que hoje junta uma comunidade de **mais de 32 000 pessoas no Facebook** e **7 900 no Instagram**. Foi aí que aprendi a contar histórias que tocam as pessoas.
 
-**Construir com inteligência artificial.** Comecei a criar apps e sites com IA e cada projeto nasceu de alguém real: a **Tato Digital** para a minha irmã, que é cega, a **ELO** para quem constrói casa em Cabo Verde a partir da diáspora, e o **BlueTime** em homenagem à minha mãe, **Cuxe Lopes**, cabeleireira durante mais de 30 anos, a quem ajudei muito no salão até ir para a universidade. Não paro no "parece pronto": testo no telemóvel, protejo os dados e corrijo até estar certo.
+**Construir com inteligência artificial.** Comecei a criar apps e sites com IA e cada projeto nasceu de alguém real: a **Tato Digital** para a minha irmã, que perdeu a visão, a **ELO** para quem constrói casa em Cabo Verde a partir da diáspora, e o **BlueTime** em homenagem à minha mãe, **Cuxe Lopes**, cabeleireira durante mais de 30 anos, a quem ajudei muito no salão até ir para a universidade. Não paro no "parece pronto": testo no telemóvel, protejo os dados e corrijo até estar certo.
 
 **Ensinar o que aprendo.** Criei o **Método ORIGEM**, o workshop e o ebook *O Teu Talento Merece Ser Encontrado*, para que mais pessoas transformem o que sabem num projeto digital.
 
@@ -58,7 +58,7 @@ Aquilo de que mais gosto:
 
 ♿ A tornar cada projeto acessível a quem usa leitor de ecrã
 
-`Novidade nov 2026:` Na **[Tato Digital](https://tatodigital.lovable.app)**, as fotos recebidas no WhatsApp e no Messenger vão direto para a app: Partilhar → Tato Digital, e a app diz tudo o que vê. Pedido da minha irmã, que é cega. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
+`Novidade nov 2026:` Na **[Tato Digital](https://tatodigital.lovable.app)**, as fotos recebidas no WhatsApp e no Messenger vão direto para a app: Partilhar → Tato Digital, e a app diz tudo o que vê. Pedido da minha irmã, que perdeu a visão. [Como foi feita](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/voz-clara.html)
 
 `Novidade nov 2026:` Criei a **[LELUEL LK](https://leluel.lovable.app/lk)**, um estúdio de conteúdos com IA: a pessoa conta a sua marca e recebe 30 publicações do mês em português de Portugal, com imagens em 7 modelos, guiões de Reels com montagem automática, plano em PDF e kit do perfil. Amostra grátis e pagamento com o Stripe. Juntei também **pagamentos online** na área de cliente da LELUEL. [Como foi feito](https://leniraleitao1929-leluel.github.io/leniraleitao1929-leluel/casos/lk.html)
 
